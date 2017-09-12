@@ -42,7 +42,6 @@ public class GUI extends JFrame implements ActionListener{
 	private JPanel panel,buttonPanel,kreispanel;
 	private JButton buttonbus,buttontaxi, buttonbahn, buttonblack, button2x;
 	
-	
 
 	/**
 	 * Launch the application.
