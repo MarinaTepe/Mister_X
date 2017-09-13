@@ -43,6 +43,7 @@ public class GUI extends JFrame implements ActionListener{
 	private JTextPane txtpnVerfgbareTickets;
 	private JPanel panel,buttonPanel,kreispanel;
 	private JButton buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, button1, button2, button3;
+	private int i, j, k, l, m, n;
 	
 
 	/**
@@ -145,11 +146,37 @@ public class GUI extends JFrame implements ActionListener{
 		JSplitPane splitPane_2 = new JSplitPane();
 		splitPane_2.setOrientation(JSplitPane.VERTICAL_SPLIT);
 		splitPane_1.setRightComponent(splitPane_2);
+	
 		
 		// Ticket stack
+		
+		//Array mit verfügbaren Tickets füllen
+		       int [] Bustickets = new int[8];
+		       for (i=1; i<Bustickets.length; i++) { 
+		         }
+		       int [] Taxitickets = new int[11];
+		       for (j=1; j<Taxitickets.length; j++) { 
+		         }
+		       int [] Ubahntickets = new int[4];
+		       for (k=1; k<Ubahntickets.length; k++) { 
+		         }
+		       int [] Blacktickets = new int[5];
+		       for (l=1; l<Blacktickets.length; l++) { 
+		         }
+		       int [] Zweimaltickets = new int[2];
+		       for (m=1; m<Zweimaltickets.length; m++) { 
+		         }
+		
 		txtpnVerfgbareTickets = new JTextPane();
 		txtpnVerfgbareTickets.setEditable(false);
-		txtpnVerfgbareTickets.setText("Verf\u00FCgbare Tickets:\r\n\t\tBus\t\tTaxi\t\tU-Bahn\r\n\r\n\r\nMister X:\r\n\t\tBlack-Tickets\t\t2x");
+		txtpnVerfgbareTickets.setText("Verf\u00FCgbare Tickets:\r\n\t"
+				+ "\tBus\t"+(i)
+				+ "\tTaxi\t"+(j)
+				+ "\tU-Bahn\t"+(k)
+				+ "\n\r\n\r"
+				+ "\nMister X:\r\n\t"
+				+ "\tBlack-Tickets\t"+(l)
+				+ "\tZweimal\t"+(m));
 		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		splitPane_1.setDividerLocation(splitPane.getSize().height/2);
 		
@@ -173,10 +200,11 @@ public class GUI extends JFrame implements ActionListener{
 		buttonblack.addActionListener(this);
 		buttonPanel.add(buttonblack);
 		
-		JButton button2x = new JButton("2x");
+		JButton button2x = new JButton("Zweimal");
 		button2x.addActionListener(this);
 		buttonPanel.add(button2x);
 		
+<<<<<<< HEAD
 		JButton button2 = new JButton("1");
 		buttonbus.addActionListener(this);
 		buttonPanel.add(button2);
@@ -198,8 +226,11 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel.add(button6);
 		
 		for(int i=6;i<=45;i++)
+=======
+		for(int n=1;n<=50;n++)
+>>>>>>> 3f5312a3ddf1aeb276ca02e871a2abb917078d13
 		{
-			JButton button1 = new JButton(""+i);
+			JButton button1 = new JButton(""+n);
 			button1.addActionListener(this);
 			buttonPanel.add(button1);
 		}
@@ -210,28 +241,27 @@ public class GUI extends JFrame implements ActionListener{
 		/*panel = new JPanel();
 		splitPane.setLeftComponent(panel);
 		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{scrollPane, splitPane_1, table, contentPane, splitPane}));*/
-		
-		
+	}		
+
+		//auslöser für die knöpfe
+		public void actionPerformed (ActionEvent ae){
+	        // Die Quelle wird mit getSource() abgefragt und mit den
+	        // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
+	        // der Buttons ist, wird der Text des JLabels entsprechend geändert
+	        if(ae.getSource() == buttonbus){
+	            System.out.println("Button 1 wurde betätigt");
+	        }
+	        else if(ae.getSource() == this.button2){
+	        	buttonLabel.setText("Button 2 wurde betätigt");
+	        }
+	        else if (ae.getSource() == this.button3){
+	        	buttonLabel.setText(("Button 3 wurde betätigt"));
+	        }
+		}
+	}
 		
 
-	}
 	
-	//auslöser für die knöpfe
-	public void actionPerformed (ActionEvent ae){
-        // Die Quelle wird mit getSource() abgefragt und mit den
-        // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
-        // der Buttons ist, wird der Text des JLabels entsprechend geändert
-        if(ae.getSource() == this.button1){
-            buttonLabel.setText(("Button 1 wurde betätigt"));
-        }
-        else if(ae.getSource() == this.button2){
-        	buttonLabel.setText("Button 2 wurde betätigt");
-        }
-        else if (ae.getSource() == this.button3){
-        	buttonLabel.setText(("Button 3 wurde betätigt"));
-        }
-	}
-}
 
 //kreise malen
 	class OvalComponent extends JComponent {
