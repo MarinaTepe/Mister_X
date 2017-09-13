@@ -204,7 +204,7 @@ public class GUI extends JFrame implements ActionListener{
 		button2x.addActionListener(this);
 		buttonPanel.add(button2x);
 		
-<<<<<<< HEAD
+
 		JButton button2 = new JButton("1");
 		buttonbus.addActionListener(this);
 		buttonPanel.add(button2);
@@ -225,10 +225,7 @@ public class GUI extends JFrame implements ActionListener{
 		button2x.addActionListener(this);
 		buttonPanel.add(button6);
 		
-		for(int i=6;i<=45;i++)
-=======
-		for(int n=1;n<=50;n++)
->>>>>>> 3f5312a3ddf1aeb276ca02e871a2abb917078d13
+		for(int i=6;i<=45;n++)
 		{
 			JButton button1 = new JButton(""+n);
 			button1.addActionListener(this);
