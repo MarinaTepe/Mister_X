@@ -61,12 +61,16 @@ public class GUI extends JFrame implements ActionListener{
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	
 	public GUI() {
+		
+		//bildschirmanpassung
 		int hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
 		int breite=Toolkit.getDefaultToolkit().getScreenSize().width;
+		
+		/**
+	 * Create the frame.
+	 */
 		setTitle("Mister X");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -76,7 +80,7 @@ public class GUI extends JFrame implements ActionListener{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		
+		//spielfeld
 		JSplitPane splitPane = new JSplitPane();
 		kreispanel=new JPanel();
 		kreispanel.add(new OvalComponent());
@@ -95,6 +99,8 @@ public class GUI extends JFrame implements ActionListener{
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 		splitPane_1.setLeftComponent(scrollPane);
 		
+		
+		//MR X spieltafel
 		table = new JTable();
 		table.setShowVerticalLines(false);
 		table.setShowHorizontalLines(false);
@@ -140,13 +146,14 @@ public class GUI extends JFrame implements ActionListener{
 		splitPane_2.setOrientation(JSplitPane.VERTICAL_SPLIT);
 		splitPane_1.setRightComponent(splitPane_2);
 		
+		// Ticket stack
 		txtpnVerfgbareTickets = new JTextPane();
 		txtpnVerfgbareTickets.setEditable(false);
 		txtpnVerfgbareTickets.setText("Verf\u00FCgbare Tickets:\r\n\t\tBus\t\tTaxi\t\tU-Bahn\r\n\r\n\r\nMister X:\r\n\t\tBlack-Tickets\t\t2x");
 		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		splitPane_1.setDividerLocation(splitPane.getSize().height/2);
 		
-		
+		//Aktionsfeld
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(11,2,0,0));
 		
@@ -188,6 +195,8 @@ public class GUI extends JFrame implements ActionListener{
 		
 
 	}
+	
+	//auslöser für die knöpfe
 	public void actionPerformed (ActionEvent ae){
         // Die Quelle wird mit getSource() abgefragt und mit den
         // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
@@ -204,7 +213,7 @@ public class GUI extends JFrame implements ActionListener{
 	}
 }
 
-
+//kreise malen
 	class OvalComponent extends JComponent {
 
 		public void paintComponent(Graphics g) {
