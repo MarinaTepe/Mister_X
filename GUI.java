@@ -20,6 +20,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.JTextComponent;
 import javax.swing.JTextArea;
 import javax.swing.DropMode;
 import javax.swing.JButton;
@@ -27,7 +28,7 @@ import javax.swing.JComponent;
 import javax.swing.border.TitledBorder;
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
-import org.eclipse.wb.swing.FocusTraversalOnArray;
+//import org.eclipse.wb.swing.FocusTraversalOnArray;
 import javax.swing.JLayeredPane;
 import javax.swing.JTextPane;
 import com.sun.prism.shader.DrawCircle_Color_Loader;
@@ -35,12 +36,13 @@ import com.sun.prism.shader.DrawCircle_ImagePattern_Loader;
 
 public class GUI extends JFrame implements ActionListener{
 
+	private JTextComponent buttonLabel;
 	private JPanel contentPane;
 	private JScrollPane scrollPane;
 	private JTable table;
 	private JTextPane txtpnVerfgbareTickets;
 	private JPanel panel,buttonPanel,kreispanel;
-	private JButton buttonbus,buttontaxi, buttonbahn, buttonblack, button2x;
+	private JButton buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, button1, button2, button3;
 	
 
 	/**
@@ -178,9 +180,9 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel.setBorder(new EmptyBorder(20, 20, 20, 20));
 		splitPane_2.setRightComponent(buttonPanel);
 		
-		panel = new JPanel();
+		/*panel = new JPanel();
 		splitPane.setLeftComponent(panel);
-		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{scrollPane, splitPane_1, table, contentPane, splitPane}));
+		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{scrollPane, splitPane_1, table, contentPane, splitPane}));*/
 		
 		
 		
@@ -216,6 +218,7 @@ public class GUI extends JFrame implements ActionListener{
 	}
 }
 }
+
 
 
 
