@@ -225,7 +225,7 @@ public class GUI extends JFrame implements ActionListener{
 		button2x.addActionListener(this);
 		buttonPanel.add(button6);
 		
-		for(int i=6;i<=45;n++)
+		for(int n=6;n<=45;n++)
 		{
 			JButton button1 = new JButton(""+n);
 			button1.addActionListener(this);
