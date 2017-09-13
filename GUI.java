@@ -177,7 +177,27 @@ public class GUI extends JFrame implements ActionListener{
 		button2x.addActionListener(this);
 		buttonPanel.add(button2x);
 		
-		for(int i=1;i<=50;i++)
+		JButton button2 = new JButton("1");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button2);
+		
+		JButton button3 = new JButton("2");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button3);
+		
+		JButton button4 = new JButton("3");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button4);
+		
+		JButton button5 = new JButton("4");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button5);
+		
+		JButton button6 = new JButton("5");
+		button2x.addActionListener(this);
+		buttonPanel.add(button6);
+		
+		for(int i=6;i<=45;i++)
 		{
 			JButton button1 = new JButton(""+i);
 			button1.addActionListener(this);
