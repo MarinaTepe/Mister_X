@@ -585,14 +585,19 @@ public class GUI extends JFrame implements ActionListener{
 	class OvalComponent extends JComponent {
 
 		public void paintComponent(Graphics g) {
-			for(int x=0;x<5;x++){
+			
+			g.setColor(Color.RED);
+			g.fillRect(120, 100, 60, 60);
+			g.setColor(Color.BLUE);
+			g.fillOval(120, 100, 60, 60);
+			/**for(int x=0;x<5;x++){
 				for(int y=0;y<10;y++){
 					g.setColor(Color.RED);
 					g.fillRect(120*x, 100*y, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(120*x, 100*y, 60, 60);
 				}
-			}
+			}**/
 		}
 	}
 
