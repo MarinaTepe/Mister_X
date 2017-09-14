@@ -205,32 +205,209 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel.add(button2x);
 		
 
-		JButton button2 = new JButton("1");
+		JButton button1 = new JButton("1");
 		buttonbus.addActionListener(this);
+		buttonPanel.add(button1);
+		
+		JButton button2 = new JButton("2");
+		buttontaxi.addActionListener(this);
 		buttonPanel.add(button2);
 		
-		JButton button3 = new JButton("2");
-		buttontaxi.addActionListener(this);
+		JButton button3 = new JButton("3");
+		buttonbahn.addActionListener(this);
 		buttonPanel.add(button3);
 		
-		JButton button4 = new JButton("3");
-		buttonbahn.addActionListener(this);
+		JButton button4 = new JButton("4");
+		buttonblack.addActionListener(this);
 		buttonPanel.add(button4);
 		
-		JButton button5 = new JButton("4");
-		buttonblack.addActionListener(this);
+		JButton button5 = new JButton("5");
+		button2x.addActionListener(this);
 		buttonPanel.add(button5);
 		
-		JButton button6 = new JButton("5");
-		button2x.addActionListener(this);
+		JButton button6 = new JButton("6");
+		buttonbus.addActionListener(this);
 		buttonPanel.add(button6);
 		
-		for(int n=6;n<=45;n++)
-		{
-			JButton button1 = new JButton(""+n);
-			button1.addActionListener(this);
-			buttonPanel.add(button1);
-		}
+		JButton button7 = new JButton("7");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button7);
+		
+		JButton button8 = new JButton("8");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button8);
+		
+		JButton button9 = new JButton("9");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button9);
+		
+		JButton button10 = new JButton("10");
+		button2x.addActionListener(this);
+		buttonPanel.add(button10);
+		
+		JButton button11 = new JButton("11");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button11);
+		
+		JButton button12 = new JButton("12");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button12);
+		
+		JButton button13 = new JButton("13");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button13);
+		
+		JButton button14 = new JButton("14");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button14);
+		
+		JButton button15 = new JButton("15");
+		button2x.addActionListener(this);
+		buttonPanel.add(button15);
+		
+		JButton button16 = new JButton("16");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button16);
+		
+		JButton button17 = new JButton("17");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button17);
+		
+		JButton button18 = new JButton("18");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button18);
+		
+		JButton button19 = new JButton("19");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button19);
+		
+		JButton button20 = new JButton("20");
+		button2x.addActionListener(this);
+		buttonPanel.add(button20);
+		
+		JButton button21 = new JButton("21");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button21);
+		
+		JButton button22 = new JButton("22");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button22);
+		
+		JButton button23 = new JButton("23");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button23);
+		
+		JButton button24 = new JButton("24");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button24);
+		
+		JButton button25 = new JButton("25");
+		button2x.addActionListener(this);
+		buttonPanel.add(button25);
+		
+		JButton button26 = new JButton("26");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button26);
+		
+		JButton button27 = new JButton("27");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button27);
+		
+		JButton button28 = new JButton("28");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button28);
+		
+		JButton button29 = new JButton("29");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button29);
+		
+		JButton button30 = new JButton("30");
+		button2x.addActionListener(this);
+		buttonPanel.add(button30);
+		
+		JButton button31 = new JButton("31");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button31);
+		
+		JButton button32 = new JButton("32");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button32);
+		
+		JButton button33 = new JButton("33");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button33);
+		
+		JButton button34 = new JButton("34");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button34);
+		
+		JButton button35 = new JButton("35");
+		button2x.addActionListener(this);
+		buttonPanel.add(button35);
+		
+		JButton button36 = new JButton("36");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button36);
+		
+		JButton button37 = new JButton("37");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button37);
+		
+		JButton button38 = new JButton("38");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button38);
+		
+		JButton button39 = new JButton("39");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button39);
+		
+		JButton button40 = new JButton("40");
+		button2x.addActionListener(this);
+		buttonPanel.add(button40);
+		
+		JButton button41 = new JButton("41");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button41);
+		
+		JButton button42 = new JButton("42");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button42);
+		
+		JButton button43 = new JButton("43");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button43);
+		
+		JButton button44 = new JButton("44");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button44);
+		
+		JButton button45 = new JButton("45");
+		button2x.addActionListener(this);
+		buttonPanel.add(button45);
+		
+		JButton button46 = new JButton("46");
+		buttonbus.addActionListener(this);
+		buttonPanel.add(button46);
+		
+		JButton button47 = new JButton("47");
+		buttontaxi.addActionListener(this);
+		buttonPanel.add(button47);
+		
+		JButton button48 = new JButton("48");
+		buttonbahn.addActionListener(this);
+		buttonPanel.add(button48);
+		
+		JButton button49 = new JButton("49");
+		buttonblack.addActionListener(this);
+		buttonPanel.add(button49);
+		
+		JButton button50 = new JButton("50");
+		button2x.addActionListener(this);
+		buttonPanel.add(button50);
+		
+		
+		
+		
 		buttonPanel.setBackground(Color.white);
 		buttonPanel.setBorder(new EmptyBorder(20, 20, 20, 20));
 		splitPane_2.setRightComponent(buttonPanel);
