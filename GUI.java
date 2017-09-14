@@ -1,4 +1,4 @@
-import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.GridLayout;
@@ -6,33 +6,18 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.*;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JSeparator;
-import java.awt.Color;
-import javax.swing.JTextField;
-import javax.swing.JSplitPane;
-import java.awt.Component;
-import javax.swing.Box;
-import javax.swing.SwingConstants;
-import javax.swing.JLabel;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.text.JTextComponent;
-import javax.swing.JTextArea;
-import javax.swing.DropMode;
 import javax.swing.JButton;
 import javax.swing.JComponent;
-import javax.swing.border.TitledBorder;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
-//import org.eclipse.wb.swing.FocusTraversalOnArray;
-import javax.swing.JLayeredPane;
+import javax.swing.JSplitPane;
+import javax.swing.JTable;
 import javax.swing.JTextPane;
-import com.sun.prism.shader.DrawCircle_Color_Loader;
-import com.sun.prism.shader.DrawCircle_ImagePattern_Loader;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.text.JTextComponent;
 
 public class GUI extends JFrame implements ActionListener{
 
@@ -42,8 +27,13 @@ public class GUI extends JFrame implements ActionListener{
 	private JTable table;
 	private JTextPane txtpnVerfgbareTickets;
 	private JPanel panel,buttonPanel,kreispanel;
-	private JButton buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, button1, button2, button3;
-	private int i, j, k, l, m, n;
+	private JButton buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, 
+	button1, button2, button3, button4, button5, button6, button7, button8, button9, button10,
+	button11, button12, button13, button14, button15, button16, button17, button18, button19, button20,
+	button21, button22, button23, button24, button25, button26, button27, button28, button29, button30,
+	button31, button32, button33, button34, button35, button36, button37, button38, button39, button40,
+	button41, button42, button43, button44, button45, button46, button47, button48, button49, button50;
+	private int i, j, k, l, m;
 	
 
 	/**
@@ -184,225 +174,225 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(11,2,0,0));
 		
-		JButton buttonbus = new JButton("Bus");
+		buttonbus = new JButton("Bus");
 		buttonbus.addActionListener(this);
 		buttonPanel.add(buttonbus);
 		
-		JButton buttontaxi = new JButton("Taxi");
+		buttontaxi = new JButton("Taxi");
 		buttontaxi.addActionListener(this);
 		buttonPanel.add(buttontaxi);
 		
-		JButton buttonbahn = new JButton("U-Bahn");
+		buttonbahn = new JButton("U-Bahn");
 		buttonbahn.addActionListener(this);
 		buttonPanel.add(buttonbahn);
 		
-		JButton buttonblack = new JButton("Black");
+		buttonblack = new JButton("Black");
 		buttonblack.addActionListener(this);
 		buttonPanel.add(buttonblack);
 		
-		JButton button2x = new JButton("Zweimal");
+		button2x = new JButton("Zweimal");
 		button2x.addActionListener(this);
 		buttonPanel.add(button2x);
 		
 
-		JButton button1 = new JButton("1");
-		buttonbus.addActionListener(this);
+		button1 = new JButton("1");
+		button1.addActionListener(this);
 		buttonPanel.add(button1);
 		
-		JButton button2 = new JButton("2");
-		buttontaxi.addActionListener(this);
+		button2 = new JButton("2");
+		button2.addActionListener(this);
 		buttonPanel.add(button2);
 		
-		JButton button3 = new JButton("3");
-		buttonbahn.addActionListener(this);
+		button3 = new JButton("3");
+		button3.addActionListener(this);
 		buttonPanel.add(button3);
 		
-		JButton button4 = new JButton("4");
-		buttonblack.addActionListener(this);
+		button4 = new JButton("4");
+		button4.addActionListener(this);
 		buttonPanel.add(button4);
 		
-		JButton button5 = new JButton("5");
-		button2x.addActionListener(this);
+		button5 = new JButton("5");
+		button5.addActionListener(this);
 		buttonPanel.add(button5);
 		
-		JButton button6 = new JButton("6");
-		buttonbus.addActionListener(this);
+		button6 = new JButton("6");
+		button6.addActionListener(this);
 		buttonPanel.add(button6);
 		
-		JButton button7 = new JButton("7");
-		buttontaxi.addActionListener(this);
+		button7 = new JButton("7");
+		button7.addActionListener(this);
 		buttonPanel.add(button7);
 		
-		JButton button8 = new JButton("8");
-		buttonbahn.addActionListener(this);
+		button8 = new JButton("8");
+		button8.addActionListener(this);
 		buttonPanel.add(button8);
 		
-		JButton button9 = new JButton("9");
-		buttonblack.addActionListener(this);
+		button9 = new JButton("9");
+		button9.addActionListener(this);
 		buttonPanel.add(button9);
 		
-		JButton button10 = new JButton("10");
-		button2x.addActionListener(this);
+		button10 = new JButton("10");
+		button10.addActionListener(this);
 		buttonPanel.add(button10);
 		
-		JButton button11 = new JButton("11");
-		buttonbus.addActionListener(this);
+		button11 = new JButton("11");
+		button11.addActionListener(this);
 		buttonPanel.add(button11);
 		
-		JButton button12 = new JButton("12");
-		buttontaxi.addActionListener(this);
+		button12 = new JButton("12");
+		button12.addActionListener(this);
 		buttonPanel.add(button12);
 		
-		JButton button13 = new JButton("13");
-		buttonbahn.addActionListener(this);
+		button13 = new JButton("13");
+		button13.addActionListener(this);
 		buttonPanel.add(button13);
 		
-		JButton button14 = new JButton("14");
-		buttonblack.addActionListener(this);
+		button14 = new JButton("14");
+		button14.addActionListener(this);
 		buttonPanel.add(button14);
 		
-		JButton button15 = new JButton("15");
-		button2x.addActionListener(this);
+		button15 = new JButton("15");
+		button15.addActionListener(this);
 		buttonPanel.add(button15);
 		
-		JButton button16 = new JButton("16");
-		buttonbus.addActionListener(this);
+		button16 = new JButton("16");
+		button16.addActionListener(this);
 		buttonPanel.add(button16);
 		
-		JButton button17 = new JButton("17");
-		buttontaxi.addActionListener(this);
+		button17 = new JButton("17");
+		button17.addActionListener(this);
 		buttonPanel.add(button17);
 		
-		JButton button18 = new JButton("18");
-		buttonbahn.addActionListener(this);
+		button18 = new JButton("18");
+		button18.addActionListener(this);
 		buttonPanel.add(button18);
 		
-		JButton button19 = new JButton("19");
-		buttonblack.addActionListener(this);
+		button19 = new JButton("19");
+		button19.addActionListener(this);
 		buttonPanel.add(button19);
 		
-		JButton button20 = new JButton("20");
-		button2x.addActionListener(this);
+		button20 = new JButton("20");
+		button20.addActionListener(this);
 		buttonPanel.add(button20);
 		
-		JButton button21 = new JButton("21");
-		buttonbus.addActionListener(this);
+		button21 = new JButton("21");
+		button21.addActionListener(this);
 		buttonPanel.add(button21);
 		
-		JButton button22 = new JButton("22");
-		buttontaxi.addActionListener(this);
+		button22 = new JButton("22");
+		button22.addActionListener(this);
 		buttonPanel.add(button22);
 		
-		JButton button23 = new JButton("23");
-		buttonbahn.addActionListener(this);
+		button23 = new JButton("23");
+		button23.addActionListener(this);
 		buttonPanel.add(button23);
 		
-		JButton button24 = new JButton("24");
-		buttonblack.addActionListener(this);
+		button24 = new JButton("24");
+		button24.addActionListener(this);
 		buttonPanel.add(button24);
 		
-		JButton button25 = new JButton("25");
-		button2x.addActionListener(this);
+		button25 = new JButton("25");
+		button25.addActionListener(this);
 		buttonPanel.add(button25);
 		
-		JButton button26 = new JButton("26");
-		buttonbus.addActionListener(this);
+		button26 = new JButton("26");
+		button26.addActionListener(this);
 		buttonPanel.add(button26);
 		
-		JButton button27 = new JButton("27");
-		buttontaxi.addActionListener(this);
+		button27 = new JButton("27");
+		button27.addActionListener(this);
 		buttonPanel.add(button27);
 		
-		JButton button28 = new JButton("28");
-		buttonbahn.addActionListener(this);
+		button28 = new JButton("28");
+		button28.addActionListener(this);
 		buttonPanel.add(button28);
 		
-		JButton button29 = new JButton("29");
-		buttonblack.addActionListener(this);
+		button29 = new JButton("29");
+		button29.addActionListener(this);
 		buttonPanel.add(button29);
 		
-		JButton button30 = new JButton("30");
-		button2x.addActionListener(this);
+		button30 = new JButton("30");
+		button30.addActionListener(this);
 		buttonPanel.add(button30);
 		
-		JButton button31 = new JButton("31");
-		buttonbus.addActionListener(this);
+		button31 = new JButton("31");
+		button31.addActionListener(this);
 		buttonPanel.add(button31);
 		
-		JButton button32 = new JButton("32");
-		buttontaxi.addActionListener(this);
+		button32 = new JButton("32");
+		button32.addActionListener(this);
 		buttonPanel.add(button32);
 		
-		JButton button33 = new JButton("33");
-		buttonbahn.addActionListener(this);
+		button33 = new JButton("33");
+		button33.addActionListener(this);
 		buttonPanel.add(button33);
 		
-		JButton button34 = new JButton("34");
-		buttonblack.addActionListener(this);
+		button34 = new JButton("34");
+		button34.addActionListener(this);
 		buttonPanel.add(button34);
 		
-		JButton button35 = new JButton("35");
-		button2x.addActionListener(this);
+		button35 = new JButton("35");
+		button35.addActionListener(this);
 		buttonPanel.add(button35);
 		
-		JButton button36 = new JButton("36");
-		buttonbus.addActionListener(this);
+		button36 = new JButton("36");
+		button36.addActionListener(this);
 		buttonPanel.add(button36);
 		
-		JButton button37 = new JButton("37");
-		buttontaxi.addActionListener(this);
+		button37 = new JButton("37");
+		button37.addActionListener(this);
 		buttonPanel.add(button37);
 		
-		JButton button38 = new JButton("38");
-		buttonbahn.addActionListener(this);
+		button38 = new JButton("38");
+		button38.addActionListener(this);
 		buttonPanel.add(button38);
 		
-		JButton button39 = new JButton("39");
-		buttonblack.addActionListener(this);
+		button39 = new JButton("39");
+		button39.addActionListener(this);
 		buttonPanel.add(button39);
 		
-		JButton button40 = new JButton("40");
-		button2x.addActionListener(this);
+		button40 = new JButton("40");
+		button40.addActionListener(this);
 		buttonPanel.add(button40);
 		
-		JButton button41 = new JButton("41");
-		buttonbus.addActionListener(this);
+		button41 = new JButton("41");
+		button41.addActionListener(this);
 		buttonPanel.add(button41);
 		
-		JButton button42 = new JButton("42");
-		buttontaxi.addActionListener(this);
+		button42 = new JButton("42");
+		button42.addActionListener(this);
 		buttonPanel.add(button42);
 		
-		JButton button43 = new JButton("43");
-		buttonbahn.addActionListener(this);
+		button43 = new JButton("43");
+		button43.addActionListener(this);
 		buttonPanel.add(button43);
 		
-		JButton button44 = new JButton("44");
-		buttonblack.addActionListener(this);
+		button44 = new JButton("44");
+		button44.addActionListener(this);
 		buttonPanel.add(button44);
 		
-		JButton button45 = new JButton("45");
-		button2x.addActionListener(this);
+		button45 = new JButton("45");
+		button45.addActionListener(this);
 		buttonPanel.add(button45);
 		
-		JButton button46 = new JButton("46");
-		buttonbus.addActionListener(this);
+		button46 = new JButton("46");
+		button46.addActionListener(this);
 		buttonPanel.add(button46);
 		
-		JButton button47 = new JButton("47");
-		buttontaxi.addActionListener(this);
+		button47 = new JButton("47");
+		button47.addActionListener(this);
 		buttonPanel.add(button47);
 		
-		JButton button48 = new JButton("48");
-		buttonbahn.addActionListener(this);
+		button48 = new JButton("48");
+		button48.addActionListener(this);
 		buttonPanel.add(button48);
 		
-		JButton button49 = new JButton("49");
-		buttonblack.addActionListener(this);
+		button49 = new JButton("49");
+		button49.addActionListener(this);
 		buttonPanel.add(button49);
 		
-		JButton button50 = new JButton("50");
-		button2x.addActionListener(this);
+		button50 = new JButton("50");
+		button50.addActionListener(this);
 		buttonPanel.add(button50);
 		
 		
@@ -422,15 +412,176 @@ public class GUI extends JFrame implements ActionListener{
 	        // Die Quelle wird mit getSource() abgefragt und mit den
 	        // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
 	        // der Buttons ist, wird der Text des JLabels entsprechend geändert
-	        if(ae.getSource() == buttonbus){
-	            System.out.println("Button 1 wurde betätigt");
-	        }
+	        if(ae.getSource() == this.button1){
+	            System.out.println("Button 1 wurde betätigt");}
+	        
 	        else if(ae.getSource() == this.button2){
-	        	buttonLabel.setText("Button 2 wurde betätigt");
-	        }
+	        	System.out.println("Button 2 wurde betätigt");}
+	       
 	        else if (ae.getSource() == this.button3){
-	        	buttonLabel.setText(("Button 3 wurde betätigt"));
-	        }
+	        	System.out.println("Button 3 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button4){
+	            System.out.println("Button 4 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button5){
+	        	System.out.println("Button 5 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button6){
+	        	System.out.println("Button 6 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button7){
+	            System.out.println("Button 7 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button8){
+	        	System.out.println("Button 8 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button9){
+	        	System.out.println("Button 9 wurde betätigt");}
+	        
+	        else if (ae.getSource() == this.button10){
+	        	System.out.println("Button 10 wurde betätigt");}
+	        
+	        	else if(ae.getSource() == this.button11){
+	        		System.out.println("Button 11 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button12){
+	        	System.out.println("Button 12 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button13){
+	        	System.out.println("Button 13 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button14){
+	            System.out.println("Button 14 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button15){
+	        	System.out.println("Button 15 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button16){
+	        	System.out.println("Button 16 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button17){
+	            System.out.println("Button 17 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button18){
+	        	System.out.println("Button 18 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button19){
+	        	System.out.println("Button 19 wurde betätigt");}
+	        
+	        else if (ae.getSource() == this.button20){
+	        	System.out.println("Button 20 wurde betätigt");}
+	        
+		        else if(ae.getSource() == this.button21){
+	        		System.out.println("Button 21 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button22){
+	        	System.out.println("Button 22 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button23){
+	        	System.out.println("Button 23 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button24){
+	            System.out.println("Button 24 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button25){
+	        	System.out.println("Button 25 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button26){
+	        	System.out.println("Button 26 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button27){
+	            System.out.println("Button 27 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button28){
+	        	System.out.println("Button 28 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button29){
+	        	System.out.println("Button 29 wurde betätigt");}
+	        
+	        else if (ae.getSource() == this.button30){
+	        	System.out.println("Button 30 wurde betätigt");}
+	        
+		        else if(ae.getSource() == this.button31){
+	        		System.out.println("Button 31 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button32){
+	        	System.out.println("Button 32 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button33){
+	        	System.out.println("Button 33 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button34){
+	            System.out.println("Button 34 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button35){
+	        	System.out.println("Button 35 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button36){
+	        	System.out.println("Button 36 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button37){
+	            System.out.println("Button 37 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button38){
+	        	System.out.println("Button 38 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button39){
+	        	System.out.println("Button 39 wurde betätigt");}
+	        
+	        else if (ae.getSource() == this.button40){
+	        	System.out.println("Button 40 wurde betätigt");}
+	        
+		        else if(ae.getSource() == this.button41){
+	        		System.out.println("Button 41 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button42){
+	        	System.out.println("Button 42 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button43){
+	        	System.out.println("Button 43 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button44){
+	            System.out.println("Button 44 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button45){
+	        	System.out.println("Button 45 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button46){
+	        	System.out.println("Button 46 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button47){
+	            System.out.println("Button 47 wurde betätigt");}
+	        
+	        else if(ae.getSource() == this.button48){
+	        	System.out.println("Button 48 wurde betätigt");}
+	       
+	        else if (ae.getSource() == this.button49){
+	        	System.out.println("Button 49 wurde betätigt");}
+	        
+	        else if (ae.getSource() == this.button50){
+	        	System.out.println("Button 50 wurde betätigt");}
+	        
+	        
+	        
+			        else if(ae.getSource() == this.buttonbus){
+		        		System.out.println("Button Bus wurde betätigt");}
+		        
+		        else if(ae.getSource() == this.buttontaxi){
+		        	System.out.println("Button Taxi wurde betätigt");}
+		       
+		        else if (ae.getSource() == this.buttonbahn){
+		        	System.out.println("Button U-Bahn wurde betätigt");}
+		        
+		        else if(ae.getSource() == this.buttonblack){
+		            System.out.println("Button Black wurde betätigt");}
+		        
+		        else if(ae.getSource() == this.button2x){
+		        	System.out.println("Button 2X wurde betätigt");}
+		       
+		       
+		        
+	        
 		}
 	}
 		
