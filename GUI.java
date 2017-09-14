@@ -403,7 +403,7 @@ public class GUI extends JFrame implements ActionListener{
 	        // Die Quelle wird mit getSource() abgefragt und mit den
 	        // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
 	        // der Buttons ist, wird der Text des JLabels entsprechend geändert
-			int counterField1;								
+								
 			
 	        if(ae.getSource() == this.button1){
 	            System.out.println("Button 1 wurde betätigt");}
@@ -558,7 +558,7 @@ public class GUI extends JFrame implements ActionListener{
 	        
 	        
 			        else if(ae.getSource() == this.buttonbus){
-			        	counterField1--  ;}
+			        	System.out.println("Button Bus wurde betätigt");}
 		        
 		        else if(ae.getSource() == this.buttontaxi){
 		        	System.out.println("Button Taxi wurde betätigt");}
@@ -595,12 +595,6 @@ public class GUI extends JFrame implements ActionListener{
 			}
 		}
 	}
-<<<<<<< HEAD
-		}
-	}
-=======
->>>>>>> 87ffd4e77cf9790c60a04c7ad490d3a65ff956b0
-
 
 
 
