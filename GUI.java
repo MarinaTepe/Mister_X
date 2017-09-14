@@ -21,12 +21,11 @@ import javax.swing.text.JTextComponent;
 
 public class GUI extends JFrame implements ActionListener{
 
-	private JTextComponent buttonLabel;
 	private JPanel contentPane;
 	private JScrollPane scrollPane;
 	private JTable table;
 	private JTextPane txtpnVerfgbareTickets;
-	private JPanel panel,buttonPanel,kreispanel;
+	private JPanel buttonPanel,kreispanel;
 	private JButton buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, 
 	button1, button2, button3, button4, button5, button6, button7, button8, button9, button10,
 	button11, button12, button13, button14, button15, button16, button17, button18, button19, button20,
@@ -586,16 +585,21 @@ public class GUI extends JFrame implements ActionListener{
 	class OvalComponent extends JComponent {
 
 		public void paintComponent(Graphics g) {
-			for(int i=0;i<5;i++){
-				for(int j=0;j<10;j++){
+			for(int x=0;x<5;x++){
+				for(int y=0;y<10;y++){
 					g.setColor(Color.RED);
-					g.fillRect(120*i, 100*j, 60, 60);
+					g.fillRect(120*x, 100*y, 60, 60);
 					g.setColor(Color.BLUE);
-					g.fillOval(120*i, 100*j, 60, 60);
+					g.fillOval(120*x, 100*y, 60, 60);
+				}
+			}
 		}
 	}
+<<<<<<< HEAD
 		}
 	}
+=======
+>>>>>>> 87ffd4e77cf9790c60a04c7ad490d3a65ff956b0
 
 
 
