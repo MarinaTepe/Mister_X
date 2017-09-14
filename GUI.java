@@ -39,7 +39,7 @@ public class GUI extends JFrame implements ActionListener{
 	public static int a;
 	public static int b;
 	public static int c;
-	
+	public static Color d;
 	
 
 	/**
@@ -60,7 +60,7 @@ public class GUI extends JFrame implements ActionListener{
 
 	
 	public GUI() {
-		a=0;b=0;c=0;
+		a=0;b=0;c=0;d= Color.black;
 		
 		
 		//bildschirmanpassung
@@ -590,6 +590,7 @@ public class GUI extends JFrame implements ActionListener{
 		public static int geta() {return a;}
 		public static int getb() {return b;}
 		public static int getc() {return c;}
+		public static Color getd() {return d;}
 	}
 		
 
@@ -598,14 +599,15 @@ public class GUI extends JFrame implements ActionListener{
 //kreise malen
 	class OvalComponent extends JComponent {
 		
-		int aa=GUI.geta();
+		int aa=GUI.geta();// spieler schwarz
 		int bb=GUI.getb();
 		int cc=GUI.getc();
+		Color dd = GUI.getd();
 		
 		public void paintComponent(Graphics g) {
 			g.setColor(Color.green);
 			g.fillRect(0, 0, 1000, 1000);
-			g.setColor(Color.black);
+			g.setColor(dd);
 			g.fillOval(bb-(aa/8), cc-(aa/3+aa/12), aa, aa);
 			
 			for(int x=1;x<6;x++){
