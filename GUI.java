@@ -139,34 +139,25 @@ public class GUI extends JFrame implements ActionListener{
 	
 		
 		// Ticket stack
+	
+		//Verfügbare Tickets generieren
+		int counterField1 = 8;
+		int counterField2 = 11;
+		int counterField3 = 4;
+		int counterField4= 4;
+		int counterField5= 2; 
 		
-		//Array mit verfügbaren Tickets füllen
-		       int [] Bustickets = new int[8];
-		       for (i=1; i<Bustickets.length; i++) { 
-		         }
-		       int [] Taxitickets = new int[11];
-		       for (j=1; j<Taxitickets.length; j++) { 
-		         }
-		       int [] Ubahntickets = new int[4];
-		       for (k=1; k<Ubahntickets.length; k++) { 
-		         }
-		       int [] Blacktickets = new int[5];
-		       for (l=1; l<Blacktickets.length; l++) { 
-		         }
-		       int [] Zweimaltickets = new int[2];
-		       for (m=1; m<Zweimaltickets.length; m++) { 
-		         }
-		
+				
 		txtpnVerfgbareTickets = new JTextPane();
 		txtpnVerfgbareTickets.setEditable(false);
 		txtpnVerfgbareTickets.setText("Verf\u00FCgbare Tickets:\r\n\t"
-				+ "\tBus\t"+(i)
-				+ "\tTaxi\t"+(j)
-				+ "\tU-Bahn\t"+(k)
+				+ "\tBus\t"+(counterField1)
+				+ "\tTaxi\t"+(counterField2)
+				+ "\tU-Bahn\t"+(counterField3)
 				+ "\n\r\n\r"
 				+ "\nMister X:\r\n\t"
-				+ "\tBlack-Tickets\t"+(l)
-				+ "\tZweimal\t"+(m));
+				+ "\tBlack-Tickets\t"+(counterField4)
+				+ "\tZweimal\t"+(counterField5));
 		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		splitPane_1.setDividerLocation(splitPane.getSize().height/2);
 		
@@ -404,14 +395,17 @@ public class GUI extends JFrame implements ActionListener{
 		
 		/*panel = new JPanel();
 		splitPane.setLeftComponent(panel);
-		setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{scrollPane, splitPane_1, table, contentPane, splitPane}));*/
-	}		
+	    setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{scrollPane, splitPane_1, table, contentPane, splitPane}));*/
+		}		
 
 		//auslöser für die knöpfe
-		public void actionPerformed (ActionEvent ae){
+	
+		public void actionPerformed (ActionEvent ae) {
 	        // Die Quelle wird mit getSource() abgefragt und mit den
 	        // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
 	        // der Buttons ist, wird der Text des JLabels entsprechend geändert
+			int counterField1;								
+			
 	        if(ae.getSource() == this.button1){
 	            System.out.println("Button 1 wurde betätigt");}
 	        
@@ -565,7 +559,7 @@ public class GUI extends JFrame implements ActionListener{
 	        
 	        
 			        else if(ae.getSource() == this.buttonbus){
-		        		System.out.println("Button Bus wurde betätigt");}
+			        	counterField1--  ;}
 		        
 		        else if(ae.getSource() == this.buttontaxi){
 		        	System.out.println("Button Taxi wurde betätigt");}
@@ -600,8 +594,8 @@ public class GUI extends JFrame implements ActionListener{
 					g.fillOval(120*i, 100*j, 60, 60);
 		}
 	}
-}
-}
+		}
+	}
 
 
 
