@@ -19,8 +19,11 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.JTextComponent;
 
+
+
 public class GUI extends JFrame implements ActionListener{
 
+	public JSplitPane splitPane;
 	private JPanel contentPane;
 	private JScrollPane scrollPane;
 	private JTable table;
@@ -33,6 +36,10 @@ public class GUI extends JFrame implements ActionListener{
 	button31, button32, button33, button34, button35, button36, button37, button38, button39, button40,
 	button41, button42, button43, button44, button45, button46, button47, button48, button49, button50;
 	private int i, j, k, l, m;
+	public static int a;
+	public static int b;
+	public static int c;
+	
 	
 
 	/**
@@ -53,6 +60,8 @@ public class GUI extends JFrame implements ActionListener{
 
 	
 	public GUI() {
+		a=0;b=0;c=0;
+		
 		
 		//bildschirmanpassung
 		int hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
@@ -71,7 +80,7 @@ public class GUI extends JFrame implements ActionListener{
 		contentPane.setLayout(null);
 		
 		//spielfeld
-		JSplitPane splitPane = new JSplitPane();
+		splitPane = new JSplitPane();
 		//kreispanel=new JPanel();
 		//kreispanel.add(new OvalComponent());
 		splitPane.setBounds(0, 0, breite, hoehe);
@@ -406,7 +415,9 @@ public class GUI extends JFrame implements ActionListener{
 								
 			
 	        if(ae.getSource() == this.button1){
-	            System.out.println("Button 1 wurde betätigt");}
+	        	a=80;b=100;c=100;
+	        	splitPane.setLeftComponent(new OvalComponent());
+	        	splitPane.setDividerLocation(splitPane.getSize().width/2);}
 	        
 	        else if(ae.getSource() == this.button2){
 	        	System.out.println("Button 2 wurde betätigt");}
@@ -576,6 +587,9 @@ public class GUI extends JFrame implements ActionListener{
 		        
 	        
 		}
+		public static int geta() {return a;}
+		public static int getb() {return b;}
+		public static int getc() {return c;}
 	}
 		
 
@@ -583,13 +597,19 @@ public class GUI extends JFrame implements ActionListener{
 
 //kreise malen
 	class OvalComponent extends JComponent {
-
+		
+		int aa=GUI.geta();
+		int bb=GUI.getb();
+		int cc=GUI.getc();
+		
 		public void paintComponent(Graphics g) {
 			g.setColor(Color.green);
 			g.fillRect(0, 0, 1000, 1000);
+			g.setColor(Color.black);
+			g.fillOval(bb-(aa/8), cc-(aa/3+aa/12), aa, aa);
 			
-			for(int x=0;x<5;x++){
-				for(int y=0;y<10;y++){
+			for(int x=1;x<6;x++){
+				for(int y=1;y<11;y++){
 					g.setColor(Color.gray);
 					g.fillRect(100*x, 80*y, 60, 60);
 					g.setColor(Color.BLUE);
