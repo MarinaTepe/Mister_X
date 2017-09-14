@@ -72,12 +72,12 @@ public class GUI extends JFrame implements ActionListener{
 		
 		//spielfeld
 		JSplitPane splitPane = new JSplitPane();
-		kreispanel=new JPanel();
-		kreispanel.add(new OvalComponent());
+		//kreispanel=new JPanel();
+		//kreispanel.add(new OvalComponent());
 		splitPane.setBounds(0, 0, breite, hoehe);
 		splitPane.setDividerLocation(splitPane.getSize().width/2);
 		contentPane.add(splitPane);
-		splitPane.setLeftComponent(kreispanel);
+		splitPane.setLeftComponent(new OvalComponent());
 	
 		JSplitPane splitPane_1 = new JSplitPane();
 		splitPane_1.setOrientation(JSplitPane.VERTICAL_SPLIT);
@@ -586,18 +586,14 @@ public class GUI extends JFrame implements ActionListener{
 
 		public void paintComponent(Graphics g) {
 			
-			g.setColor(Color.RED);
-			g.fillRect(120, 100, 60, 60);
-			g.setColor(Color.BLUE);
-			g.fillOval(120, 100, 60, 60);
-			/**for(int x=0;x<5;x++){
+			for(int x=0;x<5;x++){
 				for(int y=0;y<10;y++){
 					g.setColor(Color.RED);
 					g.fillRect(120*x, 100*y, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(120*x, 100*y, 60, 60);
 				}
-			}**/
+			}
 		}
 	}
 
