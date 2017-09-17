@@ -66,6 +66,7 @@ public class GUI extends JFrame implements ActionListener{
 
 	
 	public GUI() {
+		Color taxi =new Color(150,150,150);
 		a=0;b=0;c=0;d= Color.black;
 		
 		
@@ -186,7 +187,7 @@ public class GUI extends JFrame implements ActionListener{
 		
 		buttontaxi = new JButton("Taxi");
 		buttontaxi.addActionListener(this);
-		buttontaxi.setBackground(Color.gray);
+		buttontaxi.setBackground(taxi);
 		buttonPanel.add(buttontaxi);
 		
 		buttonbahn = new JButton("U-Bahn");
@@ -623,7 +624,9 @@ public class GUI extends JFrame implements ActionListener{
 		public void paintComponent(Graphics g) {
 			Color gruen =new Color(102,205,0);
 			Color fluss =new Color(30,144,255);
-			int[] xpoints= {440,520,480,410,280,80,0,0,110,340,460,540,580,560};
+			Color taxi =new Color(150,150,150);
+			
+			int[] xpoints= {440,500,480,410,280,80,0,0,110,340,460,560,580,560};
 			int[] ypoints= {0,140,220,330,450,510,560,760,640,570,400,220,90,0};
 			g.setColor(gruen);
 			g.fillRect(0, 0, 1000, 1000);
@@ -632,7 +635,7 @@ public class GUI extends JFrame implements ActionListener{
 			
 			g.setColor(dd);
 			g.fillOval((aa-10), (ab-10), ac, ac);
-			g.setColor(Color.gray);
+			g.setColor(taxi);
 			//g.fillRect(130,110,80,20);
 			//g.setStroke();
 			//g.drawLine(0, 0, 100, 100);
@@ -678,7 +681,7 @@ public class GUI extends JFrame implements ActionListener{
 						g2.draw(new Line2D.Double(367, 337, 437, 227));
 						g2.draw(new Line2D.Double(187, 287, 137, 117));
 						
-						g2.setColor(Color.gray);								//Taxi
+						g2.setColor(taxi);								//Taxi
 						g2.draw(new Line2D.Double(130, 110, 280, 130));
 						g2.draw(new Line2D.Double(330, 30, 280, 130));
 						g2.draw(new Line2D.Double(330, 30, 470, 140));
@@ -717,7 +720,7 @@ public class GUI extends JFrame implements ActionListener{
 						g2.draw(new Line2D.Double(690, 870, 930, 880));
 						g2.draw(new Line2D.Double(780, 780, 930, 880));
 			
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(100, 80, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(100, 80, 60, 60);
@@ -727,7 +730,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setFont(new Font("Serif", Font.PLAIN, 30));
 					g.drawString("1", 125, 120);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(250, 100, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(250, 100, 60, 60);
@@ -737,7 +740,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setFont(new Font("Serif", Font.PLAIN, 30));
 					g.drawString("2", 275, 140);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(300, 00, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(300, 00, 60, 60);
@@ -746,7 +749,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("3", 325, 40);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(440, 110, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(440, 110, 60, 60);
@@ -755,7 +758,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("4", 465, 150);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(600, 90, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(600, 90, 60, 60);
@@ -764,7 +767,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("5", 625, 130);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(900, 30, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(900, 30, 60, 60);
@@ -773,7 +776,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("6", 925, 70);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(400, 190, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(400, 190, 60, 60);
@@ -782,7 +785,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("7", 425, 230);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(540, 220, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(540, 220, 60, 60);
@@ -791,7 +794,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("8", 565, 260);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(760, 180, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(760, 180, 60, 60);
@@ -800,7 +803,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("9", 780, 220);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(150, 250, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(150, 250, 60, 60);
@@ -809,7 +812,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("10", 165, 290);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(330, 300, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(330, 300, 60, 60);
@@ -818,7 +821,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("11", 345, 340);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(200, 400, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(200, 400, 60, 60);
@@ -827,7 +830,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("12", 215, 440);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(500, 370, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(500, 370, 60, 60);
@@ -836,7 +839,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("13", 515, 410);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(800, 420, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(800, 420, 60, 60);
@@ -845,7 +848,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("14", 815, 460);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(00, 470, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(00, 470, 60, 60);
@@ -854,7 +857,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("15", 15, 510);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(380, 550, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(380, 550, 60, 60);
@@ -863,7 +866,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("16", 395, 590);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(600, 500, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(600, 500, 60, 60);
@@ -872,7 +875,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("17", 615, 540);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(150, 630, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(150, 630, 60, 60);
@@ -881,7 +884,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("18", 165, 670);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(580, 600, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(580, 600, 60, 60);
@@ -890,7 +893,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("19", 595, 640);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(50, 800, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(50, 800, 60, 60);
@@ -899,7 +902,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("20", 65, 840);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(300, 770, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(300, 770, 60, 60);
@@ -908,7 +911,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("21", 315, 810);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(750, 750, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(750, 750, 60, 60);
@@ -917,7 +920,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("22", 765, 790);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(430, 900, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(430, 900, 60, 60);
@@ -926,7 +929,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("23", 445, 940);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(660, 840, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(660, 840, 60, 60);
@@ -935,7 +938,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("24", 675, 880);
 					
-					g.setColor(Color.gray);
+					g.setColor(taxi);
 					g.fillRect(900, 850, 60, 60);
 					//g.setColor(Color.BLUE);
 					//g.fillOval(900, 850, 60, 60);
