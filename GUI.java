@@ -43,6 +43,8 @@ public class GUI extends JFrame implements ActionListener{
 	public static int a;
 	public static int b;
 	public static int c;
+	public static int hoehe;
+	public static int breite;
 	public static Color d;
 	
 
@@ -68,8 +70,8 @@ public class GUI extends JFrame implements ActionListener{
 		
 		
 		//bildschirmanpassung
-		int hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
-		int breite=Toolkit.getDefaultToolkit().getScreenSize().width;
+		hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
+		breite=Toolkit.getDefaultToolkit().getScreenSize().width;
 		
 		/**
 	 * Create the frame.
@@ -179,22 +181,28 @@ public class GUI extends JFrame implements ActionListener{
 		
 		buttonbus = new JButton("Bus");
 		buttonbus.addActionListener(this);
+		buttonbus.setBackground(Color.blue);
 		buttonPanel.add(buttonbus);
 		
 		buttontaxi = new JButton("Taxi");
 		buttontaxi.addActionListener(this);
+		buttontaxi.setBackground(Color.gray);
 		buttonPanel.add(buttontaxi);
 		
 		buttonbahn = new JButton("U-Bahn");
 		buttonbahn.addActionListener(this);
+		buttonbahn.setBackground(Color.red);
 		buttonPanel.add(buttonbahn);
 		
 		buttonblack = new JButton("Black");
 		buttonblack.addActionListener(this);
+		buttonblack.setBackground(Color.BLACK);
+		buttonblack.setForeground(Color.GRAY);
 		buttonPanel.add(buttonblack);
 		
 		button2x = new JButton("Zweimal");
 		button2x.addActionListener(this);
+		button2x.setBackground(Color.orange);
 		buttonPanel.add(button2x);
 		
 
@@ -419,7 +427,7 @@ public class GUI extends JFrame implements ActionListener{
 								
 			
 	        if(ae.getSource() == this.button1){
-	        	a=80;b=100;c=100;
+	        	a=100;b=80;c=80;
 	        	splitPane.setLeftComponent(new OvalComponent());
 	        	splitPane.setDividerLocation(splitPane.getSize().width/2);}
 	        
@@ -591,35 +599,116 @@ public class GUI extends JFrame implements ActionListener{
 		        
 	        
 		}
-		public static int geta() {return a;}
-		public static int getb() {return b;}
+		public static int geta() {return a;}//xachse
+		public static int getb() {return b;}//yachse
 		public static int getc() {return c;}
-		public static Color getd() {return d;}
-	}
+		public static Color getd() {return d;}//spielerfarbe
 		
+		public static int gethoehe() {return hoehe;}
+		public static int getbreite() {return breite;}
+	}
 
-	
+
+
 
 //kreise malen
 	class OvalComponent extends JComponent {
 		
 		int aa=GUI.geta();// spieler schwarz
-		int bb=GUI.getb();
-		int cc=GUI.getc();
+		int ab=GUI.getb();
+		int ac=GUI.getc();
+		int ob=GUI.getbreite()/2;
 		Color dd = GUI.getd();
 		
 		public void paintComponent(Graphics g) {
 			g.setColor(Color.green);
 			g.fillRect(0, 0, 1000, 1000);
 			g.setColor(dd);
-			g.fillOval(bb-(aa/8), cc-(aa/3+aa/12), aa, aa);
+			g.fillOval((aa-10), (ab-10), ac, ac);
 			g.setColor(Color.gray);
 			//g.fillRect(130,110,80,20);
 			//g.setStroke();
 			//g.drawLine(0, 0, 100, 100);
 			g.setFont(new Font("Serif", Font.PLAIN, 30));
 			
-			
+						Graphics2D g2 = (Graphics2D)g;
+						g2.setStroke(new BasicStroke(7));
+						
+						g2.setColor(Color.red);									//Ubahn
+						g2.draw(new Line2D.Double(123, 103, 23, 493));
+						g2.draw(new Line2D.Double(123, 103, 463, 133));
+						g2.draw(new Line2D.Double(623, 113, 463, 133));
+						g2.draw(new Line2D.Double(623, 113, 823, 443));
+						g2.draw(new Line2D.Double(403, 573, 823, 443));
+						g2.draw(new Line2D.Double(415, 573, 235, 423));
+						g2.draw(new Line2D.Double(23, 493, 223, 423));
+						g2.draw(new Line2D.Double(630, 120, 410, 580));
+						g2.draw(new Line2D.Double(410, 580, 460, 930));
+						
+						g2.setColor(Color.blue);									//bus
+						g2.draw(new Line2D.Double(137, 117, 287, 137));
+						g2.draw(new Line2D.Double(477, 147, 287, 137));
+						g2.draw(new Line2D.Double(437, 235, 287, 145));
+						g2.draw(new Line2D.Double(477, 147, 437, 230));
+						g2.draw(new Line2D.Double(477, 147, 637, 127));
+						g2.draw(new Line2D.Double(937, 67, 637, 127));
+						g2.draw(new Line2D.Double(937, 67, 797, 217));
+						g2.draw(new Line2D.Double(840, 457, 800, 217));
+						g2.draw(new Line2D.Double(577, 257, 797, 217));
+						g2.draw(new Line2D.Double(577, 257, 830, 450));
+						g2.draw(new Line2D.Double(780, 780, 837, 457));
+						g2.draw(new Line2D.Double(787, 787, 697, 877));
+						g2.draw(new Line2D.Double(467, 937, 697, 877));
+						g2.draw(new Line2D.Double(477, 937, 347, 807));
+						g2.draw(new Line2D.Double(417, 587, 337, 807));
+						g2.draw(new Line2D.Double(417, 590, 617, 640));
+						g2.draw(new Line2D.Double(787, 797, 617, 647));
+						g2.draw(new Line2D.Double(417, 587, 537, 407));
+						g2.draw(new Line2D.Double(577, 257, 537, 407));
+						g2.draw(new Line2D.Double(417, 597, 237, 447));
+						g2.draw(new Line2D.Double(193, 287, 243, 437));
+						g2.draw(new Line2D.Double(367, 337, 237, 437));
+						g2.draw(new Line2D.Double(367, 337, 437, 227));
+						g2.draw(new Line2D.Double(187, 287, 137, 117));
+						
+						g2.setColor(Color.gray);								//Taxi
+						g2.draw(new Line2D.Double(130, 110, 280, 130));
+						g2.draw(new Line2D.Double(330, 30, 280, 130));
+						g2.draw(new Line2D.Double(330, 30, 470, 140));
+						g2.draw(new Line2D.Double(630, 120, 470, 140));
+						g2.draw(new Line2D.Double(630, 120, 930, 60));
+						g2.draw(new Line2D.Double(930, 60, 790, 210));
+						g2.draw(new Line2D.Double(790, 210, 630, 120));
+						g2.draw(new Line2D.Double(790, 210, 570, 250));
+						g2.draw(new Line2D.Double(790, 210, 830, 450));
+						g2.draw(new Line2D.Double(130, 110, 330, 30));
+						g2.draw(new Line2D.Double(430, 220, 280, 130));
+						g2.draw(new Line2D.Double(180, 280, 280, 130));
+						g2.draw(new Line2D.Double(230, 430, 410, 580));
+						g2.draw(new Line2D.Double(180, 280, 360, 330));
+						g2.draw(new Line2D.Double(180, 280, 230, 430));
+						g2.draw(new Line2D.Double(430, 220, 360, 330));
+						g2.draw(new Line2D.Double(230, 430, 360, 330));
+						g2.draw(new Line2D.Double(230, 430, 30, 500));
+						g2.draw(new Line2D.Double(180, 280, 30, 500));
+						g2.draw(new Line2D.Double(570, 250, 530, 400));
+						g2.draw(new Line2D.Double(410, 580, 530, 400));
+						g2.draw(new Line2D.Double(410, 580, 630, 530));
+						g2.draw(new Line2D.Double(630, 530, 530, 400));
+						g2.draw(new Line2D.Double(630, 530, 830, 450));
+						g2.draw(new Line2D.Double(630, 530, 610, 630));
+						g2.draw(new Line2D.Double(410, 580, 610, 630));
+						g2.draw(new Line2D.Double(410, 580, 180, 660));
+						g2.draw(new Line2D.Double(410, 580, 330, 800));
+						g2.draw(new Line2D.Double(180, 660, 330, 800));
+						g2.draw(new Line2D.Double(80, 830, 330, 800));
+						g2.draw(new Line2D.Double(80, 830, 180, 660));
+						g2.draw(new Line2D.Double(460, 930, 330, 800));
+						g2.draw(new Line2D.Double(610, 630, 780, 780));
+						g2.draw(new Line2D.Double(690, 870, 780, 780));
+						g2.draw(new Line2D.Double(690, 870, 460, 930));
+						g2.draw(new Line2D.Double(690, 870, 930, 880));
+						g2.draw(new Line2D.Double(780, 780, 930, 880));
 			
 					g.setColor(Color.gray);
 					g.fillRect(100, 80, 60, 60);
@@ -633,20 +722,20 @@ public class GUI extends JFrame implements ActionListener{
 					
 					g.setColor(Color.gray);
 					g.fillRect(250, 100, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(250, 100, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(250+15, 100+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(250, 100, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(250+15, 100+15, 30, 30);
 					g.setColor(Color.black);
 					//g.setFont(new Font("Serif", Font.PLAIN, 30));
 					g.drawString("2", 275, 140);
 					
 					g.setColor(Color.gray);
 					g.fillRect(300, 00, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(300, 00, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(300+15, 00+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(300, 00, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(300+15, 00+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("3", 325, 40);
 					
@@ -654,15 +743,15 @@ public class GUI extends JFrame implements ActionListener{
 					g.fillRect(440, 110, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(440, 110, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(440+15, 110+15, 30, 30);
+					//g.setColor(Color.red);
+					//g.fillOval(440+15, 110+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("4", 465, 150);
 					
 					g.setColor(Color.gray);
 					g.fillRect(600, 90, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(600, 90, 60, 60);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(600, 90, 60, 60);
 					g.setColor(Color.red);
 					g.fillOval(600+15, 90+15, 30, 30);
 					g.setColor(Color.black);
@@ -672,8 +761,8 @@ public class GUI extends JFrame implements ActionListener{
 					g.fillRect(900, 30, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(900, 30, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(900+15, 30+15, 30, 30);
+					//g.setColor(Color.red);
+					//g.fillOval(900+15, 30+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("6", 925, 70);
 					
@@ -681,8 +770,8 @@ public class GUI extends JFrame implements ActionListener{
 					g.fillRect(400, 190, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(400, 190, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(400+15, 190+15, 30, 30);
+					//g.setColor(Color.red);
+					//g.fillOval(400+15, 190+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("7", 425, 230);
 					
@@ -690,35 +779,35 @@ public class GUI extends JFrame implements ActionListener{
 					g.fillRect(540, 220, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(540, 220, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(540+15, 220+15, 30, 30);
+					//g.setColor(Color.red);
+					//g.fillOval(540+15, 220+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("8", 565, 260);
 					
 					g.setColor(Color.gray);
 					g.fillRect(760, 180, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(760, 180, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(760+15, 180+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(760, 180, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(760+15, 180+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("9", 780, 220);
 					
 					g.setColor(Color.gray);
 					g.fillRect(150, 250, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(150, 250, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(150+15, 250+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(150, 250, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(150+15, 250+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("10", 165, 290);
 					
 					g.setColor(Color.gray);
 					g.fillRect(330, 300, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(330, 300, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(330+15, 300+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(330, 300, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(330+15, 300+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("11", 345, 340);
 					
@@ -726,17 +815,17 @@ public class GUI extends JFrame implements ActionListener{
 					g.fillRect(200, 400, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(200, 400, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(200+15, 400+15, 30, 30);
+					//g.setColor(Color.red);
+					//g.fillOval(200+15, 400+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("12", 215, 440);
 					
 					g.setColor(Color.gray);
 					g.fillRect(500, 370, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(500, 370, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(500+15, 370+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(500, 370, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(500+15, 370+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("13", 515, 410);
 					
@@ -751,8 +840,8 @@ public class GUI extends JFrame implements ActionListener{
 					
 					g.setColor(Color.gray);
 					g.fillRect(00, 470, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(00, 470, 60, 60);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(00, 470, 60, 60);
 					g.setColor(Color.red);
 					g.fillOval(00+15, 470+15, 30, 30);
 					g.setColor(Color.black);
@@ -769,37 +858,37 @@ public class GUI extends JFrame implements ActionListener{
 					
 					g.setColor(Color.gray);
 					g.fillRect(600, 500, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(600, 500, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(600+15, 500+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(600, 500, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(600+15, 500+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("17", 615, 540);
 					
 					g.setColor(Color.gray);
 					g.fillRect(150, 630, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(150, 630, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(150+15, 630+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(150, 630, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(150+15, 630+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("18", 165, 670);
 					
 					g.setColor(Color.gray);
 					g.fillRect(580, 600, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(580, 600, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(580+15, 600+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(580, 600, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(580+15, 600+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("19", 595, 640);
 					
 					g.setColor(Color.gray);
 					g.fillRect(50, 800, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(50, 800, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(50+15, 800+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(50, 800, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(50+15, 800+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("20", 65, 840);
 					
@@ -807,8 +896,8 @@ public class GUI extends JFrame implements ActionListener{
 					g.fillRect(300, 770, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(300, 770, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(300+15, 770+15, 30, 30);
+					//g.setColor(Color.red);
+					//g.fillOval(300+15, 770+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("21", 315, 810);
 					
@@ -816,15 +905,15 @@ public class GUI extends JFrame implements ActionListener{
 					g.fillRect(750, 750, 60, 60);
 					g.setColor(Color.BLUE);
 					g.fillOval(750, 750, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(750+15, 750+15, 30, 30);
+					//g.setColor(Color.red);
+					//g.fillOval(750+15, 750+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("22", 765, 790);
 					
 					g.setColor(Color.gray);
 					g.fillRect(430, 900, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(430, 900, 60, 60);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(430, 900, 60, 60);
 					g.setColor(Color.red);
 					g.fillOval(430+15, 900+15, 30, 30);
 					g.setColor(Color.black);
@@ -832,25 +921,23 @@ public class GUI extends JFrame implements ActionListener{
 					
 					g.setColor(Color.gray);
 					g.fillRect(660, 840, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(660, 840, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(660+15, 840+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(660, 840, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(660+15, 840+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("24", 675, 880);
 					
 					g.setColor(Color.gray);
 					g.fillRect(900, 850, 60, 60);
-					g.setColor(Color.BLUE);
-					g.fillOval(900, 850, 60, 60);
-					g.setColor(Color.red);
-					g.fillOval(900+15, 850+15, 30, 30);
+					//g.setColor(Color.BLUE);
+					//g.fillOval(900, 850, 60, 60);
+					//g.setColor(Color.red);
+					//g.fillOval(900+15, 850+15, 30, 30);
 					g.setColor(Color.black);
 					g.drawString("25", 915, 890);				
 					
-					Graphics2D g2 = (Graphics2D)g;
-					g2.setStroke(new BasicStroke(7));
-			        g2.draw(new Line2D.Double(10, 10, 100, 2));
+					
 					
 				
 			
