@@ -621,8 +621,15 @@ public class GUI extends JFrame implements ActionListener{
 		Color dd = GUI.getd();
 		
 		public void paintComponent(Graphics g) {
-			g.setColor(Color.green);
+			Color gruen =new Color(102,205,0);
+			Color fluss =new Color(30,144,255);
+			int[] xpoints= {440,520,480,410,280,80,0,0,110,340,460,540,580,560};
+			int[] ypoints= {0,140,220,330,450,510,560,760,640,570,400,220,90,0};
+			g.setColor(gruen);
 			g.fillRect(0, 0, 1000, 1000);
+			g.setColor(fluss);
+			g.fillPolygon(xpoints , ypoints, 14);
+			
 			g.setColor(dd);
 			g.fillOval((aa-10), (ab-10), ac, ac);
 			g.setColor(Color.gray);
