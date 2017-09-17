@@ -1,10 +1,14 @@
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.geom.Line2D;
 
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -171,7 +175,7 @@ public class GUI extends JFrame implements ActionListener{
 		
 		//Aktionsfeld
 		buttonPanel = new JPanel();
-		buttonPanel.setLayout(new GridLayout(11,2,0,0));
+		buttonPanel.setLayout(new GridLayout(6,2,0,0));
 		
 		buttonbus = new JButton("Bus");
 		buttonbus.addActionListener(this);
@@ -294,7 +298,7 @@ public class GUI extends JFrame implements ActionListener{
 		button25.addActionListener(this);
 		buttonPanel.add(button25);
 		
-		button26 = new JButton("26");
+		/**button26 = new JButton("26");
 		button26.addActionListener(this);
 		buttonPanel.add(button26);
 		
@@ -392,7 +396,7 @@ public class GUI extends JFrame implements ActionListener{
 		
 		button50 = new JButton("50");
 		button50.addActionListener(this);
-		buttonPanel.add(button50);
+		buttonPanel.add(button50);**/
 		
 		
 		
@@ -488,7 +492,7 @@ public class GUI extends JFrame implements ActionListener{
 	        else if(ae.getSource() == this.button24){
 	            System.out.println("Button 24 wurde betätigt");}
 	        
-	        else if(ae.getSource() == this.button25){
+	        /**else if(ae.getSource() == this.button25){
 	        	System.out.println("Button 25 wurde betätigt");}
 	       
 	        else if (ae.getSource() == this.button26){
@@ -564,7 +568,7 @@ public class GUI extends JFrame implements ActionListener{
 	        	System.out.println("Button 49 wurde betätigt");}
 	        
 	        else if (ae.getSource() == this.button50){
-	        	System.out.println("Button 50 wurde betätigt");}
+	        	System.out.println("Button 50 wurde betätigt");}**/
 	        
 	        
 	        
@@ -609,17 +613,247 @@ public class GUI extends JFrame implements ActionListener{
 			g.fillRect(0, 0, 1000, 1000);
 			g.setColor(dd);
 			g.fillOval(bb-(aa/8), cc-(aa/3+aa/12), aa, aa);
+			g.setColor(Color.gray);
+			//g.fillRect(130,110,80,20);
+			//g.setStroke();
+			//g.drawLine(0, 0, 100, 100);
+			g.setFont(new Font("Serif", Font.PLAIN, 30));
 			
-			for(int x=1;x<6;x++){
-				for(int y=1;y<11;y++){
+			
+			
 					g.setColor(Color.gray);
-					g.fillRect(100*x, 80*y, 60, 60);
+					g.fillRect(100, 80, 60, 60);
 					g.setColor(Color.BLUE);
-					g.fillOval(100*x, 80*y, 60, 60);
+					g.fillOval(100, 80, 60, 60);
 					g.setColor(Color.red);
-					g.fillOval(100*x+15, 80*y+15, 30, 30);
-				}
-			}
+					g.fillOval(100+15, 80+15, 30, 30);
+					g.setColor(Color.black);
+					//g.setFont(new Font("Serif", Font.PLAIN, 30));
+					g.drawString("1", 125, 120);
+					
+					g.setColor(Color.gray);
+					g.fillRect(250, 100, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(250, 100, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(250+15, 100+15, 30, 30);
+					g.setColor(Color.black);
+					//g.setFont(new Font("Serif", Font.PLAIN, 30));
+					g.drawString("2", 275, 140);
+					
+					g.setColor(Color.gray);
+					g.fillRect(300, 00, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(300, 00, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(300+15, 00+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("3", 325, 40);
+					
+					g.setColor(Color.gray);
+					g.fillRect(440, 110, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(440, 110, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(440+15, 110+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("4", 465, 150);
+					
+					g.setColor(Color.gray);
+					g.fillRect(600, 90, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(600, 90, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(600+15, 90+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("5", 625, 130);
+					
+					g.setColor(Color.gray);
+					g.fillRect(900, 30, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(900, 30, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(900+15, 30+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("6", 925, 70);
+					
+					g.setColor(Color.gray);
+					g.fillRect(400, 190, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(400, 190, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(400+15, 190+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("7", 425, 230);
+					
+					g.setColor(Color.gray);
+					g.fillRect(540, 220, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(540, 220, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(540+15, 220+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("8", 565, 260);
+					
+					g.setColor(Color.gray);
+					g.fillRect(760, 180, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(760, 180, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(760+15, 180+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("9", 780, 220);
+					
+					g.setColor(Color.gray);
+					g.fillRect(150, 250, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(150, 250, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(150+15, 250+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("10", 165, 290);
+					
+					g.setColor(Color.gray);
+					g.fillRect(330, 300, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(330, 300, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(330+15, 300+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("11", 345, 340);
+					
+					g.setColor(Color.gray);
+					g.fillRect(200, 400, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(200, 400, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(200+15, 400+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("12", 215, 440);
+					
+					g.setColor(Color.gray);
+					g.fillRect(500, 370, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(500, 370, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(500+15, 370+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("13", 515, 410);
+					
+					g.setColor(Color.gray);
+					g.fillRect(800, 420, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(800, 420, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(800+15, 420+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("14", 815, 460);
+					
+					g.setColor(Color.gray);
+					g.fillRect(00, 470, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(00, 470, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(00+15, 470+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("15", 15, 510);
+					
+					g.setColor(Color.gray);
+					g.fillRect(380, 550, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(380, 550, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(380+15, 550+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("16", 395, 590);
+					
+					g.setColor(Color.gray);
+					g.fillRect(600, 500, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(600, 500, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(600+15, 500+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("17", 615, 540);
+					
+					g.setColor(Color.gray);
+					g.fillRect(150, 630, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(150, 630, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(150+15, 630+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("18", 165, 670);
+					
+					g.setColor(Color.gray);
+					g.fillRect(580, 600, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(580, 600, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(580+15, 600+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("19", 595, 640);
+					
+					g.setColor(Color.gray);
+					g.fillRect(50, 800, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(50, 800, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(50+15, 800+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("20", 65, 840);
+					
+					g.setColor(Color.gray);
+					g.fillRect(300, 770, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(300, 770, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(300+15, 770+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("21", 315, 810);
+					
+					g.setColor(Color.gray);
+					g.fillRect(750, 750, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(750, 750, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(750+15, 750+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("22", 765, 790);
+					
+					g.setColor(Color.gray);
+					g.fillRect(430, 900, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(430, 900, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(430+15, 900+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("23", 445, 940);
+					
+					g.setColor(Color.gray);
+					g.fillRect(660, 840, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(660, 840, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(660+15, 840+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("24", 675, 880);
+					
+					g.setColor(Color.gray);
+					g.fillRect(900, 850, 60, 60);
+					g.setColor(Color.BLUE);
+					g.fillOval(900, 850, 60, 60);
+					g.setColor(Color.red);
+					g.fillOval(900+15, 850+15, 30, 30);
+					g.setColor(Color.black);
+					g.drawString("25", 915, 890);				
+					
+					Graphics2D g2 = (Graphics2D)g;
+					g2.setStroke(new BasicStroke(7));
+			        g2.draw(new Line2D.Double(10, 10, 100, 2));
+					
+				
+			
 		}
 	}
 
