@@ -10,6 +10,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.geom.Line2D;
 
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
@@ -19,33 +21,56 @@ import javax.swing.JSplitPane;
 import javax.swing.JTable;
 import javax.swing.JTextPane;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.JTextComponent;
+import javax.swing.DropMode;
 
 
 
 public class GUI extends JFrame implements ActionListener{
 
+	
 	public JSplitPane splitPane;
 	private JPanel contentPane;
 	private JScrollPane scrollPane;
 	private JTable table;
 	private JTextPane txtpnVerfgbareTickets;
 	private JPanel buttonPanel,kreispanel;
-	private JButton buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, 
+	private JButton buttonspieler1, buttonspieler2, buttonspieler3, buttonspieler4, buttonmisterx, buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, 
 	button1, button2, button3, button4, button5, button6, button7, button8, button9, button10,
 	button11, button12, button13, button14, button15, button16, button17, button18, button19, button20,
 	button21, button22, button23, button24, button25, button26, button27, button28, button29, button30,
 	button31, button32, button33, button34, button35, button36, button37, button38, button39, button40,
 	button41, button42, button43, button44, button45, button46, button47, button48, button49, button50;
-	private int i, j, k, l, m;
+	
 	public static int a;
 	public static int b;
 	public static int c;
 	public static int hoehe;
 	public static int breite;
 	public static Color d;
+	public static int counterField1= 8;
+	public static int counterField2 = 11;
+	public static int counterField3 = 4;
+	public static int counterField4= 4;
+	public static int counterField5= 2; 
+	
+	public static int getCounterField1() {return counterField1;}
+	public static void setCounterField1(int counterField1) {GUI.counterField1 = counterField1;}
+	
+	public static int getCounterField2() {return counterField2;}
+	public static void setCounterField2(int counterField2) {GUI.counterField2 = counterField2;}
+	
+	public static int getCounterField3() {return counterField3;}
+	public static void setCounterField3(int counterField3) {GUI.counterField3 = counterField3;}
+	
+	public static int getCounterField4() {return counterField4;}
+	public static void setCounterField4(int counterField4) {GUI.counterField4 = counterField4;}
+	
+	public static int getCounterField5() {return counterField5;}
+	public static void setCounterField5(int counterField5) {GUI.counterField5 = counterField5;}
 	
 
 	/**
@@ -88,19 +113,19 @@ public class GUI extends JFrame implements ActionListener{
 		
 		//spielfeld
 		splitPane = new JSplitPane();
-		//kreispanel=new JPanel();
-		//kreispanel.add(new OvalComponent());
 		splitPane.setBounds(0, 0, breite, hoehe);
 		splitPane.setDividerLocation(splitPane.getSize().width/2);
 		contentPane.add(splitPane);
 		splitPane.setLeftComponent(new OvalComponent());
 	
 		JSplitPane splitPane_1 = new JSplitPane();
+		splitPane_1.setEnabled(false);
 		splitPane_1.setOrientation(JSplitPane.VERTICAL_SPLIT);
-		//splitPane_1.setDividerLocation(splitPane.getSize().height/4);
+		splitPane_1.setDividerLocation(313);
 		splitPane.setRightComponent(splitPane_1);
 		
 		scrollPane = new JScrollPane();
+		scrollPane.setViewportBorder(null);
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 		splitPane_1.setLeftComponent(scrollPane);
@@ -108,29 +133,38 @@ public class GUI extends JFrame implements ActionListener{
 		
 		//MR X spieltafel
 		table = new JTable();
+		table.setRowSelectionAllowed(false);
 		table.setShowVerticalLines(false);
 		table.setShowHorizontalLines(false);
 		table.setShowGrid(false);
-		table.setRowSelectionAllowed(false);
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
-				{new String("      Spieltafel"), new String ("von Mister X"), null, null, null, null},
-				{null, null, null, null, null, null},
-				{new Integer(1), null, new Integer(9), null, new Integer(17), null},
-				{new Integer(2), null, new Integer(10), null, "(18)", null},
-				{"(3)", null, new Integer(11), null, new Integer(19), null},
-				{new Integer(4), null, new Integer(12), null, new Integer(20), null},
-				{new Integer(5), null, "(13)", null, new Integer(21), null},
-				{new Integer(6), null, new Integer(14), null, new Integer(22), null},
-				{new Integer(7), null, new Integer (15), null, new Integer(23), null},
-				{"(8)", null, new Integer(16), null, "(24)", null}
+				{"   Spieltafel", "von Mister X", null, null, null, null, null, null, null},
+				{null, null, null, null, null, null, null, null, null},
+				{"Zug Nr.", "Verkehrsmittel", " Station", "Zug Nr.", "Verkehrsmittel", " Station", "Zug Nr.", "Verkehrsmittel", " Station"},
+				{null, null, null, null, null, null, null, null, null},
+				{new Integer(1), null, null, new Integer(9), null, null, new Integer(17), null, null},
+				{null, null, null, null, null, null, null, null, null},
+				{new Integer(2), null, null, new Integer(10), null, null, "(18)", null, null},
+				{null, null, null, null, null, null, null, null, null},
+				{"(3)", null, null, new Integer(11), null, null, new Integer(19), null, null},
+				{null, null, null, null, null, null, null, null, null},
+				{new Integer(4), null, null, new Integer(12), null, null, new Integer(20), null, null},
+				{null, null, null, null, null, null, null, null, null},
+				{new Integer(5), null, null, "(13)", null, null, new Integer(21), null, null},
+				{null, null, null, null, null, null, null, null, null},
+				{new Integer(6), null, null, new Integer(14), null, null, new Integer(22), null, null},
+				{null, null, null, null, null, null, null, null, null},
+				{new Integer(7), null, null, new Integer(15), null, null, new Integer(23), null, null},
+				{null, null, null, null, null, null, null, null, null},
+				{"(8)", null, null, new Integer(16), null, null, "(24)", null, null},
 			},
 			new String[] {
-				"", "", "", "", "", ""
+				"", "", "", "", "", "", "", "", ""
 			}
 		) {
 			boolean[] columnEditables = new boolean[] {
-				false, false, false, false, false, false
+				false, false, false, false, false, false, false, true, true
 			};
 			public boolean isCellEditable(int row, int column) {
 				return columnEditables[column];
@@ -138,47 +172,79 @@ public class GUI extends JFrame implements ActionListener{
 		});
 		table.getColumnModel().getColumn(0).setResizable(false);
 		table.getColumnModel().getColumn(0).setPreferredWidth(15);
-		table.getColumnModel().getColumn(0).setMinWidth(10);
+		table.getColumnModel().getColumn(0).setMinWidth(0);
 		table.getColumnModel().getColumn(1).setResizable(false);
+		table.getColumnModel().getColumn(1).setPreferredWidth(35);
 		table.getColumnModel().getColumn(2).setResizable(false);
 		table.getColumnModel().getColumn(2).setPreferredWidth(15);
 		table.getColumnModel().getColumn(3).setResizable(false);
+		table.getColumnModel().getColumn(3).setPreferredWidth(15);
+		table.getColumnModel().getColumn(3).setMinWidth(5);
 		table.getColumnModel().getColumn(4).setResizable(false);
-		table.getColumnModel().getColumn(4).setPreferredWidth(15);
+		table.getColumnModel().getColumn(4).setPreferredWidth(35);
 		table.getColumnModel().getColumn(5).setResizable(false);
+		table.getColumnModel().getColumn(5).setPreferredWidth(15);
+		table.getColumnModel().getColumn(6).setResizable(false);
+		table.getColumnModel().getColumn(6).setPreferredWidth(15);
+		table.getColumnModel().getColumn(7).setPreferredWidth(35);
+		table.getColumnModel().getColumn(8).setPreferredWidth(15);
 		scrollPane.setViewportView(table);
 		
 		JSplitPane splitPane_2 = new JSplitPane();
+		splitPane_2.setEnabled(false);
 		splitPane_2.setOrientation(JSplitPane.VERTICAL_SPLIT);
 		splitPane_1.setRightComponent(splitPane_2);
 	
 		
 		// Ticket stack
 	
-		//Verfügbare Tickets generieren
-		int counterField1 = 8;
-		int counterField2 = 11;
-		int counterField3 = 4;
-		int counterField4= 4;
-		int counterField5= 2; 
 		
+		
+		//Verfügbare Tickets generieren
 				
 		txtpnVerfgbareTickets = new JTextPane();
 		txtpnVerfgbareTickets.setEditable(false);
-		txtpnVerfgbareTickets.setText("Verf\u00FCgbare Tickets:\r\n\t"
-				+ "\tBus\t"+(counterField1)
-				+ "\tTaxi\t"+(counterField2)
-				+ "\tU-Bahn\t"+(counterField3)
-				+ "\n\r\n\r"
+		txtpnVerfgbareTickets.setText("\nVerf\u00FCgbare Tickets:\r\n\t"
+				+ "\tBus\t"+(getCounterField1())
+				+ "\tTaxi\t"+(getCounterField2())
+				+ "\tU-Bahn\t"+(getCounterField3())
+				+ "\n\r"
 				+ "\nMister X:\r\n\t"
-				+ "\tBlack-Tickets\t"+(counterField4)
-				+ "\tZweimal\t"+(counterField5));
+				+ "\tBlack-Tickets\t"+(getCounterField4())
+				+ "\tZweimal\t"+(getCounterField5())
+				+ "\n");
 		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
-		splitPane_1.setDividerLocation(splitPane.getSize().height/2);
+		//splitPane_1.setDividerLocation(splitPane.getSize().height/2);
 		
 		//Aktionsfeld
 		buttonPanel = new JPanel();
-		buttonPanel.setLayout(new GridLayout(6,2,0,0));
+		buttonPanel.setLayout(new GridLayout(7,2,0,0));
+		
+		final Icon icon1 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/s1.png");
+		final Icon icon2 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/s2.png");
+		final Icon icon3 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/s3.png");
+		final Icon icon4 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/s4.png");
+		final Icon iconx = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/x.png");
+		
+		buttonspieler1= new JButton(icon1);
+		buttonspieler1.addActionListener(this);
+		buttonPanel.add(buttonspieler1);
+		
+		buttonspieler2= new JButton(icon2);
+		buttonspieler2.addActionListener(this);
+		buttonPanel.add(buttonspieler2);
+		
+		buttonspieler3= new JButton(icon3);
+		buttonspieler3.addActionListener(this);
+		buttonPanel.add(buttonspieler3);
+				
+		buttonspieler4= new JButton(icon4);
+		buttonspieler4.addActionListener(this);
+		buttonPanel.add(buttonspieler4);
+		
+		buttonmisterx= new JButton(iconx);
+		buttonmisterx.addActionListener(this);
+		buttonPanel.add(buttonmisterx);
 		
 		buttonbus = new JButton("Bus");
 		buttonbus.addActionListener(this);
@@ -424,8 +490,8 @@ public class GUI extends JFrame implements ActionListener{
 		public void actionPerformed (ActionEvent ae) {
 	        // Die Quelle wird mit getSource() abgefragt und mit den
 	        // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
-	        // der Buttons ist, wird der Text des JLabels entsprechend geändert
-								
+	        // der Buttons ist, wird der Text des JLabels entsprechend geändert					
+			
 			
 	        if(ae.getSource() == this.button1){
 	        	a=100;b=80;c=80;
@@ -581,25 +647,29 @@ public class GUI extends JFrame implements ActionListener{
 	        
 	        
 	        
-			        else if(ae.getSource() == this.buttonbus){
-			        	System.out.println("Button Bus wurde betätigt");}
+			    else if(ae.getSource() == this.buttonbus){
+			    	setCounterField1(counterField1--);	
+			    	txtpnVerfgbareTickets.setVisible(false);
+			    	txtpnVerfgbareTickets.setVisible(true);}
 		        
 		        else if(ae.getSource() == this.buttontaxi){
-		        	System.out.println("Button Taxi wurde betätigt");}
+		        	setCounterField2(counterField2--);
+		        	SwingUtilities.updateComponentTreeUI(txtpnVerfgbareTickets);}
 		       
 		        else if (ae.getSource() == this.buttonbahn){
-		        	System.out.println("Button U-Bahn wurde betätigt");}
+		        	setCounterField3(counterField3--) ;}
 		        
 		        else if(ae.getSource() == this.buttonblack){
-		            System.out.println("Button Black wurde betätigt");}
+		        	setCounterField4(counterField4--) ;}
 		        
 		        else if(ae.getSource() == this.button2x){
-		        	System.out.println("Button 2X wurde betätigt");}
+		        	setCounterField5(counterField5--) ;}
 		       
 		       
 		        
 	        
 		}
+		
 		public static int geta() {return a;}//xachse
 		public static int getb() {return b;}//yachse
 		public static int getc() {return c;}
