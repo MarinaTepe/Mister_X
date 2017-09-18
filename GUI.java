@@ -51,26 +51,26 @@ public class GUI extends JFrame implements ActionListener{
 	public static int hoehe;
 	public static int breite;
 	public static Color d;
-	public static int counterField1= 8;
-	public static int counterField2 = 11;
-	public static int counterField3 = 4;
-	public static int counterField4= 4;
-	public static int counterField5= 2; 
+	public static int counterField1;
+	public static int counterField2;
+	public static int counterField3;
+	public static int counterField4;
+	public static int counterField5; 
 	
 	public static int getCounterField1() {return counterField1;}
-	public static void setCounterField1(int counterField1) {GUI.counterField1 = counterField1;}
+	public static void setCounterField1() {GUI.counterField1 = counterField1--;}
 	
 	public static int getCounterField2() {return counterField2;}
-	public static void setCounterField2(int counterField2) {GUI.counterField2 = counterField2;}
+	public static void setCounterField2() {GUI.counterField2 = counterField2--;}
 	
 	public static int getCounterField3() {return counterField3;}
-	public static void setCounterField3(int counterField3) {GUI.counterField3 = counterField3;}
+	public static void setCounterField3() {GUI.counterField3 = counterField3--;}
 	
 	public static int getCounterField4() {return counterField4;}
-	public static void setCounterField4(int counterField4) {GUI.counterField4 = counterField4;}
+	public static void setCounterField4() {GUI.counterField4 = counterField4--;}
 	
 	public static int getCounterField5() {return counterField5;}
-	public static void setCounterField5(int counterField5) {GUI.counterField5 = counterField5;}
+	public static void setCounterField5() {GUI.counterField5 = counterField5--;}
 	
 
 	/**
@@ -201,17 +201,22 @@ public class GUI extends JFrame implements ActionListener{
 		
 		
 		//Verfügbare Tickets generieren
-				
+		counterField1 = 8;		
+		counterField2 = 11;
+		counterField3 = 4;
+		counterField4 = 4;
+		counterField5 = 2;
+		
 		txtpnVerfgbareTickets = new JTextPane();
 		txtpnVerfgbareTickets.setEditable(false);
 		txtpnVerfgbareTickets.setText("\nVerf\u00FCgbare Tickets:\r\n\t"
-				+ "\tBus\t"+(getCounterField1())
-				+ "\tTaxi\t"+(getCounterField2())
-				+ "\tU-Bahn\t"+(getCounterField3())
+				+ "\tBus\t"+(counterField1)
+				+ "\tTaxi\t"+(counterField2)
+				+ "\tU-Bahn\t"+(counterField3)
 				+ "\n\r"
 				+ "\nMister X:\r\n\t"
-				+ "\tBlack-Tickets\t"+(getCounterField4())
-				+ "\tZweimal\t"+(getCounterField5())
+				+ "\tBlack-Tickets\t"+(counterField4)
+				+ "\tZweimal\t"+(counterField5)
 				+ "\n");
 		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		//splitPane_1.setDividerLocation(splitPane.getSize().height/2);
@@ -492,12 +497,168 @@ public class GUI extends JFrame implements ActionListener{
 	        // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
 	        // der Buttons ist, wird der Text des JLabels entsprechend geändert					
 			
+			if (ae.getSource() == this.buttonspieler1) {
+				buttonspieler1.setEnabled(false);}
 			
-	        if(ae.getSource() == this.button1){
-	        	a=100;b=80;c=80;
+			else if (ae.getSource() == this.buttonspieler2) {
+				buttonspieler2.setEnabled(false);}
+			
+			else if (ae.getSource() == this.buttonspieler3) {
+				buttonspieler3.setEnabled(false);}
+			
+			else if (ae.getSource() == this.buttonspieler4) {
+				buttonspieler4.setEnabled(false);}
+			
+			else if (ae.getSource() == this.buttonmisterx) {
+				buttonmisterx.setEnabled(false);}
+			
+			else if(ae.getSource() == this.buttonbus){
+				if (!buttonspieler1.isEnabled()){
+					setCounterField1();	
+			    	txtpnVerfgbareTickets.setVisible(false);
+			    	txtpnVerfgbareTickets.setVisible(true);
+			    	buttonbus.setEnabled(false);}
+				if (!buttonspieler2.isEnabled()){
+					setCounterField1();	
+			    	txtpnVerfgbareTickets.setVisible(false);
+			    	txtpnVerfgbareTickets.setVisible(true);
+			    	buttonbus.setEnabled(false);}
+				if (!buttonspieler3.isEnabled()){
+					setCounterField1();	
+			    	txtpnVerfgbareTickets.setVisible(false);
+			    	txtpnVerfgbareTickets.setVisible(true);
+			    	buttonbus.setEnabled(false);}
+			    if (!buttonspieler4.isEnabled()){
+					setCounterField1();	
+				    txtpnVerfgbareTickets.setVisible(false);
+				    txtpnVerfgbareTickets.setVisible(true);
+				    buttonbus.setEnabled(false);}
+			    if (!buttonmisterx.isEnabled()){
+					setCounterField1();	
+				    txtpnVerfgbareTickets.setVisible(false);
+				    txtpnVerfgbareTickets.setVisible(true);
+				    buttonbus.setEnabled(false);}}
+		        
+		        else if(ae.getSource() == this.buttontaxi){
+		        	if (!buttonspieler1.isEnabled()){
+						setCounterField2();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttontaxi.setEnabled(false);}
+					if (!buttonspieler2.isEnabled()){
+						setCounterField2();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttontaxi.setEnabled(false);}
+					if (!buttonspieler3.isEnabled()){
+						setCounterField2();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttontaxi.setEnabled(false);}
+				    if (!buttonspieler4.isEnabled()){
+						setCounterField2();	
+					    txtpnVerfgbareTickets.setVisible(false);
+					    txtpnVerfgbareTickets.setVisible(true);
+					    buttontaxi.setEnabled(false);}
+				    if (!buttonmisterx.isEnabled()){
+						setCounterField2();	
+					    txtpnVerfgbareTickets.setVisible(false);
+					    txtpnVerfgbareTickets.setVisible(true);
+					    buttontaxi.setEnabled(false);}}
+		       
+		        else if (ae.getSource() == this.buttonbahn){
+		        	if (!buttonspieler1.isEnabled()){
+						setCounterField3();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttonbahn.setEnabled(false);}
+					if (!buttonspieler2.isEnabled()){
+						setCounterField3();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttonbahn.setEnabled(false);}
+					if (!buttonspieler3.isEnabled()){
+						setCounterField3();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttonbahn.setEnabled(false);}
+				    if (!buttonspieler4.isEnabled()){
+						setCounterField3();	
+					    txtpnVerfgbareTickets.setVisible(false);
+					    txtpnVerfgbareTickets.setVisible(true);
+					    buttonbahn.setEnabled(false);}
+				    if (!buttonmisterx.isEnabled()){
+						setCounterField3();	
+					    txtpnVerfgbareTickets.setVisible(false);
+					    txtpnVerfgbareTickets.setVisible(true);
+					    buttonbahn.setEnabled(false);}}
+		        
+		        else if(ae.getSource() == this.buttonblack){
+		        	if (!buttonspieler1.isEnabled()){
+						setCounterField4();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttonblack.setEnabled(false);}
+					if (!buttonspieler2.isEnabled()){
+						setCounterField4();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttonblack.setEnabled(false);}
+					if (!buttonspieler3.isEnabled()){
+						setCounterField4();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	buttonblack.setEnabled(false);}
+				    if (!buttonspieler4.isEnabled()){
+						setCounterField4();	
+					    txtpnVerfgbareTickets.setVisible(false);
+					    txtpnVerfgbareTickets.setVisible(true);
+					    buttonblack.setEnabled(false);}
+				    if (!buttonmisterx.isEnabled()){
+						setCounterField4();	
+					    txtpnVerfgbareTickets.setVisible(false);
+					    txtpnVerfgbareTickets.setVisible(true);
+					    buttonblack.setEnabled(false);}}
+		        
+		        else if(ae.getSource() == this.button2x){
+		        	if (!buttonspieler1.isEnabled()){
+						setCounterField5();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	button2x.setEnabled(false);}
+					if (!buttonspieler2.isEnabled()){
+						setCounterField5();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	button2x.setEnabled(false);}
+					if (!buttonspieler3.isEnabled()){
+						setCounterField5();	
+				    	txtpnVerfgbareTickets.setVisible(false);
+				    	txtpnVerfgbareTickets.setVisible(true);
+				    	button2x.setEnabled(false);}
+				    if (!buttonspieler4.isEnabled()){
+						setCounterField5();	
+					    txtpnVerfgbareTickets.setVisible(false);
+					    txtpnVerfgbareTickets.setVisible(true);
+					    button2x.setEnabled(false);}
+				    if (!buttonmisterx.isEnabled()){
+						setCounterField5();	
+					    txtpnVerfgbareTickets.setVisible(false);
+					    txtpnVerfgbareTickets.setVisible(true);
+					    button2x.setEnabled(false);}}
+		        
+		        else if(ae.getSource() == this.button1){
+	        	if (!buttonbus.isEnabled()){
+				a=100;b=80;c=80;
 	        	splitPane.setLeftComponent(new OvalComponent());
-	        	splitPane.setDividerLocation(splitPane.getSize().width/2);}
-	        
+	        	splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        	buttonspieler1.setEnabled(true);
+	        	buttonspieler2.setEnabled(true);
+	        	buttonspieler3.setEnabled(true);
+	        	buttonspieler4.setEnabled(true);
+	        	buttonmisterx.setEnabled(true);
+	        	buttonbus.setEnabled(true);}}
+	        	
 	        else if(ae.getSource() == this.button2){
 	        	System.out.println("Button 2 wurde betätigt");}
 	       
@@ -566,6 +727,7 @@ public class GUI extends JFrame implements ActionListener{
 	        
 	        else if(ae.getSource() == this.button24){
 	            System.out.println("Button 24 wurde betätigt");}
+	       
 	        
 	        /**else if(ae.getSource() == this.button25){
 	        	System.out.println("Button 25 wurde betätigt");}
@@ -647,23 +809,7 @@ public class GUI extends JFrame implements ActionListener{
 	        
 	        
 	        
-			    else if(ae.getSource() == this.buttonbus){
-			    	setCounterField1(counterField1--);	
-			    	txtpnVerfgbareTickets.setVisible(false);
-			    	txtpnVerfgbareTickets.setVisible(true);}
-		        
-		        else if(ae.getSource() == this.buttontaxi){
-		        	setCounterField2(counterField2--);
-		        	SwingUtilities.updateComponentTreeUI(txtpnVerfgbareTickets);}
-		       
-		        else if (ae.getSource() == this.buttonbahn){
-		        	setCounterField3(counterField3--) ;}
-		        
-		        else if(ae.getSource() == this.buttonblack){
-		        	setCounterField4(counterField4--) ;}
-		        
-		        else if(ae.getSource() == this.button2x){
-		        	setCounterField5(counterField5--) ;}
+			    
 		       
 		       
 		        
