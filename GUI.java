@@ -233,11 +233,11 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(7,2,0,0));
 		
-		final Icon icon1 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s1.png");
-		final Icon icon2 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s2.png");
-		final Icon icon3 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s3.png");
-		final Icon icon4 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s4.png");
-		final Icon iconx = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/x.png");
+		final Icon icon1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s1.png"));
+		final Icon icon2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s2.png"));
+		final Icon icon3 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s3.png"));
+		final Icon icon4 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s4.png"));
+		final Icon iconx = new ImageIcon(Toolkit.getDefaultToolkit().getImage("x.png"));
 		
 		buttonspieler1= new JButton(icon1);
 		buttonspieler1.addActionListener(this);
@@ -1080,7 +1080,7 @@ public class GUI extends JFrame implements ActionListener{
 			//g.fillRect(130,110,80,20);
 			//g.setStroke();
 			//g.drawLine(0, 0, 100, 100);
-			g.setFont(new Font("Serif", Font.PLAIN,(int) (30 *xfact)));g.drawString(Double.toString ((int)(440 *xfact)),(int)( 10 *xfact),(int)( 70 *xfact));
+			g.setFont(new Font("Serif", Font.PLAIN,(int) (30 *xfact)));//g.drawString(Double.toString ((int)(440 *xfact)),(int)( 10 *xfact),(int)( 70 *xfact));
 			
 						Graphics2D g2 = (Graphics2D)g;
 						g2.setStroke(new BasicStroke(7));
