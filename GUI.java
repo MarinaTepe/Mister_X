@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
@@ -36,6 +37,7 @@ public class GUI extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JScrollPane scrollPane;
 	private JTable table;
+	private JLabel label1;
 	private JTextPane txtpnVerfgbareTickets;
 	private JPanel buttonPanel;
 	private JButton buttonspieler1, buttonspieler2, buttonspieler3, buttonspieler4, buttonmisterx, buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, 
@@ -137,6 +139,7 @@ public class GUI extends JFrame implements ActionListener{
 		
 		
 		//MR X spieltafel
+		label1 = new JLabel();
 		table = new JTable();
 		table.setRowSelectionAllowed(false);
 		table.setShowVerticalLines(false);
@@ -148,7 +151,7 @@ public class GUI extends JFrame implements ActionListener{
 				{null, null, null, null, null, null, null, null, null},
 				{"Zug Nr.", "Verkehrsmittel", " Station", "Zug Nr.", "Verkehrsmittel", " Station", "Zug Nr.", "Verkehrsmittel", " Station"},
 				{null, null, null, null, null, null, null, null, null},
-				{new Integer(1), null, null, new Integer(9), null, null, new Integer(17), null, null},
+				{new Integer(1), label1.getText(), null, new Integer(9), null, null, new Integer(17), null, null},
 				{null, null, null, null, null, null, null, null, null},
 				{new Integer(2), null, null, new Integer(10), null, null, "(18)", null, null},
 				{null, null, null, null, null, null, null, null, null},
@@ -230,11 +233,11 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(7,2,0,0));
 		
-		final Icon icon1 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/s1.png");
-		final Icon icon2 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/s2.png");
-		final Icon icon3 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/s3.png");
-		final Icon icon4 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/s4.png");
-		final Icon iconx = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/x.png");
+		final Icon icon1 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s1.png");
+		final Icon icon2 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s2.png");
+		final Icon icon3 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s3.png");
+		final Icon icon4 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s4.png");
+		final Icon iconx = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/x.png");
 		
 		buttonspieler1= new JButton(icon1);
 		buttonspieler1.addActionListener(this);
@@ -539,6 +542,7 @@ public class GUI extends JFrame implements ActionListener{
 				    txtpnVerfgbareTickets.setVisible(true);
 				    buttonbus.setEnabled(false);}
 			    if (!buttonmisterx.isEnabled()){
+			    	label1.setText("Bus");
 					setCounterField1();	
 				    txtpnVerfgbareTickets.setVisible(false);
 				    txtpnVerfgbareTickets.setVisible(true);
