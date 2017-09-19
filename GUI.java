@@ -690,7 +690,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonbus.setEnabled(true);}}
 	        	else if (!buttonspieler2.isEnabled()){
 	        		if (!buttonbus.isEnabled()){
-	        			va=100;vb=80;vc=80;
+	        			wa=100;wb=80;wc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -700,7 +700,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonmisterx.setEnabled(true);
 	        			buttonbus.setEnabled(true);}
 	        		else if (!buttontaxi.isEnabled()){	
-	        			va=100;vb=80;vc=80;
+	        			wa=100;wb=80;wc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -710,7 +710,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonmisterx.setEnabled(true);
 	        			buttonbus.setEnabled(true);}
 	        		else if (!buttonbahn.isEnabled()){	
-	        			va=100;vb=80;vc=80;
+	        			wa=100;wb=80;wc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -721,7 +721,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonbus.setEnabled(true);}}
 	        	else if (!buttonspieler3.isEnabled()){
 	        		if (!buttonbus.isEnabled()){
-	        			va=100;vb=80;vc=80;
+	        			xa=100;xb=80;xc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -731,7 +731,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonmisterx.setEnabled(true);
 	        			buttonbus.setEnabled(true);}
 	        		else if (!buttontaxi.isEnabled()){	
-	        			va=100;vb=80;vc=80;
+	        			xa=100;xb=80;xc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -741,7 +741,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonmisterx.setEnabled(true);
 	        			buttonbus.setEnabled(true);}
 	        		else if (!buttonbahn.isEnabled()){	
-	        			va=100;vb=80;vc=80;
+	        			xa=100;xb=80;xc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -752,7 +752,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonbus.setEnabled(true);}}
 	        	else if (!buttonspieler4.isEnabled()){
 	        		if (!buttonbus.isEnabled()){
-	        			va=100;vb=80;vc=80;
+	        			ya=100;yb=80;yc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -762,7 +762,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonmisterx.setEnabled(true);
 	        			buttonbus.setEnabled(true);}
 	        		else if (!buttontaxi.isEnabled()){	
-	        			va=100;vb=80;vc=80;
+	        			ya=100;yb=80;yc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -772,7 +772,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonmisterx.setEnabled(true);
 	        			buttonbus.setEnabled(true);}
 	        		else if (!buttonbahn.isEnabled()){	
-	        			va=100;vb=80;vc=80;
+	        			ya=100;yb=80;yc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -783,7 +783,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonbus.setEnabled(true);}}
 	        	else if (!buttonmisterx.isEnabled()){
 	        		if (!buttonbus.isEnabled()){
-	        			va=100;vb=80;vc=80;
+	        			za=100;zb=80;zc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -793,7 +793,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonmisterx.setEnabled(true);
 	        			buttonbus.setEnabled(true);}
 	        		else if (!buttontaxi.isEnabled()){	
-	        			va=100;vb=80;vc=80;
+	        			za=100;zb=80;zc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
@@ -803,16 +803,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			buttonmisterx.setEnabled(true);
 	        			buttonbus.setEnabled(true);}
 	        		else if (!buttonbahn.isEnabled()){	
-	        			if (!buttonspieler1.isEnabled()){
-							va=100;vb=80;vc=80;}
-						if (!buttonspieler2.isEnabled()){
-							wa=100;wb=80;wc=80;}
-						if (!buttonspieler3.isEnabled()){
-							xa=100;xb=80;xc=80;}
-						if (!buttonspieler4.isEnabled()){
-							ya=100;yb=80;yc=80;}
-						if (!buttonmisterx.isEnabled()){
-							za=100;zb=80;zc=80;}
+	        			za=100;zb=80;zc=80;
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonspieler1.setEnabled(true);
