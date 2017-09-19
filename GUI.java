@@ -1322,13 +1322,508 @@ public class GUI extends JFrame implements ActionListener{
 	        }
 	        
 	        else if(ae.getSource() == this.button5){
-	        	System.out.println("Button 5 wurde betätigt");}
+	        	if (!buttonspieler1.isEnabled()){
+		        	va=600;vb=90;vc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler2.isEnabled()){
+	        			wa=600;wb=90;wc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler3.isEnabled()){
+	        			xa=600;xb=90;xc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler4.isEnabled()){
+	        			ya=600;yb=90;yc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonmisterx.isEnabled()){
+	        			za=600;zb=90;zc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        }
 	       
 	        else if (ae.getSource() == this.button6){
-	        	System.out.println("Button 6 wurde betätigt");}
+	        	if (!buttonspieler1.isEnabled()){
+		        	va=900;vb=30;vc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler2.isEnabled()){
+	        			wa=900;wb=30;wc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler3.isEnabled()){
+	        			xa=900;xb=30;xc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler4.isEnabled()){
+	        			ya=900;yb=30;yc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonmisterx.isEnabled()){
+	        			za=900;zb=30;zc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        }
 	        
 	        else if(ae.getSource() == this.button7){
-	            System.out.println("Button 7 wurde betätigt");}
+	        	if (!buttonspieler1.isEnabled()){
+		        	va=400;vb=190;vc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler2.isEnabled()){
+	        			wa=400;wb=190;wc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler3.isEnabled()){
+	        			xa=400;xb=190;xc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonspieler4.isEnabled()){
+	        			ya=400;yb=190;yc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        	else if (!buttonmisterx.isEnabled()){
+	        			za=400;zb=190;zc=80;
+	        		if (!buttonbus.isEnabled()){
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttontaxi.isEnabled()){	
+	        			splitPane.setLeftComponent(new OvalComponent());
+	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}
+	        		else if (!buttonbahn.isEnabled()){	
+	        			buttonspieler1.setEnabled(true);
+	        			buttonspieler2.setEnabled(true);
+	        			buttonspieler3.setEnabled(true);
+	        			buttonspieler4.setEnabled(true);
+	        			buttonmisterx.setEnabled(true);
+	        			buttonbus.setEnabled(true);
+	        			buttonbahn.setEnabled(true);
+	        			buttontaxi.setEnabled(true);}}
+	        }
 	        
 	        else if(ae.getSource() == this.button8){
 	        	System.out.println("Button 8 wurde betätigt");}
