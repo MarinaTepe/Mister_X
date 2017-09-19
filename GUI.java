@@ -918,19 +918,19 @@ public class GUI extends JFrame implements ActionListener{
 			g.fillPolygon(xpoints , ypoints, 14);
 			
 			g.setColor(ad);
-			g.fillOval((int)((aa-10) *xfact),(int) ((ab-10) *xfact),(int) (ac *xfact),(int) (ac *xfact));
+			g.fillOval((int)(aa*xfact-10*xfact) ,(int) (ab*xfact-10*xfact),(int) (ac *xfact),(int) (ac *xfact));
 
 			g.setColor(bd);
-			g.fillOval((int)((ba-10) *xfact),(int) ((bb-10) *xfact),(int) (bc *xfact),(int) (bc *xfact));
+			g.fillOval((int)(ba*xfact-10*xfact) ,(int) (bb*xfact-10*xfact),(int) (bc *xfact),(int) (bc *xfact));
 
 			g.setColor(cd);
-			g.fillOval((int)((ca-10) *xfact),(int) ((cb-10) *xfact),(int) (cc *xfact),(int) (cc *xfact));
+			g.fillOval((int)(ca*xfact-10*xfact) ,(int) (cb*xfact-10*xfact),(int) (cc *xfact),(int) (cc *xfact));
 
 			g.setColor(dd);
-			g.fillOval((int)((da-10) *xfact),(int) ((db-10) *xfact),(int) (dc *xfact),(int) (dc *xfact));
+			g.fillOval((int)(da*xfact-10*xfact),(int) (db*xfact-10*xfact),(int) (dc *xfact),(int) (dc *xfact));
 
 			g.setColor(ed);
-			g.fillOval((int)((ea-10) *xfact),(int) ((eb-10) *xfact),(int) (ec *xfact),(int) (ec *xfact));
+			g.fillOval((int)(ea*xfact-10*xfact) ,(int) (eb*xfact-10*xfact),(int) (ec *xfact),(int) (ec *xfact));
 			
 			g.setColor(taxi);
 			//g.fillRect(130,110,80,20);
