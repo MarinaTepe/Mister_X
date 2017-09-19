@@ -8,7 +8,6 @@ import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentListener;
 import java.awt.geom.Line2D;
 
 import javax.swing.Icon;
@@ -653,164 +652,16 @@ public class GUI extends JFrame implements ActionListener{
 					    button2x.setEnabled(false);}}
 		        
 		        else if(ae.getSource() == this.button1){
-	        	if (!buttonspieler1.isEnabled()){
-	        		if (!buttonbus.isEnabled()){
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttontaxi.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttonbahn.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}}
-	        	else if (!buttonspieler2.isEnabled()){
-	        		if (!buttonbus.isEnabled()){
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttontaxi.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttonbahn.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}}
-	        	else if (!buttonspieler3.isEnabled()){
-	        		if (!buttonbus.isEnabled()){
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttontaxi.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttonbahn.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}}
-	        	else if (!buttonspieler4.isEnabled()){
-	        		if (!buttonbus.isEnabled()){
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttontaxi.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttonbahn.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}}
-	        	else if (!buttonmisterx.isEnabled()){
-	        		if (!buttonbus.isEnabled()){
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttontaxi.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}
-	        		else if (!buttonbahn.isEnabled()){	
-	        			a=100;b=80;c=80;
-	        			splitPane.setLeftComponent(new OvalComponent());
-	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-	        			buttonspieler1.setEnabled(true);
-	        			buttonspieler2.setEnabled(true);
-	        			buttonspieler3.setEnabled(true);
-	        			buttonspieler4.setEnabled(true);
-	        			buttonmisterx.setEnabled(true);
-	        			buttonbus.setEnabled(true);}}
-	        		
-		        }
-	        		
+	        	if (!buttonbus.isEnabled()){
+				a=100;b=80;c=80;
+	        	splitPane.setLeftComponent(new OvalComponent());
+	        	splitPane.setDividerLocation(splitPane.getSize().width/2);
+	        	buttonspieler1.setEnabled(true);
+	        	buttonspieler2.setEnabled(true);
+	        	buttonspieler3.setEnabled(true);
+	        	buttonspieler4.setEnabled(true);
+	        	buttonmisterx.setEnabled(true);
+	        	buttonbus.setEnabled(true);}}
 	        	
 	        else if(ae.getSource() == this.button2){
 	        	System.out.println("Button 2 wurde betätigt");}
