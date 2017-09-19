@@ -1,0 +1,23 @@
+
+Spielziel
+Ein Spieler spielt den flüchtigen Verbrecher Mister X. Die anderen Spieler nehmen die Rolle 
+von Detektiven ein. Die Anzahl der Spielzüge ist von vornherein auf maximal 24 festgelegt. 
+Das Ziel von Mister X ist es, sich so auf dem Spielplan zu bewegen, dass er nicht von den 
+Detektiven gefangen wird. Ziel der anderen Spieler ist es hingegen, Mister X während dieser 
+24 Züge zu fangen, das heißt, eine ihrer Spielfiguren auf das Feld zu setzen, auf dem sich 
+Mister X gerade befindet, oder ihn so zu umzingeln, dass er keinen weiteren Zug mehr machen kann.
+
+Spielablauf
+Der Spielmechanismus ist insofern ungewöhnlich, als Mister X für sich alleine spielt, während 
+die übrigen Mitspieler als Detektive kooperieren und ihre Strategie für ein erfolgreiches Spiel 
+miteinander besprechen oder anderweitig abgestimmt haben müssen. Der Spielplan zeigt einen Stadtplan 
+mit Taxi-, Bus-, und Untergrundbahnverbindungen mit zugehörigen Stationen, auf dem sich die Detektive 
+mit ihren Spielfiguren bewegen. Die Bewegung auf dem Spielplan wird zusätzlich dadurch reglementiert, 
+dass jeder Mitspieler nur eine begrenzte Anzahl von Fahrscheinen für jedes Verkehrsmittel besitzt. 
+Mister X besitzt von Beginn an nur eine geringe Anzahl dieser Tickets, erhält allerdings die benutzten 
+Fahrscheine der Detektive, sodass sein Fahrkartenvorrat in der Praxis meist unlimitiert ist. Mister X 
+notiert seine Züge lediglich für sich und gibt den Mitspielern das benutzte Verkehrsmittel bekannt, 
+muss sich aber in festgesetzten Abständen den Detektiven zeigen, was diesen die Chance gibt, die 
+Verfolgung neu zu koordinieren.
+
+Bedienung der Buttons

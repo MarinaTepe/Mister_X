@@ -10,6 +10,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
 import java.awt.geom.Line2D;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -34,7 +39,7 @@ import javax.swing.DropMode;
 public class GUI extends JFrame implements ActionListener{
 
 	
-	public JSplitPane splitPane;
+	public static JSplitPane splitPane;
 	private JPanel contentPane;
 	private JScrollPane scrollPane;
 	private JTable table;
@@ -74,7 +79,6 @@ public class GUI extends JFrame implements ActionListener{
 	
 	public static int getCounterField5() {return counterField5;}
 	public static void setCounterField5() {GUI.counterField5 = counterField5--;}
-	
 
 	/**
 	 * Launch the application.
@@ -95,18 +99,56 @@ public class GUI extends JFrame implements ActionListener{
 				buttonPanel2.setLayout(new GridLayout(4,2,0,20));
 				
 				JButton buttonanleitung = new JButton("Anleitung");
+				buttonanleitung.addActionListener( new ActionListener() 
+				{ public void actionPerformed( ActionEvent e ) 
+				{JFrame frame3 = new JFrame("Anleitung");
+				frame3.setVisible( true );
+				frame3.setBounds(200, 200, 650, 500);
+				JTextPane anleitungtxt = new JTextPane();
+				anleitungtxt.setEditable(false);
+				BufferedReader br = null;
+				File anleitung = new File("C:/Users/magrot410/onedrive/studium/programmiersprachen/projekt/mister_X/anleitung.txt");
+				try {
+					br = new BufferedReader(new FileReader(anleitung));
+					String line = null;
+					while((line = br.readLine()) != null) { anleitungtxt.read(br, anleitung);}
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
+				
+				frame3.add(anleitungtxt);
+				}});
 				buttonPanel2.add(buttonanleitung);
 				
 				JButton buttonstart = new JButton("Start");
+				buttonstart.addActionListener( new ActionListener() 
+					{ public void actionPerformed( ActionEvent e ) 
+					{frame2.setVisible(false);
+					va=100;vb=80;vc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			wa=800;wb=420;wc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			xa=430;xb=900;xc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			ya=200;yb=400;yc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);}});
 				buttonPanel2.add(buttonstart);
 								
 				JButton buttonexit = new JButton("Exit");
+				buttonexit.addActionListener( new ActionListener() { public void actionPerformed( ActionEvent e ) {System.exit( 0 );}});
 				buttonPanel2.add(buttonexit);
 				
 				buttonPanel2.setBackground(Color.white);
 				buttonPanel2.setBorder(new EmptyBorder(20, 20, 20, 20));
 				frame2.add(buttonPanel2);
-			}
+				
+				
+
+				}
 		});
 	}
 
