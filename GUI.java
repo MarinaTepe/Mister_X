@@ -834,10 +834,13 @@ public class GUI extends JFrame implements ActionListener{
 		int aa=GUI.geta();// spieler schwarz
 		int ab=GUI.getb();
 		int ac=GUI.getc();
-		double xfact=(GUI.getbreite()-20)/2/950;
+		//double xfact=1.1;
+		int w2=GUI.getbreite()/2;
+		double xfact=w2/960.0;
 		Color dd = GUI.getd();
 		
 		public void paintComponent(Graphics g) {
+			
 			Color gruen =new Color(102,205,0);
 			Color fluss =new Color(30,144,255);
 			Color taxi =new Color(150,150,150);
@@ -857,7 +860,7 @@ public class GUI extends JFrame implements ActionListener{
 			//g.fillRect(130,110,80,20);
 			//g.setStroke();
 			//g.drawLine(0, 0, 100, 100);
-			g.setFont(new Font("Serif", Font.PLAIN,(int) (30 /xfact)));
+			g.setFont(new Font("Serif", Font.PLAIN,(int) (30 /xfact)));//g.drawString(Double.toString (xfact1),(int)( 10 /xfact),(int)( 70 /xfact));
 			
 						Graphics2D g2 = (Graphics2D)g;
 						g2.setStroke(new BasicStroke(7));
@@ -943,7 +946,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(100 /xfact),(int)( 80 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					g.setColor(Color.red);
-					g.fillOval((int)(100+15 /xfact),(int)( 80+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					g.fillOval((int)(100/xfact+15 /xfact),(int)( 80/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("1",(int)( 125 /xfact),(int)( 120 /xfact));
 					
@@ -952,7 +955,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(250 /xfact, 100 /xfact, 60 /xfact, 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(250+15 /xfact, 100+15 /xfact, 30 /xfact, 30 /xfact));
+					//g.fillOval((int)(250/xfact+15 /xfact, 100/xfact+15 /xfact, 30 /xfact, 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("2",(int)( 275 /xfact),(int)( 140 /xfact));
 					
@@ -961,7 +964,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(300 /xfact, 00 /xfact, 60 /xfact, 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(300+15 /xfact, 00+15 /xfact, 30 /xfact, 30 /xfact));
+					//g.fillOval((int)(300/xfact+15 /xfact, 00/xfact+15 /xfact, 30 /xfact, 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("3",(int)( 325 /xfact),(int)( 40 /xfact));
 					
@@ -970,7 +973,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(440 /xfact),(int)( 110 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(440+15 /xfact),(int)( 110+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(440/xfact+15 /xfact),(int)( 110/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("4",(int)( 465 /xfact),(int)( 150 /xfact));
 					
@@ -979,7 +982,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(600 /xfact),(int)( 90 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					g.setColor(Color.red);
-					g.fillOval((int)(600+15 /xfact),(int)( 90+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					g.fillOval((int)(600/xfact+15 /xfact),(int)( 90/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("5",(int)( 625 /xfact),(int)( 130 /xfact));
 					
@@ -988,7 +991,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(900 /xfact),(int)( 30 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(900+15 /xfact),(int)( 30+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(900/xfact+15 /xfact),(int)( 30/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("6",(int)( 925 /xfact),(int)( 70 /xfact));
 					
@@ -997,7 +1000,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(400 /xfact),(int)( 190 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(400+15 /xfact),(int)( 190+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(400/xfact+15 /xfact),(int)( 190/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("7",(int)( 425 /xfact),(int)( 230 /xfact));
 					
@@ -1006,7 +1009,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(540 /xfact),(int)( 220 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(540+15 /xfact),(int)( 220+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(540/xfact+15 /xfact),(int)( 220/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("8" ,(int)( 565 /xfact),(int)( 260 /xfact));
 					
@@ -1015,7 +1018,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(760 /xfact),(int)( 180 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(760+15 /xfact),(int)( 180+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(760/xfact+15 /xfact),(int)( 180/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("9",(int)( 780 /xfact),(int)( 220 /xfact));
 					
@@ -1024,7 +1027,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(150 /xfact),(int)( 250 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(150+15 /xfact),(int)( 250+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(150/xfact+15 /xfact),(int)( 250/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("10",(int)( 165 /xfact),(int)( 290 /xfact));
 					
@@ -1033,7 +1036,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(330 /xfact),(int)( 300 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(330+15 /xfact),(int)( 300+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(330/xfact+15 /xfact),(int)( 300/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("11" ,(int)( 345 /xfact),(int)( 340 /xfact));
 					
@@ -1042,7 +1045,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(200 /xfact),(int)( 400 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(200+15 /xfact),(int)( 400+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(200/xfact+15 /xfact),(int)( 400/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("12",(int)( 215 /xfact),(int)( 440 /xfact));
 					
@@ -1051,7 +1054,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(500 /xfact),(int)( 370 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(500+15 /xfact),(int)( 370+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(500/xfact+15 /xfact),(int)( 370/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("13",(int)( 515 /xfact),(int)( 410 /xfact));
 					
@@ -1060,7 +1063,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(800 /xfact),(int)( 420 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					g.setColor(Color.red);
-					g.fillOval((int)(800+15 /xfact),(int)( 420+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					g.fillOval((int)(800/xfact+15 /xfact),(int)( 420/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("14",(int)( 815 /xfact),(int)( 460 /xfact));
 					
@@ -1069,7 +1072,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(00 /xfact),(int)( 470 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					g.setColor(Color.red);
-					g.fillOval((int)(00+15 /xfact),(int)( 470+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					g.fillOval((int)(00/xfact+15 /xfact),(int)( 470/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("15",(int)( 15 /xfact),(int)( 510 /xfact));
 					
@@ -1078,7 +1081,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(380 /xfact),(int)( 550 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					g.setColor(Color.red);
-					g.fillOval((int)(380+15 /xfact),(int)( 550+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					g.fillOval((int)(380/xfact+15 /xfact),(int)( 550/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("16",(int)( 395 /xfact),(int)( 590 /xfact));
 					
@@ -1087,7 +1090,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(600 /xfact),(int)( 500 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(600+15 /xfact),(int)( 500+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(600/xfact+15 /xfact),(int)( 500/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("17",(int)( 615 /xfact),(int)( 540 /xfact));
 					
@@ -1096,7 +1099,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(150 /xfact),(int)( 630 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(150+15 /xfact),(int)( 630+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(150/xfact+15 /xfact),(int)( 630/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("18",(int)( 165 /xfact),(int)( 670 /xfact));
 					
@@ -1105,7 +1108,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(580 /xfact),(int)( 600 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(580+15 /xfact),(int)( 600+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(580/xfact+15 /xfact),(int)( 600/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("19",(int)( 595 /xfact),(int)( 640 /xfact));
 					
@@ -1114,7 +1117,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(50 /xfact),(int)( 800 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red );
-					//g.fillOval((int)(50+15 /xfact),(int)( 800+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(50/xfact+15 /xfact),(int)( 800/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("20" ,(int)( 65 /xfact),(int)( 840 /xfact));
 					
@@ -1123,7 +1126,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(300 /xfact),(int)( 770 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(300+15 /xfact),(int)( 770+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(300/xfact+15 /xfact),(int)( 770/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("21" ,(int)( 315 /xfact),(int)( 810 /xfact));
 					
@@ -1132,7 +1135,7 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.BLUE);
 					g.fillOval((int)(750 /xfact),(int)( 750 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(750+15 /xfact),(int)( 750+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(750/xfact+15 /xfact),(int)( 750/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("22" ,(int)( 765 /xfact),(int)( 790 /xfact));
 					
@@ -1141,7 +1144,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(430 /xfact),(int)( 900 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					g.setColor(Color.red);
-					g.fillOval((int)(430+15 /xfact),(int)( 900+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					g.fillOval((int)(430/xfact+15 /xfact),(int)( 900/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("23",(int)( 445 /xfact),(int)( 940 /xfact));
 					
@@ -1150,7 +1153,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(660 /xfact),(int)( 840 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(660+15 /xfact),(int)( 840+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(660/xfact+15 /xfact),(int)( 840/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("24",(int)( 675 /xfact),(int)( 880 /xfact));
 					
@@ -1159,7 +1162,7 @@ public class GUI extends JFrame implements ActionListener{
 					//g.setColor(Color.BLUE);
 					//g.fillOval((int)(900 /xfact),(int)( 850 /xfact),(int)( 60 /xfact),(int)( 60 /xfact));
 					//g.setColor(Color.red);
-					//g.fillOval((int)(900+15 /xfact),(int)( 850+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
+					//g.fillOval((int)(900/xfact+15 /xfact),(int)( 850/xfact+15 /xfact),(int)( 30 /xfact),(int)( 30 /xfact));
 					g.setColor(Color.black);
 					g.drawString("25",(int)( 915 /xfact),(int)( 890 /xfact));				
 					
