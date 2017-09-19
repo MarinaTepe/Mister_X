@@ -37,20 +37,20 @@ public class GUI extends JFrame implements ActionListener{
 	private JScrollPane scrollPane;
 	private JTable table;
 	private JTextPane txtpnVerfgbareTickets;
-	private JPanel buttonPanel,kreispanel;
+	private JPanel buttonPanel;
 	private JButton buttonspieler1, buttonspieler2, buttonspieler3, buttonspieler4, buttonmisterx, buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, 
 	button1, button2, button3, button4, button5, button6, button7, button8, button9, button10,
 	button11, button12, button13, button14, button15, button16, button17, button18, button19, button20,
-	button21, button22, button23, button24, button25, button26, button27, button28, button29, button30,
-	button31, button32, button33, button34, button35, button36, button37, button38, button39, button40,
-	button41, button42, button43, button44, button45, button46, button47, button48, button49, button50;
+	button21, button22, button23, button24, button25;//button26, button27, button28, button29, button30,
+	//button31, button32, button33, button34, button35, button36, button37, button38, button39, button40,
+	//button41, button42, button43, button44, button45, button46, button47, button48, button49, button50;
 	
-	public static int a;
-	public static int b;
-	public static int c;
+	public static int va,wa,xa,ya,za;
+	public static int vb,wb,xb,yb,zb;
+	public static int vc,wc,xc,yc,zc;
 	public static int hoehe;
 	public static int breite;
-	public static Color d;
+	public static Color vd,wd,xd,yd,zd;
 	public static int counterField1;
 	public static int counterField2;
 	public static int counterField3;
@@ -92,7 +92,12 @@ public class GUI extends JFrame implements ActionListener{
 	
 	public GUI() {
 		Color taxi =new Color(150,150,150);
-		a=0;b=0;c=0;d= Color.black;
+		va=0;vb=0;vc=0;vd= Color.black;
+		wa=0;wb=0;wc=0;wd= Color.yellow;
+		xa=0;xb=0;xc=0;xd= Color.magenta;
+		ya=0;yb=0;yc=0;yd= Color.cyan;
+		za=0;zb=0;zc=0;zd= Color.white;
+		
 		
 		
 		//bildschirmanpassung
@@ -649,7 +654,18 @@ public class GUI extends JFrame implements ActionListener{
 		        
 		        else if(ae.getSource() == this.button1){
 	        	if (!buttonbus.isEnabled()){
-				a=100;b=80;c=80;
+	        		if (!buttonspieler1.isEnabled()){
+						va=100;vb=80;vc=80;}
+					if (!buttonspieler2.isEnabled()){
+						wa=100;wb=80;wc=80;}
+					if (!buttonspieler3.isEnabled()){
+						xa=100;xb=80;xc=80;}
+					if (!buttonspieler4.isEnabled()){
+						ya=100;yb=80;yc=80;}
+					if (!buttonmisterx.isEnabled()){
+						za=100;zb=80;zc=80;}
+						
+				
 	        	splitPane.setLeftComponent(new OvalComponent());
 	        	splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        	buttonspieler1.setEnabled(true);
@@ -816,12 +832,31 @@ public class GUI extends JFrame implements ActionListener{
 	        
 		}
 		
-		public static int geta() {return a;}//xachse
-		public static int getb() {return b;}//yachse
-		public static int getc() {return c;}
-		public static Color getd() {return d;}//spielerfarbe
+		public static int getva() {return va;}//xachse
+		public static int getvb() {return vb;}//yachse
+		public static int getvc() {return vc;}
+		public static Color getvd() {return vd;}//spielerfarbe
 		
-		public static int gethoehe() {return hoehe;}
+		public static int getwa() {return wa;}//xachse
+		public static int getwb() {return wb;}//yachse
+		public static int getwc() {return wc;}
+		public static Color getwd() {return wd;}//spielerfarbe
+		
+		public static int getxa() {return xa;}//xachse
+		public static int getxb() {return xb;}//yachse
+		public static int getxc() {return xc;}
+		public static Color getxd() {return xd;}//spielerfarbe
+		
+		public static int getza() {return za;}//xachse
+		public static int getzb() {return zb;}//yachse
+		public static int getzc() {return zc;}
+		public static Color getzd() {return zd;}//spielerfarbe
+		
+		public static int getya() {return ya;}//xachse
+		public static int getyb() {return yb;}//yachse
+		public static int getyc() {return yc;}
+		public static Color getyd() {return yd;}//spielerfarbe
+		
 		public static int getbreite() {return breite;}
 	}
 
@@ -831,13 +866,35 @@ public class GUI extends JFrame implements ActionListener{
 //kreise malen
 	class OvalComponent extends JComponent {
 		
-		int aa=GUI.geta();// spieler schwarz
-		int ab=GUI.getb();
-		int ac=GUI.getc();
+		int aa=GUI.getva();// spieler schwarz
+		int ab=GUI.getvb();
+		int ac=GUI.getvc();
+		Color ad = GUI.getvd();
+		
+		int ba=GUI.getwa();// spieler schwarz
+		int bb=GUI.getwb();
+		int bc=GUI.getwc();
+		Color bd = GUI.getwd();
+		
+		int ca=GUI.getxa();// spieler schwarz
+		int cb=GUI.getxb();
+		int cc=GUI.getxc();
+		Color cd = GUI.getxd();
+		
+		int da=GUI.getya();// spieler schwarz
+		int db=GUI.getyb();
+		int dc=GUI.getyc();
+		Color dd = GUI.getyd();
+		
+		int ea=GUI.getza();// spieler schwarz
+		int eb=GUI.getzb();
+		int ec=GUI.getzc();
+		Color ed = GUI.getzd();
+		
+		
 		//double xfact=1.1;
 		int w2=GUI.getbreite()/2;
 		double xfact=w2/960.0;
-		Color dd = GUI.getd();
 		
 		public void paintComponent(Graphics g) {
 			
@@ -854,13 +911,26 @@ public class GUI extends JFrame implements ActionListener{
 			g.setColor(fluss);
 			g.fillPolygon(xpoints , ypoints, 14);
 			
-			g.setColor(dd);
+			g.setColor(ad);
 			g.fillOval((int)((aa-10) *xfact),(int) ((ab-10) *xfact),(int) (ac *xfact),(int) (ac *xfact));
+
+			g.setColor(bd);
+			g.fillOval((int)((ba-10) *xfact),(int) ((bb-10) *xfact),(int) (bc *xfact),(int) (bc *xfact));
+
+			g.setColor(cd);
+			g.fillOval((int)((ca-10) *xfact),(int) ((cb-10) *xfact),(int) (cc *xfact),(int) (cc *xfact));
+
+			g.setColor(dd);
+			g.fillOval((int)((da-10) *xfact),(int) ((db-10) *xfact),(int) (dc *xfact),(int) (dc *xfact));
+
+			g.setColor(ed);
+			g.fillOval((int)((ea-10) *xfact),(int) ((eb-10) *xfact),(int) (ec *xfact),(int) (ec *xfact));
+			
 			g.setColor(taxi);
 			//g.fillRect(130,110,80,20);
 			//g.setStroke();
 			//g.drawLine(0, 0, 100, 100);
-			g.setFont(new Font("Serif", Font.PLAIN,(int) (30 *xfact)));g.drawString(Double.toString ((int)(440 *xfact)),(int)( 10 *xfact),(int)( 70 *xfact));
+			g.setFont(new Font("Serif", Font.PLAIN,(int) (30 *xfact)));//g.drawString(Double.toString ((int)(440 *xfact)),(int)( 10 *xfact),(int)( 70 *xfact));
 			
 						Graphics2D g2 = (Graphics2D)g;
 						g2.setStroke(new BasicStroke(7));
