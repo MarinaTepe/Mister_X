@@ -106,6 +106,8 @@ public class GUI extends JFrame implements ActionListener{
 		hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
 		breite=Toolkit.getDefaultToolkit().getScreenSize().width;
 		
+		
+		
 		/**
 	 * Create the frame.
 	 */
@@ -386,116 +388,10 @@ public class GUI extends JFrame implements ActionListener{
 		button25.addActionListener(this);
 		buttonPanel.add(button25);
 		
-		/**button26 = new JButton("26");
-		button26.addActionListener(this);
-		buttonPanel.add(button26);
-		
-		button27 = new JButton("27");
-		button27.addActionListener(this);
-		buttonPanel.add(button27);
-		
-		button28 = new JButton("28");
-		button28.addActionListener(this);
-		buttonPanel.add(button28);
-		
-		button29 = new JButton("29");
-		button29.addActionListener(this);
-		buttonPanel.add(button29);
-		
-		button30 = new JButton("30");
-		button30.addActionListener(this);
-		buttonPanel.add(button30);
-		
-		button31 = new JButton("31");
-		button31.addActionListener(this);
-		buttonPanel.add(button31);
-		
-		button32 = new JButton("32");
-		button32.addActionListener(this);
-		buttonPanel.add(button32);
-		
-		button33 = new JButton("33");
-		button33.addActionListener(this);
-		buttonPanel.add(button33);
-		
-		button34 = new JButton("34");
-		button34.addActionListener(this);
-		buttonPanel.add(button34);
-		
-		button35 = new JButton("35");
-		button35.addActionListener(this);
-		buttonPanel.add(button35);
-		
-		button36 = new JButton("36");
-		button36.addActionListener(this);
-		buttonPanel.add(button36);
-		
-		button37 = new JButton("37");
-		button37.addActionListener(this);
-		buttonPanel.add(button37);
-		
-		button38 = new JButton("38");
-		button38.addActionListener(this);
-		buttonPanel.add(button38);
-		
-		button39 = new JButton("39");
-		button39.addActionListener(this);
-		buttonPanel.add(button39);
-		
-		button40 = new JButton("40");
-		button40.addActionListener(this);
-		buttonPanel.add(button40);
-		
-		button41 = new JButton("41");
-		button41.addActionListener(this);
-		buttonPanel.add(button41);
-		
-		button42 = new JButton("42");
-		button42.addActionListener(this);
-		buttonPanel.add(button42);
-		
-		button43 = new JButton("43");
-		button43.addActionListener(this);
-		buttonPanel.add(button43);
-		
-		button44 = new JButton("44");
-		button44.addActionListener(this);
-		buttonPanel.add(button44);
-		
-		button45 = new JButton("45");
-		button45.addActionListener(this);
-		buttonPanel.add(button45);
-		
-		button46 = new JButton("46");
-		button46.addActionListener(this);
-		buttonPanel.add(button46);
-		
-		button47 = new JButton("47");
-		button47.addActionListener(this);
-		buttonPanel.add(button47);
-		
-		button48 = new JButton("48");
-		button48.addActionListener(this);
-		buttonPanel.add(button48);
-		
-		button49 = new JButton("49");
-		button49.addActionListener(this);
-		buttonPanel.add(button49);
-		
-		button50 = new JButton("50");
-		button50.addActionListener(this);
-		buttonPanel.add(button50);**/
-		
-		
-		
-		
 		buttonPanel.setBackground(Color.white);
 		buttonPanel.setBorder(new EmptyBorder(20, 20, 20, 20));
 		splitPane_2.setRightComponent(buttonPanel);
 		
-		/*panel = new JPanel();
-		splitPane.setLeftComponent(panel);
-	    setFocusTraversalPolicy(new FocusTraversalOnArray(new Component[]{scrollPane, splitPane_1, table, contentPane, splitPane}));*/
 		}		
 
 		//auslöser für die knöpfe
@@ -5389,7 +5285,7 @@ public class GUI extends JFrame implements ActionListener{
 
 
 //kreise malen
-	class OvalComponent extends JComponent {
+	class OvalComponent extends JComponent{
 		
 		int aa=GUI.getva();// spieler schwarz
 		int ab=GUI.getvb();
@@ -5759,13 +5655,9 @@ public class GUI extends JFrame implements ActionListener{
 					//g.fillOval((int)(900*xfact+15 *xfact),(int)( 850*xfact+15 *xfact),(int)( 30 *xfact),(int)( 30 *xfact));
 					g.setColor(Color.black);
 					g.drawString("25",(int)( 915 *xfact),(int)( 890 *xfact));				
-					
-					
-					
-				
-			
 		}
-	}
+		
+	}	
 
 
 
