@@ -27,6 +27,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.text.JTextComponent;
 import javax.swing.DropMode;
+import java.applet.*;
+
 
 
 
@@ -233,11 +235,11 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(7,2,0,0));
 		
-		final Icon icon1 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s1.png");
-		final Icon icon2 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s2.png");
-		final Icon icon3 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s3.png");
-		final Icon icon4 = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/s4.png");
-		final Icon iconx = new ImageIcon("c:/users/magrot410/OneDrive/Studium/Programmiersprachen/Projekt/Mister_X/x.png");
+		final Icon icon1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s1.png"));
+		final Icon icon2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s2.png"));
+		final Icon icon3 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s3.png"));
+		final Icon icon4 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s4.png"));
+		final Icon iconx = new ImageIcon(Toolkit.getDefaultToolkit().getImage("x.png"));
 		
 		buttonspieler1= new JButton(icon1);
 		buttonspieler1.addActionListener(this);
