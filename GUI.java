@@ -88,6 +88,24 @@ public class GUI extends JFrame implements ActionListener{
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
+				JFrame frame2 = new JFrame("Start");
+				frame2.setVisible( true );
+				frame2.setBounds(100, 100, 450, 300);	
+				JPanel buttonPanel2 = new JPanel();
+				buttonPanel2.setLayout(new GridLayout(4,2,0,20));
+				
+				JButton buttonanleitung = new JButton("Anleitung");
+				buttonPanel2.add(buttonanleitung);
+				
+				JButton buttonstart = new JButton("Start");
+				buttonPanel2.add(buttonstart);
+								
+				JButton buttonexit = new JButton("Exit");
+				buttonPanel2.add(buttonexit);
+				
+				buttonPanel2.setBackground(Color.white);
+				buttonPanel2.setBorder(new EmptyBorder(20, 20, 20, 20));
+				frame2.add(buttonPanel2);
 			}
 		});
 	}
@@ -5279,6 +5297,7 @@ public class GUI extends JFrame implements ActionListener{
 		
 		public static int gethoehe() {return hoehe;}
 		public static int getbreite() {return breite;}
+		
 	}
 
 
