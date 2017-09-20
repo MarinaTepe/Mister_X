@@ -2194,7 +2194,7 @@ public class GUI extends JFrame implements ActionListener{
 		}
 		
 		public void textFeld() {
-			txtpnVerfgbareTickets = new JEditorPane("text/html", "<font face='Arial'>" + "<h3><center>Verf\u00FCgbare Tickets:</center></h3><br>"
+			txtpnVerfgbareTickets = new JEditorPane("text/html", "<font face='Arial'>" + "<FONT SIZE=\"3*1920/breite\"><h3><center>Verf\u00FCgbare Tickets:</center></h3><br>"
 					+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"file:s1.png\">"
 					+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"file:s2.png\">"
 					+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"file:s3.png\">"
