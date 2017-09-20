@@ -2204,14 +2204,6 @@ public class GUI extends JFrame implements ActionListener{
 					+ "U-Bahn :&nbsp&nbsp&nbsp;"+counterField3+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField8+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField11+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField14+"<br>"
 					+ "<br><center>Mister X:</center><br>"+ "<center>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Black-Tickets :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField4+ "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Zweimal :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField5+"</center>");
 			txtpnVerfgbareTickets.setEditable(false);
-			/**
-			txtpnVerfgbareTickets = new JEditorPane();
-			txtpnVerfgbareTickets.setEditable(false);
-			txtpnVerfgbareTickets.setText("Verf\u00FCgbare Tickets:\n\n"
-					+ "Bus\t"+"Schwarz:  "+counterField1+"\tGelb:  "+counterField6+"\tLila:  "+counterField9+"\tTürkis:  "+counterField12+"\n\n"
-					+ "Taxi\t"+"Schwarz:  "+counterField2+"\tGelb:  "+counterField7+"\tLila:  "+counterField10+"\tTürkis:  "+counterField13+"\n\n"
-					+ "U-Bahn\t"+"Schwarz:  "+counterField3+"\tGelb:  "+counterField8+"\tLila:  "+counterField11+"\tTürkis:  "+counterField14+"\n\n\n"
-					+ "Mister X\t"+ "Black-Tickets:  "+counterField4+ "\tZweimal:  "+counterField5);**/
 			}
 		
 		public static int getva() {return va;}//xachse
