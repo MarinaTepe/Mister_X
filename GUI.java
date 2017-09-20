@@ -63,21 +63,32 @@ public class GUI extends JFrame implements ActionListener{
 	public  int counterField3=4;
 	public  int counterField4=4;
 	public  int counterField5=2; 
+	public  int counterField6=8;
+	public  int counterField7=11;
+	public  int counterField8=4; 
+	public  int counterField9=8;
+	public  int counterField10=11;
+	public  int counterField11=4; 
+	public  int counterField12=8;
+	public  int counterField13=11;
+	public  int counterField14=4; 
 	
-	public  int getCounterField1() {return counterField1;}
+	
 	public  void setCounterField1() {counterField1 = counterField1-1;}
-	
-	public  int getCounterField2() {return counterField2;}
 	public  void setCounterField2() {counterField2 = counterField2-1;}
-	
-	public  int getCounterField3() {return counterField3;}
 	public  void setCounterField3() {counterField3 = counterField3-1;}
-	
-	public  int getCounterField4() {return counterField4;}
 	public  void setCounterField4() {counterField4 = counterField4-1;}
-	
-	public  int getCounterField5() {return counterField5;}
 	public  void setCounterField5() {counterField5 = counterField5-1;}
+	public  void setCounterField6() {counterField6 = counterField6-1;}
+	public  void setCounterField7() {counterField7 = counterField7-1;}
+	public  void setCounterField8() {counterField8 = counterField8-1;}
+	public  void setCounterField9() {counterField9 = counterField9-1;}
+	public  void setCounterField10() {counterField10 = counterField10-1;}
+	public  void setCounterField11() {counterField11 = counterField11-1;}
+	public  void setCounterField12() {counterField12 = counterField12-1;}
+	public  void setCounterField13() {counterField13 = counterField13-1;}
+	public  void setCounterField14() {counterField14 = counterField14-1;}
+	
 
 	/**
 	 * Launch the application.
@@ -467,62 +478,86 @@ public class GUI extends JFrame implements ActionListener{
 				buttonmisterx.setEnabled(false);}
 			
 			else if(ae.getSource() == this.buttonbus){
-				setCounterField1();	
-				splitPane_2.remove(txtpnVerfgbareTickets);
-		    	textFeld();
-		    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
-					if (!buttonspieler1.isEnabled()){					
+					if (!buttonspieler1.isEnabled()){
+						setCounterField1();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+						textFeld();
+						splitPane_2.setLeftComponent(txtpnVerfgbareTickets);					
 				    	buttonbus.setEnabled(false);}
-					
-					if (!buttonspieler2.isEnabled()){					
+					if (!buttonspieler2.isEnabled()){
+						setCounterField6();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+						textFeld();
+						splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 				    	buttonbus.setEnabled(false);}
-					
 					if (!buttonspieler3.isEnabled()){
-						buttonbus.setEnabled(false);}
-					
+						setCounterField9();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+						textFeld();
+						splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
+				    	buttonbus.setEnabled(false);}
 				    if (!buttonspieler4.isEnabled()){
-					    buttonbus.setEnabled(false);}
-				    
+				    	setCounterField12();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+						textFeld();
+						splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
+				    	buttonbus.setEnabled(false);}
 				    if (!buttonmisterx.isEnabled()){
 					    buttonbus.setEnabled(false);}}
 		        
 			else if(ae.getSource() == this.buttontaxi){
-				setCounterField2();	
-				splitPane_2.remove(txtpnVerfgbareTickets);
-		    	textFeld();
-		    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		        	if (!buttonspieler1.isEnabled()){
+		        		setCounterField2();	
+		        		splitPane_2.remove(txtpnVerfgbareTickets);
+		        		textFeld();
+		        		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 				    	buttontaxi.setEnabled(false);}
-		        	
 					if (!buttonspieler2.isEnabled()){
+						setCounterField7();	
+		        		splitPane_2.remove(txtpnVerfgbareTickets);
+		        		textFeld();
+		        		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 				    	buttontaxi.setEnabled(false);}
-					
 					if (!buttonspieler3.isEnabled()){
+						setCounterField10();	
+		        		splitPane_2.remove(txtpnVerfgbareTickets);
+		        		textFeld();
+		        		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 				    	buttontaxi.setEnabled(false);}
-					
 				    if (!buttonspieler4.isEnabled()){
+				    	setCounterField13();	
+		        		splitPane_2.remove(txtpnVerfgbareTickets);
+		        		textFeld();
+		        		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 					    buttontaxi.setEnabled(false);}
-				    
 				    if (!buttonmisterx.isEnabled()){
 					    buttontaxi.setEnabled(false);}}
 		       
 			else if (ae.getSource() == this.buttonbahn){
-				setCounterField3();	
-				splitPane_2.remove(txtpnVerfgbareTickets);
-		    	textFeld();
-		    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		        	if (!buttonspieler1.isEnabled()){
+		        		setCounterField3();	
+		        		splitPane_2.remove(txtpnVerfgbareTickets);
+		        		textFeld();
+		        		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 				    	buttonbahn.setEnabled(false);}
-		        	
 					if (!buttonspieler2.isEnabled()){
+						setCounterField8();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+		        		textFeld();
+		        		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 				    	buttonbahn.setEnabled(false);}
-					
 					if (!buttonspieler3.isEnabled()){
+						setCounterField11();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+		        		textFeld();
+		        		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 				    	buttonbahn.setEnabled(false);}
-					
 				    if (!buttonspieler4.isEnabled()){
+				    	setCounterField14();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+		        		textFeld();
+		        		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 					    buttonbahn.setEnabled(false);}
-				    
 				    if (!buttonmisterx.isEnabled()){
 					    buttonbahn.setEnabled(false);}}
 		        
@@ -3791,15 +3826,11 @@ public class GUI extends JFrame implements ActionListener{
 		public void textFeld() {
 			txtpnVerfgbareTickets = new JEditorPane();
 			txtpnVerfgbareTickets.setEditable(false);
-			txtpnVerfgbareTickets.setText("\nVerf\u00FCgbare Tickets:\r\n\t"
-					+ "\tBus\t"+counterField1
-					+ "\tTaxi\t"+counterField2
-					+ "\tU-Bahn\t"+counterField3
-					+ "\n\r"
-					+ "\nMister X:\r\n\t"
-					+ "\tBlack-Tickets\t"+counterField4
-					+ "\tZweimal\t"+counterField5
-					+ "\n");}
+			txtpnVerfgbareTickets.setText("Verf\u00FCgbare Tickets:\n\n"
+					+ "Bus\t"+"Schwarz:  "+counterField1+"\tGelb:  "+counterField6+"\tLila:  "+counterField9+"\tTürkis:  "+counterField12+"\n\n"
+					+ "Taxi\t"+"Schwarz:  "+counterField2+"\tGelb:  "+counterField7+"\tLila:  "+counterField10+"\tTürkis:  "+counterField13+"\n\n"
+					+ "U-Bahn\t"+"Schwarz:  "+counterField3+"\tGelb:  "+counterField8+"\tLila:  "+counterField11+"\tTürkis:  "+counterField14+"\n\n\n"
+					+ "Mister X\t"+ "Black-Tickets:  "+counterField4+ "\tZweimal:  "+counterField5);}
 		
 		public static int getva() {return va;}//xachse
 		public static int getvb() {return vb;}//yachse
