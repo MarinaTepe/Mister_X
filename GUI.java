@@ -96,12 +96,7 @@ public class GUI extends JFrame implements ActionListener{
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
-					GUI frame = new GUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				
 				JFrame frame2 = new JFrame("Start");
 				frame2.setVisible( true );
 				frame2.setBounds(100, 100, 450, 300);	
@@ -132,20 +127,31 @@ public class GUI extends JFrame implements ActionListener{
 				
 				JButton buttonstart = new JButton("Start");
 				buttonstart.addActionListener( new ActionListener() 
-					{ public void actionPerformed( ActionEvent e ) 
-					{frame2.setVisible(false);
-					va=100;vb=80;vc=80;
-					splitPane.setLeftComponent(new OvalComponent());
-        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-        			wa=800;wb=420;wc=80;
-					splitPane.setLeftComponent(new OvalComponent());
-        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-        			xa=430;xb=900;xc=80;
-					splitPane.setLeftComponent(new OvalComponent());
-        			splitPane.setDividerLocation(splitPane.getSize().width/2);
-        			ya=200;yb=400;yc=80;
-					splitPane.setLeftComponent(new OvalComponent());
-        			splitPane.setDividerLocation(splitPane.getSize().width/2);}});
+					{
+					public void actionPerformed( ActionEvent e ) 
+						{
+							try {
+								GUI frame = new GUI();
+								frame.setVisible(true);
+							} catch (Exception e1) {
+								e1.printStackTrace();
+							}
+							frame2.setVisible(false);
+							va=100;vb=80;vc=80;
+							splitPane.setLeftComponent(new OvalComponent());
+		        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+		        			wa=800;wb=420;wc=80;
+							splitPane.setLeftComponent(new OvalComponent());
+		        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+		        			xa=430;xb=900;xc=80;
+							splitPane.setLeftComponent(new OvalComponent());
+		        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+		        			ya=200;yb=400;yc=80;
+							splitPane.setLeftComponent(new OvalComponent());
+		        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+		        			}
+					}
+				);
 				buttonPanel2.add(buttonstart);
 								
 				JButton buttonexit = new JButton("Exit");
