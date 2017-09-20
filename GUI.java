@@ -2203,6 +2203,7 @@ public class GUI extends JFrame implements ActionListener{
 					+ "Taxi :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField2+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField7+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField10+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField13+"<br>"
 					+ "U-Bahn :&nbsp&nbsp&nbsp;"+counterField3+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField8+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField11+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField14+"<br>"
 					+ "<br><center>Mister X:</center><br>"+ "<center>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Black-Tickets :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField4+ "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Zweimal :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField5+"</center>");
+			txtpnVerfgbareTickets.setEditable(false);
 			/**
 			txtpnVerfgbareTickets = new JEditorPane();
 			txtpnVerfgbareTickets.setEditable(false);
