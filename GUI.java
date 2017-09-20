@@ -277,17 +277,7 @@ public class GUI extends JFrame implements ActionListener{
 		//counterField4 = 4;
 		//counterField5 = 2;
 		textFeld();
-		txtpnVerfgbareTickets = new JEditorPane();
-		txtpnVerfgbareTickets.setEditable(false);
-		txtpnVerfgbareTickets.setText("\nVerf\u00FCgbare Tickets:\r\n\t"
-				+ "\tBus\t"+counterField1
-				+ "\tTaxi\t"+counterField2
-				+ "\tU-Bahn\t"+counterField3
-				+ "\n\r"
-				+ "\nMister X:\r\n\t"
-				+ "\tBlack-Tickets\t"+counterField4
-				+ "\tZweimal\t"+counterField5
-				+ "\n");
+		
 		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		//splitPane_1.setDividerLocation(splitPane.getSize().height/2);
 		
@@ -477,102 +467,79 @@ public class GUI extends JFrame implements ActionListener{
 				buttonmisterx.setEnabled(false);}
 			
 			else if(ae.getSource() == this.buttonbus){
-				if (!buttonspieler1.isEnabled()){
-					setCounterField1();	
-					System.out.println(getCounterField1());
-					System.out.println(txtpnVerfgbareTickets.getText());
-					splitPane_2.remove(txtpnVerfgbareTickets);
-			    	textFeld();
-			    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
-			    	buttonbus.setEnabled(false);}
-				if (!buttonspieler2.isEnabled()){
-					setCounterField1();	
-			    	txtpnVerfgbareTickets.setVisible(false);
-			    	txtpnVerfgbareTickets.setVisible(true);
-			    	buttonbus.setEnabled(false);}
-				if (!buttonspieler3.isEnabled()){
-					setCounterField1();	
-			    	txtpnVerfgbareTickets.setVisible(false);
-			    	txtpnVerfgbareTickets.setVisible(true);
-			    	buttonbus.setEnabled(false);}
-			    if (!buttonspieler4.isEnabled()){
-					setCounterField1();	
-				    txtpnVerfgbareTickets.setVisible(false);
-				    txtpnVerfgbareTickets.setVisible(true);
-				    buttonbus.setEnabled(false);}
-			    if (!buttonmisterx.isEnabled()){
-			    	label1.setText("Bus");
-					setCounterField1();	
-				    txtpnVerfgbareTickets.setVisible(false);
-				    txtpnVerfgbareTickets.setVisible(true);
-				    buttonbus.setEnabled(false);}}
-		        
-		        else if(ae.getSource() == this.buttontaxi){
-		        	if (!buttonspieler1.isEnabled()){
-						setCounterField2();	
-				    	txtpnVerfgbareTickets.setVisible(false);
-				    	txtpnVerfgbareTickets.setVisible(true);
-				    	buttontaxi.setEnabled(false);}
-					if (!buttonspieler2.isEnabled()){
-						setCounterField2();	
-				    	txtpnVerfgbareTickets.setVisible(false);
-				    	txtpnVerfgbareTickets.setVisible(true);
-				    	buttontaxi.setEnabled(false);}
+				setCounterField1();	
+				splitPane_2.remove(txtpnVerfgbareTickets);
+		    	textFeld();
+		    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
+					if (!buttonspieler1.isEnabled()){					
+				    	buttonbus.setEnabled(false);}
+					
+					if (!buttonspieler2.isEnabled()){					
+				    	buttonbus.setEnabled(false);}
+					
 					if (!buttonspieler3.isEnabled()){
-						setCounterField2();	
-				    	txtpnVerfgbareTickets.setVisible(false);
-				    	txtpnVerfgbareTickets.setVisible(true);
-				    	buttontaxi.setEnabled(false);}
+						buttonbus.setEnabled(false);}
+					
 				    if (!buttonspieler4.isEnabled()){
-						setCounterField2();	
-					    txtpnVerfgbareTickets.setVisible(false);
-					    txtpnVerfgbareTickets.setVisible(true);
-					    buttontaxi.setEnabled(false);}
+					    buttonbus.setEnabled(false);}
+				    
 				    if (!buttonmisterx.isEnabled()){
-						setCounterField2();	
-					    txtpnVerfgbareTickets.setVisible(false);
-					    txtpnVerfgbareTickets.setVisible(true);
+					    buttonbus.setEnabled(false);}}
+		        
+			else if(ae.getSource() == this.buttontaxi){
+				setCounterField2();	
+				splitPane_2.remove(txtpnVerfgbareTickets);
+		    	textFeld();
+		    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
+		        	if (!buttonspieler1.isEnabled()){
+				    	buttontaxi.setEnabled(false);}
+		        	
+					if (!buttonspieler2.isEnabled()){
+				    	buttontaxi.setEnabled(false);}
+					
+					if (!buttonspieler3.isEnabled()){
+				    	buttontaxi.setEnabled(false);}
+					
+				    if (!buttonspieler4.isEnabled()){
+					    buttontaxi.setEnabled(false);}
+				    
+				    if (!buttonmisterx.isEnabled()){
 					    buttontaxi.setEnabled(false);}}
 		       
-		        else if (ae.getSource() == this.buttonbahn){
+			else if (ae.getSource() == this.buttonbahn){
+				setCounterField3();	
+				splitPane_2.remove(txtpnVerfgbareTickets);
+		    	textFeld();
+		    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		        	if (!buttonspieler1.isEnabled()){
-						setCounterField3();	
-				    	txtpnVerfgbareTickets.setVisible(false);
-				    	txtpnVerfgbareTickets.setVisible(true);
 				    	buttonbahn.setEnabled(false);}
+		        	
 					if (!buttonspieler2.isEnabled()){
-						setCounterField3();	
-				    	txtpnVerfgbareTickets.setVisible(false);
-				    	txtpnVerfgbareTickets.setVisible(true);
 				    	buttonbahn.setEnabled(false);}
+					
 					if (!buttonspieler3.isEnabled()){
-						setCounterField3();	
-				    	txtpnVerfgbareTickets.setVisible(false);
-				    	txtpnVerfgbareTickets.setVisible(true);
 				    	buttonbahn.setEnabled(false);}
+					
 				    if (!buttonspieler4.isEnabled()){
-						setCounterField3();	
-					    txtpnVerfgbareTickets.setVisible(false);
-					    txtpnVerfgbareTickets.setVisible(true);
 					    buttonbahn.setEnabled(false);}
+				    
 				    if (!buttonmisterx.isEnabled()){
-						setCounterField3();	
-					    txtpnVerfgbareTickets.setVisible(false);
-					    txtpnVerfgbareTickets.setVisible(true);
 					    buttonbahn.setEnabled(false);}}
 		        
-		        else if(ae.getSource() == this.buttonblack){
-		        	    if (!buttonmisterx.isEnabled()){
-						setCounterField4();	
-					    txtpnVerfgbareTickets.setVisible(false);
-					    txtpnVerfgbareTickets.setVisible(true);
+			else if(ae.getSource() == this.buttonblack){
+		        	if (!buttonmisterx.isEnabled()){
+		        		setCounterField4();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+				    	textFeld();
+				    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 					    buttonblack.setEnabled(false);}}
 		        
-		        else if(ae.getSource() == this.button2x){
-		        	  if (!buttonmisterx.isEnabled()){
-						setCounterField5();	
-					    txtpnVerfgbareTickets.setVisible(false);
-					    txtpnVerfgbareTickets.setVisible(true);
+			else if(ae.getSource() == this.button2x){
+		        	if (!buttonmisterx.isEnabled()){
+		        		setCounterField5();	
+						splitPane_2.remove(txtpnVerfgbareTickets);
+				    	textFeld();
+				    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 					    button2x.setEnabled(false);}}
 		        
 		        else if(ae.getSource() == this.button1){
