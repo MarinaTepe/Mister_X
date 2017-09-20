@@ -20,6 +20,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComponent;
+import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -39,12 +40,12 @@ import javax.swing.DropMode;
 public class GUI extends JFrame implements ActionListener{
 
 	
-	public static JSplitPane splitPane;
+	public static JSplitPane splitPane_2,splitPane;
 	private JPanel contentPane;
 	private JScrollPane scrollPane;
 	private JTable table;
 	private JLabel label1;
-	private JTextPane txtpnVerfgbareTickets;
+	private JEditorPane txtpnVerfgbareTickets;
 	private JPanel buttonPanel;
 	private JButton buttonspieler1, buttonspieler2, buttonspieler3, buttonspieler4, buttonmisterx, buttonbus,buttontaxi, buttonbahn, buttonblack, button2x, 
 	button1, button2, button3, button4, button5, button6, button7, button8, button9, button10,
@@ -57,26 +58,26 @@ public class GUI extends JFrame implements ActionListener{
 	public static int hoehe;
 	public static int breite;
 	public static Color vd,wd,xd,yd,zd;
-	public static int counterField1;
-	public static int counterField2;
-	public static int counterField3;
-	public static int counterField4;
-	public static int counterField5; 
+	public  int counterField1=8;
+	public  int counterField2=11;
+	public  int counterField3=4;
+	public  int counterField4=4;
+	public  int counterField5=2; 
 	
-	public static int getCounterField1() {return counterField1;}
-	public static void setCounterField1() {GUI.counterField1 = counterField1--;}
+	public  int getCounterField1() {return counterField1;}
+	public  void setCounterField1() {counterField1 = counterField1-1;}
 	
-	public static int getCounterField2() {return counterField2;}
-	public static void setCounterField2() {GUI.counterField2 = counterField2--;}
+	public  int getCounterField2() {return counterField2;}
+	public  void setCounterField2() {counterField2 = counterField2-1;}
 	
-	public static int getCounterField3() {return counterField3;}
-	public static void setCounterField3() {GUI.counterField3 = counterField3--;}
+	public  int getCounterField3() {return counterField3;}
+	public  void setCounterField3() {counterField3 = counterField3-1;}
 	
-	public static int getCounterField4() {return counterField4;}
-	public static void setCounterField4() {GUI.counterField4 = counterField4--;}
+	public  int getCounterField4() {return counterField4;}
+	public  void setCounterField4() {counterField4 = counterField4-1;}
 	
-	public static int getCounterField5() {return counterField5;}
-	public static void setCounterField5() {GUI.counterField5 = counterField5--;}
+	public  int getCounterField5() {return counterField5;}
+	public  void setCounterField5() {counterField5 = counterField5-1;}
 
 	/**
 	 * Launch the application.
@@ -259,7 +260,7 @@ public class GUI extends JFrame implements ActionListener{
 		table.getColumnModel().getColumn(8).setPreferredWidth(15);
 		scrollPane.setViewportView(table);
 		
-		JSplitPane splitPane_2 = new JSplitPane();
+		splitPane_2 = new JSplitPane();
 		splitPane_2.setEnabled(false);
 		splitPane_2.setOrientation(JSplitPane.VERTICAL_SPLIT);
 		splitPane_1.setRightComponent(splitPane_2);
@@ -270,22 +271,22 @@ public class GUI extends JFrame implements ActionListener{
 		
 		
 		//Verfügbare Tickets generieren
-		counterField1 = 8;		
-		counterField2 = 11;
-		counterField3 = 4;
-		counterField4 = 4;
-		counterField5 = 2;
-		
-		txtpnVerfgbareTickets = new JTextPane();
+		//counterField1 = 8;		
+		//counterField2 = 11;
+		//counterField3 = 4;
+		//counterField4 = 4;
+		//counterField5 = 2;
+		textFeld();
+		txtpnVerfgbareTickets = new JEditorPane();
 		txtpnVerfgbareTickets.setEditable(false);
 		txtpnVerfgbareTickets.setText("\nVerf\u00FCgbare Tickets:\r\n\t"
-				+ "\tBus\t"+(counterField1)
-				+ "\tTaxi\t"+(counterField2)
-				+ "\tU-Bahn\t"+(counterField3)
+				+ "\tBus\t"+counterField1
+				+ "\tTaxi\t"+counterField2
+				+ "\tU-Bahn\t"+counterField3
 				+ "\n\r"
 				+ "\nMister X:\r\n\t"
-				+ "\tBlack-Tickets\t"+(counterField4)
-				+ "\tZweimal\t"+(counterField5)
+				+ "\tBlack-Tickets\t"+counterField4
+				+ "\tZweimal\t"+counterField5
 				+ "\n");
 		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 		//splitPane_1.setDividerLocation(splitPane.getSize().height/2);
@@ -478,8 +479,11 @@ public class GUI extends JFrame implements ActionListener{
 			else if(ae.getSource() == this.buttonbus){
 				if (!buttonspieler1.isEnabled()){
 					setCounterField1();	
-			    	txtpnVerfgbareTickets.setVisible(false);
-			    	txtpnVerfgbareTickets.setVisible(true);
+					System.out.println(getCounterField1());
+					System.out.println(txtpnVerfgbareTickets.getText());
+					splitPane_2.remove(txtpnVerfgbareTickets);
+			    	textFeld();
+			    	splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
 			    	buttonbus.setEnabled(false);}
 				if (!buttonspieler2.isEnabled()){
 					setCounterField1();	
@@ -4071,6 +4075,19 @@ public class GUI extends JFrame implements ActionListener{
 	       
 		}
 		
+		public void textFeld() {
+			txtpnVerfgbareTickets = new JEditorPane();
+			txtpnVerfgbareTickets.setEditable(false);
+			txtpnVerfgbareTickets.setText("\nVerf\u00FCgbare Tickets:\r\n\t"
+					+ "\tBus\t"+counterField1
+					+ "\tTaxi\t"+counterField2
+					+ "\tU-Bahn\t"+counterField3
+					+ "\n\r"
+					+ "\nMister X:\r\n\t"
+					+ "\tBlack-Tickets\t"+counterField4
+					+ "\tZweimal\t"+counterField5
+					+ "\n");}
+		
 		public static int getva() {return va;}//xachse
 		public static int getvb() {return vb;}//yachse
 		public static int getvc() {return vc;}
@@ -4103,6 +4120,8 @@ public class GUI extends JFrame implements ActionListener{
 
 
 
+	
+	
 
 //kreise malen
 	class OvalComponent extends JComponent{
