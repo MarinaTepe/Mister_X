@@ -72,7 +72,7 @@ public class GUI extends JFrame implements ActionListener{
 	public  int counterField12=8;
 	public  int counterField13=11;
 	public  int counterField14=4; 
-	
+	public final Icon icon1,icon2,icon3,icon4,iconx;
 	
 	public  void setCounterField1() {counterField1 = counterField1-1;}
 	public  void setCounterField2() {counterField2 = counterField2-1;}
@@ -296,11 +296,11 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(7,2,0,0));
 		
-		final Icon icon1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s1.png"));
-		final Icon icon2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s2.png"));
-		final Icon icon3 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s3.png"));
-		final Icon icon4 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s4.png"));
-		final Icon iconx = new ImageIcon(Toolkit.getDefaultToolkit().getImage("x.png"));
+		icon1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s1.png"));
+		icon2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s2.png"));
+		icon3 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s3.png"));
+		icon4 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s4.png"));
+		iconx = new ImageIcon(Toolkit.getDefaultToolkit().getImage("x.png"));
 		
 		buttonspieler1= new JButton(icon1);
 		buttonspieler1.addActionListener(this);
@@ -3824,13 +3824,24 @@ public class GUI extends JFrame implements ActionListener{
 		}
 		
 		public void textFeld() {
+			txtpnVerfgbareTickets = new JEditorPane("text/html", "<font face='Arial'>" + "<h1><center>Verf\u00FCgbare Tickets:</center></h1><br>"
+					+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"file:s1.png\">"
+					+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"file:s2.png\">"
+					+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"file:s3.png\">"
+					+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=\"file:s4.png\">"+"<br>"
+					+ "Bus :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+counterField1+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField6+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField9+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField12+"<br>"
+					+ "Taxi :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField2+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField7+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField10+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField13+"<br>"
+					+ "U-Bahn :&nbsp&nbsp&nbsp;"+counterField3+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField8+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField11+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField14+"<br>"
+					+ "<br><center>Mister X:</center><br>"+ "<center>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Black-Tickets :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField4+ "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Zweimal :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField5+"</center>");
+			/**
 			txtpnVerfgbareTickets = new JEditorPane();
 			txtpnVerfgbareTickets.setEditable(false);
 			txtpnVerfgbareTickets.setText("Verf\u00FCgbare Tickets:\n\n"
 					+ "Bus\t"+"Schwarz:  "+counterField1+"\tGelb:  "+counterField6+"\tLila:  "+counterField9+"\tTürkis:  "+counterField12+"\n\n"
 					+ "Taxi\t"+"Schwarz:  "+counterField2+"\tGelb:  "+counterField7+"\tLila:  "+counterField10+"\tTürkis:  "+counterField13+"\n\n"
 					+ "U-Bahn\t"+"Schwarz:  "+counterField3+"\tGelb:  "+counterField8+"\tLila:  "+counterField11+"\tTürkis:  "+counterField14+"\n\n\n"
-					+ "Mister X\t"+ "Black-Tickets:  "+counterField4+ "\tZweimal:  "+counterField5);}
+					+ "Mister X\t"+ "Black-Tickets:  "+counterField4+ "\tZweimal:  "+counterField5);**/
+			}
 		
 		public static int getva() {return va;}//xachse
 		public static int getvb() {return vb;}//yachse
