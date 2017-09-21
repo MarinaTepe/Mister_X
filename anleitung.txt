@@ -23,7 +23,7 @@ Verfolgung neu zu koordinieren.
 Bedienung der Buttons
 Sobald das Spiel startet zieht Mister X zuerst und belegt eine beliebige Station. Dazu den Button "X" drücken,
 das Verkehrsmittel wählen und auf den Button der Station klicken.
-Nun machen die Detektibve abwechselnd ihre Züge. Umd dies zu tun müssen sie ebenfalls erst auf den Button
+Nun machen die Detektive abwechselnd ihre Züge. Um dies zu tun müssen sie ebenfalls erst auf den Button
 mit ihrer Spielfigur klicken, dann auf ein Verkehrsmittel und eine Station.
-Der Ticketzähler zählt automatisch mit wieviele Tickets noch vorhaden sind das Programm erkennt welche Station mit
-welchem Verkehrsmittel erreicht werden kann.
+Der Ticketzähler zählt automatisch mit wie viele Tickets noch vorhanden sind. Das Programm erkennt welche 
+Station mit welchem Verkehrsmittel erreicht werden kann.
