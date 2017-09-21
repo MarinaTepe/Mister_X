@@ -105,7 +105,7 @@ public class GUI extends JFrame implements ActionListener{
 				buttonanleitung.addActionListener( new ActionListener() 
 				{ public void actionPerformed( ActionEvent e ) 
 				{JFrame frame3 = new JFrame("Anleitung");
-				frame3.setBounds(breite/2-breite/4,hoehe/2-hoehe/4, breite/2, hoehe/2);
+				frame3.setBounds(breite/2-breite/4,hoehe/3-hoehe/4, breite/2, hoehe/1);
 				JTextPane anleitungtxt = new JTextPane();
 				anleitungtxt.setEditable(false);
 				BufferedReader br = null;
