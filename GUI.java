@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
@@ -2271,34 +2272,23 @@ public class GUI extends JFrame implements ActionListener{
 		public static int getbreite() {return breite;}
 		
 		public void abgleich() {
-			if(vb == zb) {JFrame frame4 = new JFrame("Gewonnen");
-			frame4.setVisible( true );
-			frame4.setBounds(200, 200, 650, 500);
-			JTextPane gewonnentxt = new JTextPane();
-			gewonnentxt.setEditable(false);
-			gewonnentxt.setText("Gewonnen!");
-			frame4.add(gewonnentxt);}
-			if(wb == zb) {JFrame frame4 = new JFrame("Gewonnen");
-			frame4.setVisible( true );
-			frame4.setBounds(200, 200, 650, 500);
-			JTextPane gewonnentxt = new JTextPane();
-			gewonnentxt.setEditable(false);
-			gewonnentxt.setText("Gewonnen!");
-			frame4.add(gewonnentxt);}
-			if(xb == zb) {JFrame frame4 = new JFrame("Gewonnen");
-			frame4.setVisible( true );
-			frame4.setBounds(200, 200, 650, 500);
-			JTextPane gewonnentxt = new JTextPane();
-			gewonnentxt.setEditable(false);
-			gewonnentxt.setText("Gewonnen!");
-			frame4.add(gewonnentxt);}
-			if(yb == zb) {JFrame frame4 = new JFrame("Gewonnen");
-			frame4.setVisible( true );
-			frame4.setBounds(200, 200, 650, 500);
-			JTextPane gewonnentxt = new JTextPane();
-			gewonnentxt.setEditable(false);
-			gewonnentxt.setText("Gewonnen!");
-			frame4.add(gewonnentxt);}
+			if(vb == zb||wb == zb||xb == zb||yb == zb) {
+				JFrame frame4 = new JFrame("Gewonnen");
+				frame4.setVisible( true );
+				frame4.setBounds(breite/2-breite/10,hoehe/2-hoehe/16, breite/5, hoehe/8);
+				//frame4.setLayout(new GridBagLayout());
+				JPanel gewonnentxt = new JPanel();
+				JLabel win = new JLabel();
+				JLabel win1 = new JLabel();
+				win.setHorizontalAlignment(JLabel.CENTER);
+				win1.setHorizontalAlignment(JLabel.CENTER);
+				win.setFont(new Font("Verdana",1,40/(1920/breite)));
+				win.setText("Gewonnen!");
+				win1.setText("Du hast mister x gefangen");
+				gewonnentxt.add(win);
+				gewonnentxt.add(win1);
+				frame4.add(gewonnentxt);
+				}
 			
 		}
 	}
