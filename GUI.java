@@ -4,22 +4,16 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ComponentListener;
-import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.geom.Line2D;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
-
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -34,11 +28,8 @@ import javax.swing.JSplitPane;
 import javax.swing.JTable;
 import javax.swing.JTextPane;
 import javax.swing.ScrollPaneConstants;
-import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.text.JTextComponent;
-import javax.swing.DropMode;
 
 
 
@@ -105,6 +96,7 @@ public class GUI extends JFrame implements ActionListener{
 				
 				JFrame frame2 = new JFrame("Start");
 				frame2.setVisible( true );
+				frame2.setDefaultCloseOperation(EXIT_ON_CLOSE);
 				frame2.setBounds(breite/2-breite/6,hoehe/2-hoehe/8, breite/3, hoehe/4);	
 				JPanel buttonPanel2 = new JPanel();
 				buttonPanel2.setLayout(new GridLayout(4,2,0,20));
@@ -113,7 +105,6 @@ public class GUI extends JFrame implements ActionListener{
 				buttonanleitung.addActionListener( new ActionListener() 
 				{ public void actionPerformed( ActionEvent e ) 
 				{JFrame frame3 = new JFrame("Anleitung");
-				frame3.setVisible( true );
 				frame3.setBounds(breite/2-breite/4,hoehe/2-hoehe/4, breite/2, hoehe/2);
 				JTextPane anleitungtxt = new JTextPane();
 				anleitungtxt.setEditable(false);
@@ -128,6 +119,14 @@ public class GUI extends JFrame implements ActionListener{
 				}
 				
 				frame3.add(anleitungtxt);
+				try {
+					frame = new GUI();
+					frame.setVisible(true);
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+				frame3.setVisible( true );
+				frame2.setVisible(false);
 				}});
 				buttonPanel2.add(buttonanleitung);
 				
@@ -2610,31 +2609,32 @@ public class GUI extends JFrame implements ActionListener{
 			
 		}
 		
+		//spieler1
 		public static int getva() {return va;}//xachse
 		public static int getvb() {return vb;}//yachse
 		public static int getvc() {return vc;}
 		public static Color getvd() {return vd;}//spielerfarbe
-		
+		//spieler2
 		public static int getwa() {return wa;}//xachse
 		public static int getwb() {return wb;}//yachse
 		public static int getwc() {return wc;}
 		public static Color getwd() {return wd;}//spielerfarbe
-		
+		//spieler3
 		public static int getxa() {return xa;}//xachse
 		public static int getxb() {return xb;}//yachse
 		public static int getxc() {return xc;}
 		public static Color getxd() {return xd;}//spielerfarbe
-		
+		//spieler4
 		public static int getza() {return za;}//xachse
 		public static int getzb() {return zb;}//yachse
 		public static int getzc() {return zc;}
 		public static Color getzd() {return zd;}//spielerfarbe
-		
+		//spieler5
 		public static int getya() {return ya;}//xachse
 		public static int getyb() {return yb;}//yachse
 		public static int getyc() {return yc;}
 		public static Color getyd() {return yd;}//spielerfarbe
-		
+		//auflösungsabfrage
 		public static int gethoehe() {return hoehe;}
 		public static int getbreite() {return breite;}
 		
@@ -2657,16 +2657,17 @@ public class GUI extends JFrame implements ActionListener{
 				gewonnentxt.add(win1);
 				frame4.add(gewonnentxt);
 				//default icon, custom title
-				frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+				
 				int n = JOptionPane.showConfirmDialog(
 				    null,
 				    "Möchtest du erneut spielen?",
 				    "Sie haben Gewonnen",
 				    JOptionPane.YES_NO_OPTION);
-				
+				frame4.setVisible( true );
 				
 				if(n==0) {
 					frame4.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+					frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 					GUI.frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 					try {
 						
@@ -2688,21 +2689,14 @@ public class GUI extends JFrame implements ActionListener{
         			splitPane.setDividerLocation(splitPane.getSize().width/2);
         			frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
         			}
-					else {
-						frame4.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-						GUI.frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));}
+				else {
+					frame4.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+					GUI.frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));}
 					
 				
 				
 				
 			}
-			
-			if(vb == wb) {
-				buttonbus.setEnabled(true);
-				buttontaxi.setEnabled(true);
-				buttonbahn.setEnabled(true);
-			}
-
 			
 		}
 	}
