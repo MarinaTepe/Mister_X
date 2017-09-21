@@ -113,7 +113,7 @@ public class GUI extends JFrame implements ActionListener{
 								
 								anleitungtxt.setEditable(false);
 								BufferedReader br = null;
-								File anleitung = new File("anleitung.txt");
+								File anleitung = new File("anleitung.txt");//einlesen der Anleitung
 								try {
 									br = new BufferedReader(new FileReader(anleitung));
 									String line = null;
@@ -200,33 +200,32 @@ public class GUI extends JFrame implements ActionListener{
 		ya=0;yb=0;yc=0;yd= Color.cyan;//spieler4
 		za=0;zb=0;zc=0;zd= Color.white;//spielerx
 		
-		/**
+	/**
 	 * Create the frame.
 	 */
 		setTitle("Mister X");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
-		//setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		//spielfeld
-		splitPane = new JSplitPane();
+		splitPane = new JSplitPane();//linke Seite
 		splitPane.setEnabled(false);
 		splitPane.setBounds(0, 0, breite, hoehe);
 		splitPane.setDividerLocation(splitPane.getSize().width/2);
 		contentPane.add(splitPane);
 		splitPane.setLeftComponent(new OvalComponent());
 	
-		JSplitPane splitPane_1 = new JSplitPane();
+		JSplitPane splitPane_1 = new JSplitPane();//rechte Seite
 		splitPane_1.setEnabled(false);
 		splitPane_1.setOrientation(JSplitPane.VERTICAL_SPLIT);
 		splitPane_1.setDividerLocation(313);
 		splitPane.setRightComponent(splitPane_1);
 		
-		scrollPane = new JScrollPane();
+		scrollPane = new JScrollPane();//tabelle und ticketzähler
 		scrollPane.setViewportBorder(null);
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -293,7 +292,7 @@ public class GUI extends JFrame implements ActionListener{
 		table.getColumnModel().getColumn(8).setPreferredWidth(15);
 		scrollPane.setViewportView(table);
 		
-		splitPane_2 = new JSplitPane();
+		splitPane_2 = new JSplitPane();//ticketzähler
 		splitPane_2.setEnabled(false);
 		splitPane_2.setOrientation(JSplitPane.VERTICAL_SPLIT);
 		splitPane_1.setRightComponent(splitPane_2);
@@ -309,11 +308,13 @@ public class GUI extends JFrame implements ActionListener{
 		buttonPanel = new JPanel();
 		buttonPanel.setLayout(new GridLayout(7,2,0,0));
 		
-		icon1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s1.png"));
+		icon1 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s1.png"));//einbindung der images
 		icon2 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s2.png"));
 		icon3 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s3.png"));
 		icon4 = new ImageIcon(Toolkit.getDefaultToolkit().getImage("s4.png"));
 		iconx = new ImageIcon(Toolkit.getDefaultToolkit().getImage("x.png"));
+		
+		//instanzierung der buttons
 		
 		buttonspieler1= new JButton(icon1);
 		buttonspieler1.addActionListener(this);
@@ -473,7 +474,7 @@ public class GUI extends JFrame implements ActionListener{
 		public void actionPerformed (ActionEvent ae) {
 	        // Die Quelle wird mit getSource() abgefragt und mit den
 	        // Buttons abgeglichen. Wenn die Quelle des ActionEvents einer
-	        // der Buttons ist, wird der Text des JLabels entsprechend geändert					
+	        // der Buttons ist, wird die figur bewegt				
 			
 			if (ae.getSource() == this.buttonspieler1) {
 				buttonspieler1.setEnabled(false);}
@@ -2580,8 +2581,7 @@ public class GUI extends JFrame implements ActionListener{
 	        			button2x.setEnabled(true);
 	        			abgleich();}}
      	        }
-	     
-		}
+			}
 		
 		public void textFeld() {
 			if(1920==breite) {
@@ -2607,9 +2607,7 @@ public class GUI extends JFrame implements ActionListener{
 						+ "U-Bahn :&nbsp&nbsp&nbsp;"+counterField3+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField8+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField11+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField14+"<br>"
 						+ "<center>Mister X:</center>"+ "<center>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Black-Tickets :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField4+ "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;Zweimal :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;"+counterField5+"</center>");
 				txtpnVerfgbareTickets.setEditable(false);
-				
 			}
-			
 		}
 		
 		//spieler1
