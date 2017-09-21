@@ -4,17 +4,21 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.geom.Line2D;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -23,6 +27,7 @@ import javax.swing.JComponent;
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
@@ -55,8 +60,8 @@ public class GUI extends JFrame implements ActionListener{
 	public static int va,wa,xa,ya,za;
 	public static int vb,wb,xb,yb,zb;
 	public static int vc,wc,xc,yc,zc;
-	public static int hoehe;
-	public static int breite;
+	public static int hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
+	public static int breite=Toolkit.getDefaultToolkit().getScreenSize().width;
 	public static Color vd,wd,xd,yd,zd;
 	public  int counterField1=8;
 	public  int counterField2=11;
@@ -73,6 +78,7 @@ public class GUI extends JFrame implements ActionListener{
 	public  int counterField13=11;
 	public  int counterField14=4; 
 	public final Icon icon1,icon2,icon3,icon4,iconx;
+	public static GUI frame;
 	
 	public  void setCounterField1() {counterField1 = counterField1-1;}
 	public  void setCounterField2() {counterField2 = counterField2-1;}
@@ -99,7 +105,7 @@ public class GUI extends JFrame implements ActionListener{
 				
 				JFrame frame2 = new JFrame("Start");
 				frame2.setVisible( true );
-				frame2.setBounds(100, 100, 450, 300);	
+				frame2.setBounds(breite/2-breite/6,hoehe/2-hoehe/8, breite/3, hoehe/4);	
 				JPanel buttonPanel2 = new JPanel();
 				buttonPanel2.setLayout(new GridLayout(4,2,0,20));
 				
@@ -108,7 +114,7 @@ public class GUI extends JFrame implements ActionListener{
 				{ public void actionPerformed( ActionEvent e ) 
 				{JFrame frame3 = new JFrame("Anleitung");
 				frame3.setVisible( true );
-				frame3.setBounds(200, 200, 650, 500);
+				frame3.setBounds(breite/2-breite/4,hoehe/2-hoehe/4, breite/2, hoehe/2);
 				JTextPane anleitungtxt = new JTextPane();
 				anleitungtxt.setEditable(false);
 				BufferedReader br = null;
@@ -131,7 +137,7 @@ public class GUI extends JFrame implements ActionListener{
 					public void actionPerformed( ActionEvent e ) 
 						{
 							try {
-								GUI frame = new GUI();
+								frame = new GUI();
 								frame.setVisible(true);
 							} catch (Exception e1) {
 								e1.printStackTrace();
@@ -179,8 +185,7 @@ public class GUI extends JFrame implements ActionListener{
 		
 		
 		//bildschirmanpassung
-		hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
-		breite=Toolkit.getDefaultToolkit().getScreenSize().width;
+		
 		
 		
 		
@@ -2634,6 +2639,7 @@ public class GUI extends JFrame implements ActionListener{
 		public static int getbreite() {return breite;}
 		
 		public void abgleich() {
+<<<<<<< HEAD
 			if(vb==zb || wb==zb || xb==zb || yb==zb) {
 			JFrame frame4 = new JFrame("Gewonnen");
 			frame4.setVisible( true );
@@ -2642,6 +2648,70 @@ public class GUI extends JFrame implements ActionListener{
 			gewonnentxt.setEditable(false);
 			gewonnentxt.setText("Gewonnen!");
 			frame4.add(gewonnentxt);}		
+=======
+			if(vb == zb||wb == zb||xb == zb||yb == zb) {
+				JFrame frame4 = new JFrame("Gewonnen");
+				frame4.setVisible( true );
+				frame4.setBounds(breite/2-breite/10,hoehe/2-hoehe/16, breite/5, hoehe/8);
+				//frame4.setLayout(new GridBagLayout());
+				JPanel gewonnentxt = new JPanel();
+				JLabel win = new JLabel();
+				JLabel win1 = new JLabel();
+				win.setHorizontalAlignment(JLabel.CENTER);
+				win1.setHorizontalAlignment(JLabel.CENTER);
+				win.setFont(new Font("Verdana",1,40/(1920/breite)));
+				win.setText("Gewonnen!");
+				win1.setText("Du hast mister x gefangen");
+				gewonnentxt.add(win);
+				gewonnentxt.add(win1);
+				frame4.add(gewonnentxt);
+				//default icon, custom title
+				frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+				int n = JOptionPane.showConfirmDialog(
+				    null,
+				    "Möchtest du erneut spielen?",
+				    "replay",
+				    JOptionPane.YES_NO_OPTION);
+				
+				
+				if(n==0) {
+					frame4.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+					GUI.frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+					try {
+						
+						frame.setVisible(true);
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+					va=100;vb=80;vc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			wa=800;wb=420;wc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			xa=430;xb=900;xc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			ya=200;yb=400;yc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        			}
+					else {
+						frame4.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+						GUI.frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));}
+					
+				
+				
+				
+			}
+			
+			if(vb == wb) {
+				buttonbus.setEnabled(true);
+				buttontaxi.setEnabled(true);
+				buttonbahn.setEnabled(true);
+			}
+>>>>>>> f33a391eecd0857dfff48481be6f556781699df4
 			
 		}
 	}
