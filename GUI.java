@@ -2639,7 +2639,7 @@ public class GUI extends JFrame implements ActionListener{
 		public static int getbreite() {return breite;}
 		
 		public void abgleich() {
-<<<<<<< HEAD
+
 			if(vb==zb || wb==zb || xb==zb || yb==zb) {
 			JFrame frame4 = new JFrame("Gewonnen");
 			frame4.setVisible( true );
@@ -2648,7 +2648,7 @@ public class GUI extends JFrame implements ActionListener{
 			gewonnentxt.setEditable(false);
 			gewonnentxt.setText("Gewonnen!");
 			frame4.add(gewonnentxt);}		
-=======
+
 			if(vb == zb||wb == zb||xb == zb||yb == zb) {
 				JFrame frame4 = new JFrame("Gewonnen");
 				frame4.setVisible( true );
@@ -2711,7 +2711,7 @@ public class GUI extends JFrame implements ActionListener{
 				buttontaxi.setEnabled(true);
 				buttonbahn.setEnabled(true);
 			}
->>>>>>> f33a391eecd0857dfff48481be6f556781699df4
+
 			
 		}
 	}
