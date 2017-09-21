@@ -2640,15 +2640,6 @@ public class GUI extends JFrame implements ActionListener{
 		
 		public void abgleich() {
 
-			if(vb==zb || wb==zb || xb==zb || yb==zb) {
-			JFrame frame4 = new JFrame("Gewonnen");
-			frame4.setVisible( true );
-			frame4.setBounds(200, 200, 650, 500);
-			JTextPane gewonnentxt = new JTextPane();
-			gewonnentxt.setEditable(false);
-			gewonnentxt.setText("Gewonnen!");
-			frame4.add(gewonnentxt);}		
-
 			if(vb == zb||wb == zb||xb == zb||yb == zb) {
 				JFrame frame4 = new JFrame("Gewonnen");
 				frame4.setVisible( true );
