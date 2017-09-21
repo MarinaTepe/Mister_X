@@ -10,12 +10,15 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.awt.geom.Line2D;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -24,6 +27,7 @@ import javax.swing.JComponent;
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
@@ -74,6 +78,7 @@ public class GUI extends JFrame implements ActionListener{
 	public  int counterField13=11;
 	public  int counterField14=4; 
 	public final Icon icon1,icon2,icon3,icon4,iconx;
+	public static GUI frame;
 	
 	public  void setCounterField1() {counterField1 = counterField1-1;}
 	public  void setCounterField2() {counterField2 = counterField2-1;}
@@ -132,7 +137,7 @@ public class GUI extends JFrame implements ActionListener{
 					public void actionPerformed( ActionEvent e ) 
 						{
 							try {
-								GUI frame = new GUI();
+								frame = new GUI();
 								frame.setVisible(true);
 							} catch (Exception e1) {
 								e1.printStackTrace();
@@ -2552,7 +2557,46 @@ public class GUI extends JFrame implements ActionListener{
 				gewonnentxt.add(win);
 				gewonnentxt.add(win1);
 				frame4.add(gewonnentxt);
-				}
+				//default icon, custom title
+				frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+				int n = JOptionPane.showConfirmDialog(
+				    null,
+				    "Möchtest du erneut spielen?",
+				    "replay",
+				    JOptionPane.YES_NO_OPTION);
+				
+				
+				if(n==0) {
+					frame4.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+					GUI.frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+					try {
+						
+						frame.setVisible(true);
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+					va=100;vb=80;vc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			wa=800;wb=420;wc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			xa=430;xb=900;xc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			ya=200;yb=400;yc=80;
+					splitPane.setLeftComponent(new OvalComponent());
+        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+        			frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        			}
+					else {
+						frame4.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+						GUI.frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));}
+					
+				
+				
+				
+			}
 			
 			if(vb == wb) {
 				buttonbus.setEnabled(true);
