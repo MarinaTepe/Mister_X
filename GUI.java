@@ -2643,7 +2643,7 @@ public class GUI extends JFrame implements ActionListener{
 			if(vb == zb||wb == zb||xb == zb||yb == zb) {
 				JFrame frame4 = new JFrame("Gewonnen");
 				frame4.setVisible( true );
-				frame4.setBounds(breite/2-breite/10,hoehe/2-hoehe/16, breite/5, hoehe/8);
+				frame4.setBounds(breite/2-breite/10,hoehe/2-hoehe/8, breite/5, hoehe/8);
 				//frame4.setLayout(new GridBagLayout());
 				JPanel gewonnentxt = new JPanel();
 				JLabel win = new JLabel();
@@ -2661,7 +2661,7 @@ public class GUI extends JFrame implements ActionListener{
 				int n = JOptionPane.showConfirmDialog(
 				    null,
 				    "Möchtest du erneut spielen?",
-				    "replay",
+				    "Sie haben Gewonnen",
 				    JOptionPane.YES_NO_OPTION);
 				
 				
