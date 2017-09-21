@@ -60,8 +60,8 @@ public class GUI extends JFrame implements ActionListener{
 	public static int va,wa,xa,ya,za;
 	public static int vb,wb,xb,yb,zb;
 	public static int vc,wc,xc,yc,zc;
-	public static int hoehe;
-	public static int breite;
+	public static int hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
+	public static int breite=Toolkit.getDefaultToolkit().getScreenSize().width;
 	public static Color vd,wd,xd,yd,zd;
 	public  int counterField1=8;
 	public  int counterField2=11;
@@ -105,7 +105,7 @@ public class GUI extends JFrame implements ActionListener{
 				
 				JFrame frame2 = new JFrame("Start");
 				frame2.setVisible( true );
-				frame2.setBounds(100, 100, 450, 300);	
+				frame2.setBounds(breite/2-breite/6,hoehe/2-hoehe/8, breite/3, hoehe/4);	
 				JPanel buttonPanel2 = new JPanel();
 				buttonPanel2.setLayout(new GridLayout(4,2,0,20));
 				
@@ -114,7 +114,7 @@ public class GUI extends JFrame implements ActionListener{
 				{ public void actionPerformed( ActionEvent e ) 
 				{JFrame frame3 = new JFrame("Anleitung");
 				frame3.setVisible( true );
-				frame3.setBounds(200, 200, 650, 500);
+				frame3.setBounds(breite/2-breite/4,hoehe/2-hoehe/4, breite/2, hoehe/2);
 				JTextPane anleitungtxt = new JTextPane();
 				anleitungtxt.setEditable(false);
 				BufferedReader br = null;
@@ -185,8 +185,7 @@ public class GUI extends JFrame implements ActionListener{
 		
 		
 		//bildschirmanpassung
-		hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
-		breite=Toolkit.getDefaultToolkit().getScreenSize().width;
+		
 		
 		
 		
