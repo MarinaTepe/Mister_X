@@ -2108,44 +2108,52 @@ public class GUI extends JFrame implements ActionListener{
              			splitPane.setLeftComponent(new OvalComponent());
              			splitPane.setDividerLocation(splitPane.getSize().width/2);
              			buttonspieler1.setEnabled(true);
-             			buttontaxi.setEnabled(true);}}
+             			buttontaxi.setEnabled(true);
+             			abgleich();}}
              	else if (!buttonspieler2.isEnabled()){
              			wa=660;wb=840;wc=80;
              		if (!buttontaxi.isEnabled()){	
              			splitPane.setLeftComponent(new OvalComponent());
              			splitPane.setDividerLocation(splitPane.getSize().width/2);
              			buttonspieler2.setEnabled(true);
-             			buttontaxi.setEnabled(true);}}
+             			buttontaxi.setEnabled(true);
+             			abgleich();}}
              	else if (!buttonspieler3.isEnabled()){
              			xa=660;xb=840;xc=80;
              			if (!buttontaxi.isEnabled()){	
                  			splitPane.setLeftComponent(new OvalComponent());
                  			splitPane.setDividerLocation(splitPane.getSize().width/2);
                  			buttonspieler3.setEnabled(true);
-                 			buttontaxi.setEnabled(true);}}
+                 			buttontaxi.setEnabled(true);
+                 			abgleich();}}
              	else if (!buttonspieler4.isEnabled()){
              			ya=660;yb=840;yc=80;
              		if (!buttontaxi.isEnabled()){	
              			splitPane.setLeftComponent(new OvalComponent());
              			splitPane.setDividerLocation(splitPane.getSize().width/2);
              			buttonspieler4.setEnabled(true);
-             			buttontaxi.setEnabled(true);}}
+             			buttontaxi.setEnabled(true);
+             			abgleich();}}
              	else if (!buttonmisterx.isEnabled()){
+             			za=660;zb=840;zc=80;
              		if (!buttontaxi.isEnabled()){	
              			splitPane.setLeftComponent(new OvalComponent());
              			splitPane.setDividerLocation(splitPane.getSize().width/2);
              			buttonmisterx.setEnabled(true);
-             			buttontaxi.setEnabled(true);}
+             			buttontaxi.setEnabled(true);
+             			abgleich();}
              		else if (!buttonblack.isEnabled()){	
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonmisterx.setEnabled(true);
-	        			buttonblack.setEnabled(true);}
+	        			buttonblack.setEnabled(true);
+	        			abgleich();}
 	        		else if (!button2x.isEnabled()){	
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonmisterx.setEnabled(true);
-	        			button2x.setEnabled(true);}}
+	        			button2x.setEnabled(true);
+	        			abgleich();}}
      	        }
 	       
 	        else if(ae.getSource() == this.button25){
@@ -2157,29 +2165,34 @@ public class GUI extends JFrame implements ActionListener{
              			splitPane.setLeftComponent(new OvalComponent());
              			splitPane.setDividerLocation(splitPane.getSize().width/2);
              			buttonspieler1.setEnabled(true);
-             			buttontaxi.setEnabled(true);}}
+             			buttontaxi.setEnabled(true);
+             			abgleich();}}
              	else if (!buttonspieler2.isEnabled()){
              			wa=900;wb=850;wc=80;
              			if (!buttontaxi.isEnabled()){	
                  			splitPane.setLeftComponent(new OvalComponent());
                  			splitPane.setDividerLocation(splitPane.getSize().width/2);
                  			buttonspieler2.setEnabled(true);
-                 			buttontaxi.setEnabled(true);}}
+                 			buttontaxi.setEnabled(true);
+                 			abgleich();}}
              	else if (!buttonspieler3.isEnabled()){
              			xa=900;xb=850;xc=80;
              		if (!buttontaxi.isEnabled()){	
              			splitPane.setLeftComponent(new OvalComponent());
              			splitPane.setDividerLocation(splitPane.getSize().width/2);
              			buttonspieler3.setEnabled(true);
-             			buttontaxi.setEnabled(true);}}
+             			buttontaxi.setEnabled(true);
+             			abgleich();}}
              	else if (!buttonspieler4.isEnabled()){
              			ya=900;yb=850;yc=80;
              			if (!buttontaxi.isEnabled()){	
                  			splitPane.setLeftComponent(new OvalComponent());
                  			splitPane.setDividerLocation(splitPane.getSize().width/2);
                  			buttonspieler4.setEnabled(true);
-                 			buttontaxi.setEnabled(true);}}
+                 			buttontaxi.setEnabled(true);
+                 			abgleich();}}
              	else if (!buttonmisterx.isEnabled()){
+             			za=900;zb=850;zc=80;
              		if (!buttontaxi.isEnabled()){	
              			splitPane.setLeftComponent(new OvalComponent());
              			splitPane.setDividerLocation(splitPane.getSize().width/2);
@@ -2194,7 +2207,8 @@ public class GUI extends JFrame implements ActionListener{
 	        			splitPane.setLeftComponent(new OvalComponent());
 	        			splitPane.setDividerLocation(splitPane.getSize().width/2);
 	        			buttonmisterx.setEnabled(true);
-	        			button2x.setEnabled(true);}}
+	        			button2x.setEnabled(true);
+	        			abgleich();}}
      	        }
 	       
 		}
@@ -2256,6 +2270,37 @@ public class GUI extends JFrame implements ActionListener{
 		public static int gethoehe() {return hoehe;}
 		public static int getbreite() {return breite;}
 		
+		public void abgleich() {
+			if(vb == zb) {JFrame frame4 = new JFrame("Gewonnen");
+			frame4.setVisible( true );
+			frame4.setBounds(200, 200, 650, 500);
+			JTextPane gewonnentxt = new JTextPane();
+			gewonnentxt.setEditable(false);
+			gewonnentxt.setText("Gewonnen!");
+			frame4.add(gewonnentxt);}
+			if(wb == zb) {JFrame frame4 = new JFrame("Gewonnen");
+			frame4.setVisible( true );
+			frame4.setBounds(200, 200, 650, 500);
+			JTextPane gewonnentxt = new JTextPane();
+			gewonnentxt.setEditable(false);
+			gewonnentxt.setText("Gewonnen!");
+			frame4.add(gewonnentxt);}
+			if(xb == zb) {JFrame frame4 = new JFrame("Gewonnen");
+			frame4.setVisible( true );
+			frame4.setBounds(200, 200, 650, 500);
+			JTextPane gewonnentxt = new JTextPane();
+			gewonnentxt.setEditable(false);
+			gewonnentxt.setText("Gewonnen!");
+			frame4.add(gewonnentxt);}
+			if(yb == zb) {JFrame frame4 = new JFrame("Gewonnen");
+			frame4.setVisible( true );
+			frame4.setBounds(200, 200, 650, 500);
+			JTextPane gewonnentxt = new JTextPane();
+			gewonnentxt.setEditable(false);
+			gewonnentxt.setText("Gewonnen!");
+			frame4.add(gewonnentxt);}
+			
+		}
 	}
 
 
@@ -2271,22 +2316,22 @@ public class GUI extends JFrame implements ActionListener{
 		int ac=GUI.getvc();
 		Color ad = GUI.getvd();
 		
-		int ba=GUI.getwa();// spieler schwarz
+		int ba=GUI.getwa();// spieler gelb
 		int bb=GUI.getwb();
 		int bc=GUI.getwc();
 		Color bd = GUI.getwd();
 		
-		int ca=GUI.getxa();// spieler schwarz
+		int ca=GUI.getxa();// spieler lila
 		int cb=GUI.getxb();
 		int cc=GUI.getxc();
 		Color cd = GUI.getxd();
 		
-		int da=GUI.getya();// spieler schwarz
+		int da=GUI.getya();// spieler türkis
 		int db=GUI.getyb();
 		int dc=GUI.getyc();
 		Color dd = GUI.getyd();
 		
-		int ea=GUI.getza();// spieler schwarz
+		int ea=GUI.getza();// spieler misterx
 		int eb=GUI.getzb();
 		int ec=GUI.getzc();
 		Color ed = GUI.getzd();
@@ -2321,9 +2366,9 @@ public class GUI extends JFrame implements ActionListener{
 			g.setColor(dd);
 			g.fillOval((int)(da*xfact-10*xfact),(int) (db*xfact-10*xfact),(int) (dc *xfact),(int) (dc *xfact));
 			
-			g.setColor(ed);
+			/*g.setColor(ed);
 			g.fillOval((int)(ea*xfact-10*xfact) ,(int) (eb*xfact-10*xfact),(int) (ec *xfact),(int) (ec *xfact));
-			
+			*/  //auskommentiert da Kreis von MisterX nicht sichtbar sein soll
 			
 			g.setColor(taxi);
 			//g.fillRect(130,110,80,20);
