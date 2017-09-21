@@ -48,29 +48,30 @@ public class GUI extends JFrame implements ActionListener{
 	button11, button12, button13, button14, button15, button16, button17, button18, button19, button20,
 	button21, button22, button23, button24, button25;
 	
-	public static int va,wa,xa,ya,za;
-	public static int vb,wb,xb,yb,zb;
-	public static int vc,wc,xc,yc,zc;
-	public static int hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//-60 richtwert für die taskleiste
-	public static int breite=Toolkit.getDefaultToolkit().getScreenSize().width;
-	public static Color vd,wd,xd,yd,zd;
-	public  int counterField1=8;
+	public static int va,wa,xa,ya,za;//xposition der spieler
+	public static int vb,wb,xb,yb,zb;//yposition der spieler
+	public static int vc,wc,xc,yc,zc;//figurengröße der spieler
+	public static int hoehe=Toolkit.getDefaultToolkit().getScreenSize().height-70;//auflösung höhe in pixel -70 richtwert für die taskleiste
+	public static int breite=Toolkit.getDefaultToolkit().getScreenSize().width;//auflösung breite in pixel
+	public static Color vd,wd,xd,yd,zd;//farben der spielfiguren
+	public  int counterField1=8;//spieler 1 tickets
 	public  int counterField2=11;
 	public  int counterField3=4;
-	public  int counterField4=4;
-	public  int counterField5=2; 
-	public  int counterField6=8;
+	public  int counterField4=4;//blacktickets
+	public  int counterField5=2;//2x tickets
+	public  int counterField6=8;//spieler 2 tickes
 	public  int counterField7=11;
 	public  int counterField8=4; 
-	public  int counterField9=8;
+	public  int counterField9=8;//spieler 3 tickets
 	public  int counterField10=11;
 	public  int counterField11=4; 
-	public  int counterField12=8;
+	public  int counterField12=8;//spieler 4 tickes
 	public  int counterField13=11;
 	public  int counterField14=4; 
-	public final Icon icon1,icon2,icon3,icon4,iconx;
-	public static GUI frame;
+	public final Icon icon1,icon2,icon3,icon4,iconx;//spielericons
+	public static GUI frame;//spiel Fenster
 	
+	//ticket zähler tickets-1
 	public  void setCounterField1() {counterField1 = counterField1-1;}
 	public  void setCounterField2() {counterField2 = counterField2-1;}
 	public  void setCounterField3() {counterField3 = counterField3-1;}
@@ -90,48 +91,65 @@ public class GUI extends JFrame implements ActionListener{
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) {//mainmethode die ausgefürt wird
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				
-				JFrame frame2 = new JFrame("Start");
+				JFrame frame2 = new JFrame("Start");//starfenster
 				frame2.setVisible( true );
-				frame2.setDefaultCloseOperation(EXIT_ON_CLOSE);
-				frame2.setBounds(breite/2-breite/6,hoehe/2-hoehe/8, breite/3, hoehe/4);	
+				frame2.setDefaultCloseOperation(EXIT_ON_CLOSE);//wenn das fenster geschlossen wird beendet das programm
+				frame2.setBounds(breite/2-breite/6,hoehe/2-hoehe/8, breite/3, hoehe/4);	//Fenstergöße mit anpassung an die auflösung
+				
 				JPanel buttonPanel2 = new JPanel();
 				buttonPanel2.setLayout(new GridLayout(4,2,0,20));
 				
-				JButton buttonanleitung = new JButton("Anleitung");
-				buttonanleitung.addActionListener( new ActionListener() 
-				{ public void actionPerformed( ActionEvent e ) 
-				{JFrame frame3 = new JFrame("Anleitung");
-				frame3.setBounds(breite/2-breite/4,hoehe/3-hoehe/4, breite/2, hoehe/1);
-				JTextPane anleitungtxt = new JTextPane();
-				anleitungtxt.setEditable(false);
-				BufferedReader br = null;
-				File anleitung = new File("anleitung.txt");
-				try {
-					br = new BufferedReader(new FileReader(anleitung));
-					String line = null;
-					while((line = br.readLine()) != null) { anleitungtxt.read(br, anleitung);}
-				} catch (IOException e1) {
-					e1.printStackTrace();
-				}
+				JButton buttonanleitung = new JButton("Anleitung");//öffnen der anleitung und des spiels im hintergrund
+				buttonanleitung.addActionListener(
+						new ActionListener() 
+							{public void actionPerformed( ActionEvent e ) 
+								{JFrame frame3 = new JFrame("Anleitung");
+								frame3.setBounds(breite/2-breite/4,hoehe/2-hoehe/3, breite/2,(int) (hoehe/1.5));
+								JTextPane anleitungtxt = new JTextPane();
+								
+								anleitungtxt.setEditable(false);
+								BufferedReader br = null;
+								File anleitung = new File("anleitung.txt");
+								try {
+									br = new BufferedReader(new FileReader(anleitung));
+									String line = null;
+									while((line = br.readLine()) != null) { anleitungtxt.read(br, anleitung);}
+								} catch (IOException e1) {
+									e1.printStackTrace();
+								}
 				
-				frame3.add(anleitungtxt);
-				try {
-					frame = new GUI();
-					frame.setVisible(true);
-				} catch (Exception e1) {
-					e1.printStackTrace();
-				}
-				frame3.setVisible( true );
-				frame2.setVisible(false);
-				}});
+								frame3.add(anleitungtxt);
+								try {
+									frame = new GUI();
+									frame.setVisible(true);
+								} catch (Exception e1) {
+									e1.printStackTrace();
+								}
+								va=100;vb=80;vc=80;
+								splitPane.setLeftComponent(new OvalComponent());
+			        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+			        			wa=800;wb=420;wc=80;
+								splitPane.setLeftComponent(new OvalComponent());
+			        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+			        			xa=430;xb=900;xc=80;
+								splitPane.setLeftComponent(new OvalComponent());
+			        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+			        			ya=200;yb=400;yc=80;
+								splitPane.setLeftComponent(new OvalComponent());
+			        			splitPane.setDividerLocation(splitPane.getSize().width/2);
+								frame3.setVisible( true );
+								frame2.setVisible(false);
+								}
+							}
+						);
 				buttonPanel2.add(buttonanleitung);
 				
 				JButton buttonstart = new JButton("Start   (Mister X beginnt)");
-				buttonstart.addActionListener( new ActionListener() 
+				buttonstart.addActionListener( new ActionListener() //start des spiels
 					{
 					public void actionPerformed( ActionEvent e ) 
 						{
@@ -169,24 +187,18 @@ public class GUI extends JFrame implements ActionListener{
 				
 				
 
-				}
+			}
 		});
 	}
 
 	
 	public GUI() {
-		Color taxi =new Color(150,150,150);
-		va=0;vb=0;vc=0;vd= Color.black;
-		wa=0;wb=0;wc=0;wd= Color.yellow;
-		xa=0;xb=0;xc=0;xd= Color.magenta;
-		ya=0;yb=0;yc=0;yd= Color.cyan;
-		za=0;zb=0;zc=0;zd= Color.white;
-		
-		
-		//bildschirmanpassung
-		
-		
-		
+		Color taxi =new Color(150,150,150);//farbe grau für die Taxen
+		va=0;vb=0;vc=0;vd= Color.black;//spieler1
+		wa=0;wb=0;wc=0;wd= Color.yellow;//spieler2
+		xa=0;xb=0;xc=0;xd= Color.magenta;//spieler3
+		ya=0;yb=0;yc=0;yd= Color.cyan;//spieler4
+		za=0;zb=0;zc=0;zd= Color.white;//spielerx
 		
 		/**
 	 * Create the frame.
@@ -194,7 +206,7 @@ public class GUI extends JFrame implements ActionListener{
 		setTitle("Mister X");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
-		setBounds(100, 100, 450, 300);
+		//setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -285,22 +297,13 @@ public class GUI extends JFrame implements ActionListener{
 		splitPane_2.setEnabled(false);
 		splitPane_2.setOrientation(JSplitPane.VERTICAL_SPLIT);
 		splitPane_1.setRightComponent(splitPane_2);
-	
 		
-		// Ticket stack
-	
 		
 		
 		//Verfügbare Tickets generieren
-		//counterField1 = 8;		
-		//counterField2 = 11;
-		//counterField3 = 4;
-		//counterField4 = 4;
-		//counterField5 = 2;
 		textFeld();
 		
 		splitPane_2.setLeftComponent(txtpnVerfgbareTickets);
-		//splitPane_1.setDividerLocation(splitPane.getSize().height/2);
 		
 		//Aktionsfeld
 		buttonPanel = new JPanel();
@@ -2663,7 +2666,6 @@ public class GUI extends JFrame implements ActionListener{
 				    "Möchtest du erneut spielen?",
 				    "Sie haben Gewonnen",
 				    JOptionPane.YES_NO_OPTION);
-				frame4.setVisible( true );
 				
 				if(n==0) {
 					frame4.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
@@ -3080,6 +3082,3 @@ public class GUI extends JFrame implements ActionListener{
 		}
 		
 	}	
-
-
-
