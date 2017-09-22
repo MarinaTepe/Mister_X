@@ -148,7 +148,7 @@ public class GUI extends JFrame implements ActionListener{
 						);
 				buttonPanel2.add(buttonanleitung);
 				
-				JButton buttonstart = new JButton("Start   (Mister X beginnt)");
+				JButton buttonstart = new JButton("Start   (Mister zieht zuerst)");
 				buttonstart.addActionListener( new ActionListener() //start des spiels
 					{
 					public void actionPerformed( ActionEvent e ) 
