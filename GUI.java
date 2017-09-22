@@ -47,7 +47,7 @@ public class GUI extends JFrame implements ActionListener{
 	button1, button2, button3, button4, button5, button6, button7, button8, button9, button10,
 	button11, button12, button13, button14, button15, button16, button17, button18, button19, button20,
 	button21, button22, button23, button24, button25;
-	
+	public static int q=0;
 	public static int va,wa,xa,ya,za;//xposition der spieler
 	public static int vb,wb,xb,yb,zb;//yposition der spieler
 	public static int vc,wc,xc,yc,zc;//figurengröße der spieler
@@ -489,7 +489,7 @@ public class GUI extends JFrame implements ActionListener{
 				buttonspieler4.setEnabled(false);}
 			
 			else if (ae.getSource() == this.buttonmisterx) {
-				buttonmisterx.setEnabled(false);}
+				buttonmisterx.setEnabled(false);GUI.setq();}
 			
 			else if(ae.getSource() == this.buttonbus){
 					if (!buttonspieler1.isEnabled()){
@@ -2636,13 +2636,13 @@ public class GUI extends JFrame implements ActionListener{
 		public static int getyc() {return yc;}
 		public static Color getyd() {return yd;}//spielerfarbe
 		//auflösungsabfrage
-		public static int gethoehe() {return hoehe;}
+		public static int getq() {return q;}public static int setq() {return q=q+1;}
 		public static int getbreite() {return breite;}
 		
 		public void abgleich() {
 
-			if(vb == zb||wb == zb||xb == zb||yb == zb) {
-				JFrame frame4 = new JFrame("Gewonnen");
+			if(vb == zb||wb == zb||xb == zb||yb == zb||q==24) {
+				JFrame frame4;if(q==24) {frame4 = new JFrame("verloren");}else {frame4 = new JFrame("Gewonnen");}
 				frame4.setVisible( true );
 				frame4.setBounds(breite/2-breite/10,hoehe/2-hoehe/8, breite/5, hoehe/8);
 				//frame4.setLayout(new GridBagLayout());
@@ -2652,8 +2652,8 @@ public class GUI extends JFrame implements ActionListener{
 				win.setHorizontalAlignment(JLabel.CENTER);
 				win1.setHorizontalAlignment(JLabel.CENTER);
 				win.setFont(new Font("Verdana",1,40/(1920/breite)));
-				win.setText("Gewonnen!");
-				win1.setText("Du hast mister x gefangen");
+				if(q==24) {win.setText("Verloren!");}else {win.setText("Gewonnen!");}
+				if(q==24) {win1.setText("Mister X ist entkommen!");}else {win1.setText("Du hast mister x gefangen");}
 				gewonnentxt.add(win);
 				gewonnentxt.add(win1);
 				frame4.add(gewonnentxt);
@@ -2662,7 +2662,7 @@ public class GUI extends JFrame implements ActionListener{
 				int n = JOptionPane.showConfirmDialog(
 				    null,
 				    "Möchtest du erneut spielen?",
-				    "Sie haben Gewonnen",
+				    "Spiel Vorbei",
 				    JOptionPane.YES_NO_OPTION);
 				
 				if(n==0) {
@@ -2733,7 +2733,7 @@ public class GUI extends JFrame implements ActionListener{
 		int eb=GUI.getzb();
 		int ec=GUI.getzc();
 		Color ed = GUI.getzd();
-		//double xfact=1.1;
+		int z=GUI.getq();
 		int w2=GUI.getbreite()/2;
 		double xfact=w2/960.0;
 		
@@ -2764,20 +2764,20 @@ public class GUI extends JFrame implements ActionListener{
 			g.setColor(dd);
 			g.fillOval((int)(da*xfact-10*xfact),(int) (db*xfact-10*xfact),(int) (dc *xfact),(int) (dc *xfact));
 			
-			/*g.setColor(ed);
-			g.fillOval((int)(ea*xfact-10*xfact) ,(int) (eb*xfact-10*xfact),(int) (ec *xfact),(int) (ec *xfact));
-			*/  //auskommentiert da Kreis von MisterX nicht sichtbar sein soll
+			if(z==3||z==8||z==13||z==18||z==24) {g.setColor(ed);
+			g.fillOval((int)(ea*xfact-10*xfact) ,(int) (eb*xfact-10*xfact),(int) (ec *xfact),(int) (ec *xfact));}
+			
 			
 			g.setColor(taxi);
 			//g.fillRect(130,110,80,20);
 			//g.setStroke();
 			//g.drawLine(0, 0, 100, 100);
-			g.setFont(new Font("Serif", Font.PLAIN,(int) (30 *xfact)));//g.drawString(Double.toString ((int)(440 *xfact)),(int)( 10 *xfact),(int)( 70 *xfact));
+			g.setFont(new Font("Serif", Font.PLAIN,(int) (30 *xfact)));
 			
 						Graphics2D g2 = (Graphics2D)g;
 						g2.setStroke(new BasicStroke(7));
 						
-						g2.setColor(Color.red);									//Ubahn
+						g2.setColor(Color.red);										//Ubahn strecken
 						g2.draw(new Line2D.Double(123 *xfact, 103 *xfact, 23 *xfact, 493 *xfact));
 						g2.draw(new Line2D.Double(123 *xfact, 103 *xfact, 463 *xfact, 133 *xfact));
 						g2.draw(new Line2D.Double(623 *xfact, 113 *xfact, 463 *xfact, 133 *xfact));
@@ -2788,7 +2788,7 @@ public class GUI extends JFrame implements ActionListener{
 						g2.draw(new Line2D.Double(630 *xfact, 120 *xfact, 410 *xfact, 580 *xfact));
 						g2.draw(new Line2D.Double(410 *xfact, 580 *xfact, 460 *xfact, 930 *xfact));
 						
-						g2.setColor(Color.blue);									//bus
+						g2.setColor(Color.blue);									//bus strecken
 						g2.draw(new Line2D.Double(137 *xfact, 117 *xfact, 287 *xfact, 137 *xfact));
 						g2.draw(new Line2D.Double(477 *xfact, 147 *xfact, 287 *xfact, 137 *xfact));
 						g2.draw(new Line2D.Double(437 *xfact, 235 *xfact, 287 *xfact, 145 *xfact));
@@ -2814,7 +2814,7 @@ public class GUI extends JFrame implements ActionListener{
 						g2.draw(new Line2D.Double(367 *xfact, 337 *xfact, 437 *xfact, 227 *xfact));
 						g2.draw(new Line2D.Double(187 *xfact, 287 *xfact, 137 *xfact, 117 *xfact));
 						
-						g2.setColor(taxi);								//Taxi
+						g2.setColor(taxi);											//Taxi strecken
 						g2.draw(new Line2D.Double(130 *xfact, 110 *xfact, 280 *xfact, 130 *xfact));
 						g2.draw(new Line2D.Double(330 *xfact, 30 *xfact, 280 *xfact, 130 *xfact));
 						g2.draw(new Line2D.Double(330 *xfact, 30 *xfact, 470 *xfact, 140 *xfact));
@@ -2853,14 +2853,14 @@ public class GUI extends JFrame implements ActionListener{
 						g2.draw(new Line2D.Double(690 *xfact, 870 *xfact, 930 *xfact, 880 *xfact));
 						g2.draw(new Line2D.Double(780 *xfact, 780 *xfact, 930 *xfact, 880 *xfact));
 			
-					g.setColor(taxi);
-					g.fillRect((int)(100 *xfact),(int)( 80 *xfact),(int)( 60 *xfact),(int)( 60 *xfact));
+					g.setColor(taxi);//instanzierung der felder 1-25 mit ensprechender factorisierung um verschiedene auflösungen zu unterstützen
+					g.fillRect((int)(100 *xfact),(int)( 80 *xfact),(int)( 60 *xfact),(int)( 60 *xfact));//graues taxifeld
 					g.setColor(Color.BLUE);
-					g.fillOval((int)(100 *xfact),(int)( 80 *xfact),(int)( 60 *xfact),(int)( 60 *xfact));
+					g.fillOval((int)(100 *xfact),(int)( 80 *xfact),(int)( 60 *xfact),(int)( 60 *xfact));//der innere buskreis in blau
 					g.setColor(Color.red);
-					g.fillOval((int)(100*xfact+15 *xfact),(int)( 80*xfact+15 *xfact),(int)( 30 *xfact),(int)( 30 *xfact));
+					g.fillOval((int)(100*xfact+15 *xfact),(int)( 80*xfact+15 *xfact),(int)( 30 *xfact),(int)( 30 *xfact));//der innerste kreis ubahn
 					g.setColor(Color.black);
-					g.drawString("1",(int)( 125 *xfact),(int)( 120 *xfact));
+					g.drawString("1",(int)( 125 *xfact),(int)( 120 *xfact));//die feldnummer 
 					
 					g.setColor(taxi);
 					g.fillRect((int)(250 *xfact),(int)( 100 *xfact),(int)( 60 *xfact),(int)( 60 *xfact));
@@ -3078,5 +3078,4 @@ public class GUI extends JFrame implements ActionListener{
 					g.setColor(Color.black);
 					g.drawString("25",(int)( 915 *xfact),(int)( 890 *xfact));				
 		}
-		
-	}	
+	}
